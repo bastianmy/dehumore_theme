@@ -24,6 +24,7 @@ function dehumore_seite() {
 		array( 'humor-und-persoenlichkeit', true, is_page( 'humor-und-persoenlichkeit' ) ),
 		array( 'humor-in-organisationen', true, is_page( 'humor-in-organisationen' ) ),
 		array( 'ueber', true, is_page( 'ueber' ) ),
+		array( 'beitrag', true, is_singular( 'post' ) ),
 		array( 'blog', true, is_page( 'blog' ) || is_home() ),
 	);
 	foreach ( $seiten as $s ) {

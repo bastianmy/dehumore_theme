@@ -1,13 +1,103 @@
 <!-- wp:pattern {"slug":"dehumore/kopf"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:post-date {"className":"is-style-kicker"} /-->
+<!-- wp:html -->
+<div class="dh-progress" id="fortschritt" aria-hidden="true"></div>
+<!-- /wp:html -->
 
-<!-- wp:post-title {"level":1} /-->
-
-<!-- wp:post-featured-image {"align":"wide"} /-->
-
-<!-- wp:post-content {"layout":{"type":"constrained"}} /--></main>
+<!-- wp:group {"tagName":"main","className":"dh-single","layout":{"type":"default"}} -->
+<main class="wp-block-group dh-single"><!-- wp:group {"tagName":"header","className":"dh-post-head dh-wrap","layout":{"type":"default"}} -->
+<header class="wp-block-group dh-post-head dh-wrap"><!-- wp:group {"className":"inner","layout":{"type":"default"}} -->
+<div class="wp-block-group inner"><!-- wp:group {"className":"dh-crumbs","layout":{"type":"default"}} -->
+<div class="wp-block-group dh-crumbs"><!-- wp:html -->
+<a href="/">Start</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a>
+<!-- /wp:html --></div>
 <!-- /wp:group -->
+
+<!-- wp:post-title {"level":1,"className":"dh-post-title"} /-->
+
+<!-- wp:group {"className":"dh-byline","layout":{"type":"default"}} -->
+<div class="wp-block-group dh-byline"><!-- wp:html -->
+<img src="/wp-content/themes/dehumore/assets/img/beginnt-zu-lachen.jpg" alt="" width="52" height="52">
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"dh-byline-text","layout":{"type":"default"}} -->
+<div class="wp-block-group dh-byline-text"><!-- wp:html -->
+<p class="who">Dr. Bastian Mayerhofer</p>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"when","layout":{"type":"default"}} -->
+<div class="wp-block-group when"><!-- wp:post-date /-->
+
+<!-- wp:post-time-to-read /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></header>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"dh-wrap dh-cover-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group dh-wrap dh-cover-wrap"><!-- wp:post-featured-image {"aspectRatio":"3/2","className":"dh-cover-img"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"dh-wrap dh-post-grid","layout":{"type":"default"}} -->
+<div class="wp-block-group dh-wrap dh-post-grid"><!-- wp:html -->
+<aside class="dh-toc" aria-label="Inhalt" hidden><details open><summary class="dh-kicker">Inhalt</summary><ol></ol></details><a class="dh-btn" href="#newsletter">Newsletter abonnieren</a></aside>
+<!-- /wp:html -->
+
+<!-- wp:group {"tagName":"article","className":"dh-article-wrap","layout":{"type":"default"}} -->
+<article class="wp-block-group dh-article-wrap"><!-- wp:post-content {"className":"dh-article","layout":{"type":"default"}} /-->
+
+<!-- wp:html -->
+<div class="dh-share" aria-label="Teilen"><a class="dh-share-li" href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener">Auf LinkedIn teilen</a><button type="button" id="kopieren">Link kopieren</button></div>
+<div class="dh-author">
+	<img src="/wp-content/themes/dehumore/assets/img/beginnt-zu-lachen.jpg" alt="Dr. Bastian Mayerhofer" width="120" height="120">
+	<div class="dh-stack" style="gap:10px">
+		<p class="dh-kicker">Geschrieben von</p>
+		<p class="dh-h3" style="font-family:var(--display);font-weight:800">Dr. Bastian Mayerhofer</p>
+		<p class="dh-small">Kognitionspsychologe mit Promotion in Psycholinguistik zur neurokognitiven Verarbeitung von Humor. Der wissenschaftliche Kopf hinter De:Humore.</p>
+		<a class="dh-link" href="https://bastianmayerhofer.com/ueber-mich/">Mehr über Bastian</a>
+	</div>
+</div>
+<!-- /wp:html --></article>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<div class="spacer"></div>
+<!-- /wp:html --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"dh-related dh-section","layout":{"type":"default"}} -->
+<section class="wp-block-group dh-related dh-section"><!-- wp:group {"className":"dh-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group dh-wrap"><!-- wp:html -->
+<div class="bl-list-head" style="margin-top:0"><div class="dh-stack"><p class="dh-kicker">Weiterlesen</p><h2 class="dh-h2" id="h-weiter">Noch ein Frosch gefällig?</h2></div><a class="dh-link" href="/blog/">Alle Beiträge</a></div>
+<!-- /wp:html -->
+
+<!-- wp:query {"queryId":81,"query":{"perPage":4,"pages":1,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"layout":{"type":"default"}} -->
+<div class="wp-block-query"><!-- wp:post-template {"className":"bl-grid dh-related-grid","layout":{"type":"default"}} -->
+<!-- wp:group {"className":"bl-card","layout":{"type":"default"}} -->
+<div class="wp-block-group bl-card"><!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","className":"bl-img"} /-->
+
+<!-- wp:post-date {"className":"bl-date"} /-->
+
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+
+<!-- wp:post-excerpt {"moreText":"Weiterlesen →","excerptLength":20} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<section class="dh-wrap" id="newsletter" style="margin-top: var(--section); margin-bottom: var(--section)" aria-labelledby="h-news">
+	<div class="dh-news">
+		<div class="dh-stack"><p class="dh-kicker">Newsletter</p><h2 class="dh-h2" id="h-news">Neue Beiträge, ohne Frosch-Spam.</h2>
+		<p class="dh-gift"><b>Gratis zur Anmeldung:</b> das E-Paper „10 Humor-Hacks für mehr Leichtigkeit“</p></div>
+		<div class="dh-form dh-form--mailpoet">[mailpoet_form id="1"]<p class="dh-small dh-muted">Abmelden geht jederzeit, Details in der <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>.</p></div>
+	</div>
+</section>
+<!-- /wp:html --></main>
+<!-- /wp:group -->
+
 
 <!-- wp:pattern {"slug":"dehumore/fuss"} /-->

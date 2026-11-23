@@ -1,5 +1,5 @@
 === De:Humore ===
-Version: 0.2.1
+Version: 0.2.2
 
 Block-Theme für De:Humore, erzeugt aus dem freigegebenen Prototyp (Übergabe 22.11.2026).
 Gestaltete Seiten kommen als Muster aus dem Theme; WordPress wählt die Vorlage über den Seiten-Slug:

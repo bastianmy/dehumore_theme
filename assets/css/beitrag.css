@@ -164,3 +164,23 @@
 :root body .dh-post-grid.no-toc { grid-template-columns: minmax(0, 760px); justify-content: center; }
 :root body .dh-post-grid.no-toc > .spacer { display: none; }
 :root body .dh-toc[hidden] { display: none; }
+
+/* ---------- Beitragsbilder: CI-Rahmen mit Farbschatten (Variante B, 23.11.2026) ---------- */
+:root body .bl-img, :root body .dh-cover-img {
+	--dh-schatten: var(--lime);
+	border: 2px solid var(--ink);
+	box-shadow: 8px 8px 0 var(--dh-schatten);
+	transition: transform .25s ease, box-shadow .25s ease;
+}
+:root body .wp-block-post:nth-child(3n+2) .bl-img { --dh-schatten: var(--peach); }
+:root body .wp-block-post:nth-child(3n+3) .bl-img { --dh-schatten: #c9c9f4; }
+:root body .dh-cover-img { --dh-schatten: var(--peach); margin-right: 8px; }
+:root body .bl-card:hover .bl-img, :root body .bl-feat-card:hover .bl-img, :root body .bl-img:focus-within {
+	transform: translate(-3px, -3px);
+	box-shadow: 13px 13px 0 var(--dh-schatten);
+}
+:root body .bl-card:hover .bl-img img, :root body .bl-feat-card:hover .bl-img img { transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) {
+	:root body .bl-img, :root body .bl-img img { transition: none; }
+	:root body .bl-card:hover .bl-img, :root body .bl-feat-card:hover .bl-img { transform: none; }
+}

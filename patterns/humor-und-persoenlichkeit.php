@@ -233,36 +233,36 @@
 		</div>
 		<div class="dh-slider" data-slider>
 			<div class="dh-track" tabindex="0" aria-label="Beitragsempfehlungen, seitlich wischen oder Pfeile nutzen">
-			<a class="dh-post" href="https://bastianmayerhofer.com/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">
-				<span class="img" style="--c: var(--peach)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">
+				<?php echo dehumore_beitragsbild( "/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/", "var(--peach)", "var(--lime)" ); ?>
 				<span class="meta"><i style="background: var(--peach)"></i>Humor trainieren</span>
 				<h3>Humor trainieren: Warum dein Gehirn dabei mehr lernt als beim nächsten Mindset-Seminar</h3>
 				<p>Humor ist keine fixe Persönlichkeitseigenschaft, sondern ein kognitiver Prozess.</p>
 				<span class="use">Für dich, wenn du deinen Humor weiterentwickeln willst.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/">
-				<span class="img" style="--c: var(--ink)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/">
+				<?php echo dehumore_beitragsbild( "/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/", "var(--ink)", "var(--peach)" ); ?>
 				<span class="meta"><i style="background: var(--ink)"></i>Grenzen von Humor</span>
 				<h3>Warum mehr Humor nicht automatisch besser ist</h3>
 				<p>Humor ist kein neutrales Wohlfühl-Werkzeug. Er wirkt nicht per se gut, sondern bedingt gut.</p>
 				<span class="use">Für Teams und Führung, die „mehr Humor“ wollen.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2026/08/21/homo-probabilisticus-wie-predictive-processing-unsere-wahrnehmung-praegt/">
-				<span class="img" style="--c: var(--lime)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2026/08/21/homo-probabilisticus-wie-predictive-processing-unsere-wahrnehmung-praegt/">
+				<?php echo dehumore_beitragsbild( "/2026/08/21/homo-probabilisticus-wie-predictive-processing-unsere-wahrnehmung-praegt/", "var(--lime)", "#c9c9f4" ); ?>
 				<span class="meta"><i style="background: var(--lime); border: 1.5px solid var(--ink)"></i>Kognition</span>
 				<h3>Homo Probabilisticus: Wie Predictive Processing unsere Wahrnehmung prägt</h3>
 				<p>Warum Überraschung, Vorurteile, Resilienz und ein guter Witz erstaunlich viel miteinander zu tun haben.</p>
 				<span class="use">Für dich, wenn du verstehen willst, wie Erwartungen dein Denken lenken.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2026/08/21/belief-revision-wenn-richtiges-denken-auf-falschen-annahmen-beruht/">
-				<span class="img" style="--c: var(--indigo)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2026/08/21/belief-revision-wenn-richtiges-denken-auf-falschen-annahmen-beruht/">
+				<?php echo dehumore_beitragsbild( "/2026/08/21/belief-revision-wenn-richtiges-denken-auf-falschen-annahmen-beruht/", "var(--indigo)", "var(--lime)" ); ?>
 				<span class="meta"><i style="background: var(--indigo)"></i>Kognition</span>
 				<h3>Belief Revision: Wenn richtiges Denken auf falschen Annahmen beruht</h3>
 				<p>Wie logisches Denken auf falschen Annahmen scheitert und was das mit Humor zu tun hat.</p>
 				<span class="use">Für dich, wenn du wissen willst, was beim Umdenken passiert.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2025/11/21/warum-wir-lachen-und-warum-humor-ein-evolutionaeres-trainingsprogramm-fuer-den-geist-ist/">
-				<span class="img" style="--c: var(--peach)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2025/11/21/warum-wir-lachen-und-warum-humor-ein-evolutionaeres-trainingsprogramm-fuer-den-geist-ist/">
+				<?php echo dehumore_beitragsbild( "/2025/11/21/warum-wir-lachen-und-warum-humor-ein-evolutionaeres-trainingsprogramm-fuer-den-geist-ist/", "var(--peach)", "var(--peach)" ); ?>
 				<span class="meta"><i style="background: var(--peach)"></i>Evolution und Soziales</span>
 				<h3>Humor und Evolution: Warum lachen wir …</h3>
 				<p>Was Kognitionswissenschaft, Neurobiologie und Philosophie über den Ursprung von Humor und Lachen sagen.</p>

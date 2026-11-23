@@ -127,7 +127,7 @@
 					<p class="fine">Nur für dich: Deine Notizen bleiben in diesem Browserfenster und werden weder gespeichert noch übertragen.</p>
 				</form>
 				<p class="dh-voice" data-voice><span class="mk">Eine alternative Lesart ist noch keine Pointe.</span> <span class="mk pt">Sie ist Material, mit dem du weiterarbeiten kannst.</span></p>
-				<a class="dh-link" style="color:var(--lime)" href="https://bastianmayerhofer.com/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">Mehr zum Training im Blog</a>
+				<a class="dh-link" style="color:var(--lime)" href="/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">Mehr zum Training im Blog</a>
 			</div>
 		</div>
 	</section>
@@ -177,7 +177,7 @@
 					<li>Was möchte ich mit diesem Humor erreichen?</li>
 					<li>Ist jetzt der passende Moment dafür?</li>
 				</ul>
-				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/#check">Humor Risk Check starten</a><a class="dh-link" href="https://bastianmayerhofer.com/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/">Wann Humor verletzend wirken kann</a></div>
+				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/#check">Humor Risk Check starten</a><a class="dh-link" href="/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/">Wann Humor verletzend wirken kann</a></div>
 			</div>
 		</div>
 	</section>
@@ -233,36 +233,36 @@
 		</div>
 		<div class="dh-slider" data-slider>
 			<div class="dh-track" tabindex="0" aria-label="Beitragsempfehlungen, seitlich wischen oder Pfeile nutzen">
-			<a class="dh-post" href="https://bastianmayerhofer.com/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">
-				<span class="img" style="--c: var(--peach)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">
+				<?php echo dehumore_beitragsbild( "/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/", "var(--peach)", "var(--lime)" ); ?>
 				<span class="meta"><i style="background: var(--peach)"></i>Humor trainieren</span>
 				<h3>Humor trainieren: Warum dein Gehirn dabei mehr lernt als beim nächsten Mindset-Seminar</h3>
 				<p>Humor ist keine fixe Persönlichkeitseigenschaft, sondern ein kognitiver Prozess.</p>
 				<span class="use">Für dich, wenn du Humor üben möchtest.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2025/12/22/ziele-erreichen-ohne-verkrampfung-neurobiologie-humor-und-motivation/">
-				<span class="img" style="--c: var(--lime)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2025/12/22/ziele-erreichen-ohne-verkrampfung-neurobiologie-humor-und-motivation/">
+				<?php echo dehumore_beitragsbild( "/2025/12/22/ziele-erreichen-ohne-verkrampfung-neurobiologie-humor-und-motivation/", "var(--lime)", "var(--peach)" ); ?>
 				<span class="meta"><i style="background: var(--lime); border: 1.5px solid var(--ink)"></i>Motivation</span>
 				<h3>Ziele erreichen ohne Verkrampfung – Neurobiologie, Humor und Motivation</h3>
 				<p>Warum Zielerreichung Ernst braucht, Lernen Humor braucht und wie unser Gehirn zwischen Fokus und Spiel wechseln muss.</p>
 				<span class="use">Für dich, wenn du zwischen Fokus und Leichtigkeit wechseln willst.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2026/08/26/prokrastination-ueberwinden-wie-humor-motivation-veraendern-kann/">
-				<span class="img" style="--c: var(--indigo)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2026/08/26/prokrastination-ueberwinden-wie-humor-motivation-veraendern-kann/">
+				<?php echo dehumore_beitragsbild( "/2026/08/26/prokrastination-ueberwinden-wie-humor-motivation-veraendern-kann/", "var(--indigo)", "#c9c9f4" ); ?>
 				<span class="meta"><i style="background: var(--indigo)"></i>Motivation</span>
 				<h3>Prokrastination überwinden: Wie Humor Motivation verändern kann</h3>
 				<p>Was Dopamin, Reframing und Humor damit zu tun haben, überhaupt erst ins Tun zu kommen.</p>
 				<span class="use">Für dich, wenn eine Aufgabe schon zu lange liegt.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2025/12/19/wenn-20-ernst-reichen-pareto-verbissenheit-und-die-kunst-nicht-hoeher-zu-springen-als-noetig/">
-				<span class="img" style="--c: var(--ink)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2025/12/19/wenn-20-ernst-reichen-pareto-verbissenheit-und-die-kunst-nicht-hoeher-zu-springen-als-noetig/">
+				<?php echo dehumore_beitragsbild( "/2025/12/19/wenn-20-ernst-reichen-pareto-verbissenheit-und-die-kunst-nicht-hoeher-zu-springen-als-noetig/", "var(--ink)", "var(--lime)" ); ?>
 				<span class="meta"><i style="background: var(--ink)"></i>Alltag</span>
 				<h3>Wenn 20 % Ernst reichen – Pareto, Verbissenheit und die Kunst, nicht höher zu springen als nötig</h3>
 				<p>Wie Humor, Leichtigkeit und das Pareto-Prinzip den Krampf rausnehmen können, ohne die Selbstdisziplin aufzugeben.</p>
 				<span class="use">Für dich, wenn Perfektionismus bremst.</span>
 			</a>
-			<a class="dh-post" href="https://bastianmayerhofer.com/2025/05/26/erziehungs-kungfu-wie-humor-mentale-flexibilitaet-und-kreative-loesungen-den-familienalltag-leichter-machen/">
-				<span class="img" style="--c: var(--lime)" aria-hidden="true"><em>Beitragsbild</em></span>
+			<a class="dh-post" href="/2025/05/26/erziehungs-kungfu-wie-humor-mentale-flexibilitaet-und-kreative-loesungen-den-familienalltag-leichter-machen/">
+				<?php echo dehumore_beitragsbild( "/2025/05/26/erziehungs-kungfu-wie-humor-mentale-flexibilitaet-und-kreative-loesungen-den-familienalltag-leichter-machen/", "var(--lime)", "var(--peach)" ); ?>
 				<span class="meta"><i style="background: var(--lime); border: 1.5px solid var(--ink)"></i>Familie</span>
 				<h3>Erziehungs-Kungfu: Wie Humor, mentale Flexibilität und kreative Lösungen den Familienalltag leichter machen</h3>
 				<p>Wenn statt Machtkampf eine Lösung auftaucht, die die Situation verwandelt.</p>

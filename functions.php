@@ -24,6 +24,7 @@ function dehumore_seite() {
 		array( 'humor-und-persoenlichkeit', true, is_page( 'humor-und-persoenlichkeit' ) ),
 		array( 'humor-in-organisationen', true, is_page( 'humor-in-organisationen' ) ),
 		array( 'ueber', true, is_page( 'ueber' ) ),
+		array( 'blog', true, is_page( 'blog' ) || is_home() ),
 	);
 	foreach ( $seiten as $s ) {
 		if ( $s[2] ) {
@@ -39,7 +40,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	$seite  = dehumore_seite();
 	$script = 'site';
 	if ( $seite ) {
-		$script = $seite[0];
+		$script = in_array( $seite[0], array( 'blog' ), true ) ? 'site' : $seite[0];
 		if ( $seite[1] ) {
 			wp_enqueue_style( 'dehumore-' . $seite[0], get_theme_file_uri( 'assets/css/' . $seite[0] . '.css' ), array( 'dehumore' ), $v );
 		}

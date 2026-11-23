@@ -172,3 +172,17 @@ function dehumore_beitragsbild( $pfad, $farbe, $schatten ) {
 	}
 	return '<span class="img dh-rahmen" style="' . esc_attr( $stil ) . '" aria-hidden="true"><em>Beitragsbild</em></span>';
 }
+
+/**
+ * Weiterleitungen für umgezogene Adressen (301, pfadgenau).
+ */
+add_action( 'template_redirect', function () {
+	$ziele = array(
+		'humor-risk-check-test' => '/humor-risk-check/',
+	);
+	$pfad = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+	if ( isset( $ziele[ $pfad ] ) ) {
+		wp_safe_redirect( home_url( $ziele[ $pfad ] ), 301 );
+		exit;
+	}
+}, 0 );

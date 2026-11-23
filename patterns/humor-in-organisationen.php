@@ -92,8 +92,8 @@
 					<div class="dh-stat"><b>–36%</b><span>Stress und Burnout-Tendenzen</span><small>niedriger bei mehr positivem Humor</small></div>
 					<div class="dh-stat"><b>+21%</b><span>Teamleistung</span><small>höher bei mehr positivem Humor</small></div>
 				</div>
-				<p class="dh-stats-explain"><b>So sind die Werte zu lesen:</b> Untersucht wurde, wie positiver Humor am Arbeitsplatz mit diesen Merkmalen zusammenhängt. Die Prozentwerte sind aus Effektstärken umgerechnet (<span class="dh-ph">[PLATZHALTER – Umrechnungsmethode benennen]</span>). Sie beschreiben Zusammenhänge, keine Ursache und keine garantierten Effekte eines Trainings.</p>
-				<p class="dh-stats-src">Quellen: Meta-Analysen und Reviews der Organisationspsychologie, u. a. Mesmer-Magnus et al., 2012; Martin, 2007; Cann &amp; Kuiper, 2014.</p>
+				<p class="dh-stats-explain"><b>So sind die Werte zu lesen:</b> Untersucht wurde, wie positiver Humor am Arbeitsplatz mit diesen Merkmalen zusammenhängt. Die Prozentzahlen entsprechen transformierten Effektstärken. Sie beschreiben Zusammenhänge, keine Ursache und keine garantierten Effekte eines Trainings.</p>
+				<p class="dh-stats-src">Werte basieren auf Meta-Analysen und Reviews der Organisationspsychologie (u. a. Mesmer-Magnus et al., 2012; Martin, 2007; Cann &amp; Kuiper, 2014).</p>
 				<p class="og-caveat">Welche Wirkung Humor in Ihrer Organisation hat, hängt von Personen, Beziehungen, Ziel, Situation und Kultur ab. Genau dort setzen die Formate an.</p>
 			</div>
 		</div>

@@ -121,3 +121,40 @@ foreach ( array( 'wpseo_opengraph_desc', 'wpseo_twitter_description' ) as $dehum
 		return $leer ? ( dehumore_meta_beschreibung() ?: $desc ) : $desc;
 	} );
 }
+
+/**
+ * Markenschreibweise: „De:Humore“ mit fettem „Humore“, überall im sichtbaren Text
+ * (Theme, Seiten, Beiträge). Attribute, Head, Skripte und Styles bleiben unverändert.
+ */
+function dehumore_marke_fett( $html ) {
+	$body = stripos( $html, '<body' );
+	if ( false === $body || false === strpos( $html, 'De:Humore' ) ) {
+		return $html;
+	}
+	$kopf  = substr( $html, 0, $body );
+	$teile = preg_split( '/(<[^>]*>)/', substr( $html, $body ), -1, PREG_SPLIT_DELIM_CAPTURE );
+	$skip  = '';
+	foreach ( $teile as $i => $teil ) {
+		if ( '' === $teil ) {
+			continue;
+		}
+		if ( '<' === $teil[0] ) {
+			if ( '' === $skip && preg_match( '/^<(script|style|textarea|title|svg|noscript)\b/i', $teil, $m ) ) {
+				$skip = strtolower( $m[1] );
+			} elseif ( '' !== $skip && preg_match( '/^<\/' . $skip . '\b/i', $teil ) ) {
+				$skip = '';
+			}
+			continue;
+		}
+		if ( '' === $skip && false !== strpos( $teil, 'De:Humore' ) ) {
+			$teile[ $i ] = str_replace( 'De:Humore', 'De:<b class="dh-marke">Humore</b>', $teil );
+		}
+	}
+	return $kopf . implode( '', $teile );
+}
+add_action( 'template_redirect', function () {
+	if ( is_admin() || is_feed() || wp_doing_ajax() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+		return;
+	}
+	ob_start( 'dehumore_marke_fett' );
+}, 1 );

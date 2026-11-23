@@ -297,7 +297,7 @@
 			<li id="q3">Ruch, W. (1992). Assessment of appreciation of humor: Studies with the 3 WD humor test. In C. D. Spielberger &amp; J. N. Butcher (Hrsg.), <em>Advances in Personality Assessment</em> (Bd. 9, S. 27–75). Erlbaum.</li>
 			<li id="q4">Plessen, C. Y. et al. (2020). Humor styles and personality: A systematic review and meta-analysis on the relations between humor styles and the Big Five personality traits. <em>Personality and Individual Differences, 154</em>, 109676. <a href="https://doi.org/10.1016/j.paid.2019.109676">DOI: 10.1016/j.paid.2019.109676</a></li>
 			<li id="q5">Aaker, J. &amp; Bagdonas, N. (2021). <em>Humor, Seriously: Why Humor Is a Secret Weapon in Business and Life</em>. Currency. Weiterführende, praxisnahe Perspektive; nicht Grundlage der De:Humore-Reflexionshilfe.</li>
-			<li id="q6">Associations between personality and humor structure appreciation. <em>Current Psychology</em> (2023). Stichprobe: 509 Teilnehmende aus Tschechien. <a href="https://doi.org/10.1007/s12144-023-04610-4">DOI: 10.1007/s12144-023-04610-4</a> <span class="dh-ph">[PLATZHALTER – Autor:innen ergänzen]</span></li>
+			<li id="q6">Associations between personality and humor structure appreciation. <em>Current Psychology</em> (2023). Stichprobe: 509 Teilnehmende aus Tschechien. <a href="https://doi.org/10.1007/s12144-023-04610-4">DOI: 10.1007/s12144-023-04610-4</a> Autor:innen: Sulejmanov, Dostál, Grundman u. a., mit Willibald Ruch.</li>
 		</ol>
 	</section>
 

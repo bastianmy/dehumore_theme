@@ -288,7 +288,7 @@
 					<li>Hinweise, wenn neue Formate starten</li>
 				</ul>
 			</div>
-			<div class="dh-form dh-form--mailpoet">[mailpoet_form id="1"]<p class="dh-small dh-muted">Abmelden geht jederzeit, Details in der <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>.</p></div>
+			<div class="dh-form dh-form--mailpoet">[dehumore_newsletter]<p class="dh-small dh-muted">Abmelden geht jederzeit, Details in der <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>.</p></div>
 		</div>
 	</section>
 

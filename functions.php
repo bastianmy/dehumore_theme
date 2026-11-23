@@ -53,3 +53,41 @@ add_action( 'init', function () {
 	register_block_style( 'core/paragraph', array( 'name' => 'stimme', 'label' => 'Bastians Stimme' ) );
 	register_block_pattern_category( 'dehumore', array( 'label' => 'De:Humore' ) );
 } );
+
+/**
+ * Newsletter-Formular von MailPoet.
+ * Shortcodes werden in Mustern (Patterns) und HTML-Blöcken nicht ausgeführt,
+ * deshalb rendert das Theme das Formular selbst. Genommen wird Formular 1,
+ * sonst das neueste aktive MailPoet-Formular.
+ */
+function dehumore_newsletter_form_id() {
+	global $wpdb;
+	$table = $wpdb->prefix . 'mailpoet_forms';
+	if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) ) !== $table ) {
+		return 0;
+	}
+	$ids = $wpdb->get_col( "SELECT id FROM {$table} WHERE deleted_at IS NULL AND (status = 'enabled' OR status IS NULL) ORDER BY id DESC" );
+	$ids = array_map( 'intval', (array) $ids );
+	if ( in_array( 1, $ids, true ) ) {
+		return 1;
+	}
+	return $ids ? $ids[0] : 0;
+}
+
+function dehumore_newsletter_form() {
+	$id   = dehumore_newsletter_form_id();
+	$html = $id ? do_shortcode( '[mailpoet_form id="' . $id . '"]' ) : '';
+	if ( '' === trim( wp_strip_all_tags( $html, true ) ) && false === strpos( $html, '<form' ) ) {
+		return '<!-- dehumore: kein MailPoet-Formular gefunden (id ' . $id . ') --><p><a class="dh-btn" href="/kontakt/">Newsletter per Kontakt anfragen</a></p>';
+	}
+	return '<!-- dehumore: MailPoet-Formular ' . $id . ' -->' . $html;
+}
+add_shortcode( 'dehumore_newsletter', 'dehumore_newsletter_form' );
+
+/* Sicherheitsnetz: Shortcodes in HTML-Blöcken von Theme-Vorlagen ausführen. */
+add_filter( 'render_block_core/html', function ( $content ) {
+	if ( false !== strpos( $content, '[dehumore_newsletter' ) || false !== strpos( $content, '[mailpoet_form' ) ) {
+		$content = do_shortcode( $content );
+	}
+	return $content;
+} );

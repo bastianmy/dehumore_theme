@@ -293,9 +293,6 @@
     }
    },
    "heading": {
-    "color": {
-     "text": "var(--wp--preset--color--ink)"
-    },
     "typography": {
      "fontFamily": "var(--wp--preset--font-family--montserrat)",
      "fontWeight": "800",

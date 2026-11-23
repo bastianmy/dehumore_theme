@@ -20,7 +20,6 @@ function dehumore_seite() {
 		array( 'startseite', false, is_front_page() ),
 		array( 'humor-verstehen', true, is_page( 'humor-verstehen' ) ),
 		array( 'humor-risk-check', true, is_page_template( 'page-humor-risk-check' ) || is_page( 'humor-risk-check' ) ),
-		array( 'humor-trainieren', true, is_page( 'humor-kann-man-trainieren' ) ),
 		array( 'humor-und-persoenlichkeit', true, is_page( 'humor-und-persoenlichkeit' ) ),
 		array( 'humor-in-organisationen', true, is_page( 'humor-in-organisationen' ) ),
 		array( 'ueber', true, is_page( 'ueber' ) ),

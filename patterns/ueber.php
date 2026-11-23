@@ -58,8 +58,6 @@
 			<h2 class="dh-h2 dh-rise" id="h-weiter">Such dir deinen Einstieg aus.</h2>
 		</div>
 		<div class="ub-ways">
-			<a class="ub-way dh-rise" href="/humor-verstehen/"><b>Humor verstehen</b><span>Was die Forschung über Humor erklärt.</span></a>
-			<a class="ub-way dh-rise" href="/humor-kann-man-trainieren/"><b>Humor trainieren</b><span>Perspektiven wechseln und humorvolle Möglichkeiten entdecken.</span></a>
 			<a class="ub-way dh-rise" href="/humor-und-persoenlichkeit/"><b>Humor und Persönlichkeit</b><span>Was wir lustig finden und wie wir Humor verwenden.</span></a>
 			<a class="ub-way peach dh-rise" href="/humor-risk-check/"><b>Humor Risk Check</b><span>Wann ein Witz verbindet und wann er verletzen kann.</span></a>
 			<a class="ub-way dark dh-rise" href="/humor-in-organisationen/"><b>Für Organisationen</b><span>Trainings, Workshops und Keynotes für Teams und Führung.</span></a>

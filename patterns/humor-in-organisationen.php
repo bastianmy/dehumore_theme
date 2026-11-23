@@ -77,7 +77,6 @@
 				<p class="dh-kicker">Forschungsstand</p>
 				<h2 id="h-forschung">Was die Forschung zeigt – und was nicht.</h2>
 				<p>Meta-Analysen finden Zusammenhänge zwischen positivem Humor und Merkmalen wie Arbeitszufriedenheit, Commitment oder Teamleistung. Das sind Korrelationen. Sie zeigen nicht, dass ein Training diese Werte automatisch erzeugt.</p>
-				<p><a class="dh-link" style="color:var(--lime)" href="/humor-verstehen/">Wie De:Humore mit Forschung arbeitet: Humor verstehen</a></p>
 				<ul class="dh-effects">
 					<li>Humor kann verbinden.</li>
 					<li>Humor kann Status markieren.</li>

@@ -16,7 +16,7 @@
 				<h1 id="h-hero">Mehr <span class="hl">Leichtigkeit</span>, wenn’s ernst wird.</h1>
 				<p class="dh-lead">De:Humore verbindet Humorforschung mit Übungen für deinen Alltag und Trainings für Teams. Entdecke, wie Humor entsteht, wie du deinen Blick dafür schärfst und worauf es ankommt, wenn du ihn einsetzt.</p>
 				<div class="dh-actions">
-					<a class="dh-btn" href="/humor-verstehen/">Wissen entdecken</a>
+					<a class="dh-btn" href="/blog/">Beiträge lesen</a>
 					<a class="dh-btn dh-btn--ghost" href="/humor-in-organisationen/">Für Organisationen</a>
 				</div>
 				<p class="dh-sender"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/beginnt-zu-lachen.jpg" ) ); ?>" alt="" width="44" height="44"><span>Eine wissenschaftlich fundierte Plattform über die <del class="dh-x">zweitschönste</del> <ins class="dh-y">drittschönste</ins> Sache der Welt. Von <strong>Dr. Bastian Mayerhofer</strong>.</span></p>
@@ -35,17 +35,17 @@
 			<h2 class="dh-h2 dh-rise" id="h-wege">Wo möchtest du anfangen?</h2>
 		</div>
 		<div class="dh-paths">
-			<a class="dh-path dh-rise" href="/humor-verstehen/">
+			<a class="dh-path dh-rise" href="/blog/">
 				<span class="ic" style="background: var(--lime)"><svg viewBox="0 0 32 32" fill="none" stroke="#0b303b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 6c-2-2.5-7-2-8 1.5C5 8 4 11 5.5 13 4 15 4.5 18.5 7 19.5c0 3 3.5 5.5 6.5 4.5L16 26V6Z"/><path d="M16 6c2-2.5 7-2 8 1.5 3 .5 4 3.5 2.5 5.5 1.5 2 1 5.5-1.5 6.5 0 3-3.5 5.5-6.5 4.5L16 26"/></svg></span>
 				<h3>Humor verstehen</h3>
-				<p>Du willst wissen, warum wir eigentlich lachen? Hier findest du Forschung, Erklärungen und Geschichten dazu, wie Humor und Denken zusammenhängen.</p>
-				<span class="dh-link">Zum Wissen</span>
+				<p>Du willst wissen, warum wir eigentlich lachen? Im Blog findest du Forschung, Erklärungen und Geschichten dazu, wie Humor und Denken zusammenhängen.</p>
+				<span class="dh-link">Zu den Beiträgen</span>
 			</a>
-			<a class="dh-path dh-rise" href="/humor-kann-man-trainieren/">
-				<span class="ic" style="background: var(--peach)"><svg viewBox="0 0 32 32" fill="none" stroke="#0b303b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22c4-1 6-5 6-9m0 0c0-3 2-6 5-6s5 3 5 6-2 5-5 5"/><path d="M16 18v8M12 26h8"/></svg></span>
-				<h3>Humor trainieren</h3>
-				<p>Du willst Situationen öfter mit einem Augenzwinkern sehen? Mit kurzen Übungen probierst du aus, wie sich ein Perspektivwechsel anfühlt.</p>
-				<span class="dh-link">Übungen ansehen</span>
+			<a class="dh-path dh-rise" href="/humor-risk-check/">
+				<span class="ic" style="background: var(--peach)"><svg viewBox="0 0 32 32" fill="none" stroke="#0b303b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4 5 8v7c0 6.5 4.6 11.5 11 13 6.4-1.5 11-6.5 11-13V8z"/><path d="m11.5 16 3 3 6-6"/></svg></span>
+				<h3>Humor einschätzen</h3>
+				<p>Du bist unsicher, ob ein Witz passt? Der Humor Risk Check zeigt dir in wenigen Fragen, wann Humor verbindet und wann er verletzen kann.</p>
+				<span class="dh-link">Check starten</span>
 			</a>
 			<a class="dh-path dh-rise" href="/humor-in-organisationen/">
 				<span class="ic" style="background: var(--lime)"><svg viewBox="0 0 32 32" fill="none" stroke="#0b303b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h20v13H13l-5 4v-4H6z"/><path d="M11 13h10M11 17h6"/></svg></span>
@@ -107,8 +107,8 @@
 					</div>
 				</div>
 				<div class="dh-twoways">
-					<a class="dh-way" href="/humor-verstehen/"><span class="dh-kicker">Verstehen</span><b>Tiefer ins Wissen</b><span class="d">Humortheorien, Forschung und Beiträge, die erklären, warum wir lachen.</span><span class="dh-link">Zum Wissen</span></a>
-					<a class="dh-way dh-way--try" href="/humor-kann-man-trainieren/"><span class="dh-kicker">Selbst ausprobieren <em class="soon">geplant</em></span><b>Garden-Path-Trainer</b><span class="d">Versteckte Doppeldeutungen entdecken und eigene Pointen bauen, allein oder mit KI-Unterstützung.</span><span class="dh-link">Humor trainieren</span></a>
+					<a class="dh-way" href="/blog/"><span class="dh-kicker">Verstehen</span><b>Tiefer ins Wissen</b><span class="d">Humortheorien, Forschung und Beiträge, die erklären, warum wir lachen.</span><span class="dh-link">Zum Blog</span></a>
+					<div class="dh-way dh-way--try"><span class="dh-kicker">Selbst ausprobieren <em class="soon">geplant</em></span><b>Garden-Path-Trainer</b><span class="d">Versteckte Doppeldeutungen entdecken und eigene Pointen bauen, allein oder mit KI-Unterstützung.</span></div>
 				</div>
 			</div>
 		</div>
@@ -186,7 +186,7 @@
 				</div>
 				<div class="dh-actions">
 					<a class="dh-btn" href="https://calendar.app.google/uagqHNJ56Vd2u1ma7" target="_blank" rel="noopener">15 Minuten kostenlos kennenlernen</a>
-					<a class="dh-link" href="/humor-kann-man-trainieren/">Lernangebote entdecken</a>
+					<a class="dh-link" href="/blog/">Beiträge und Übungen im Blog</a>
 				</div>
 			</div>
 		</div>
@@ -297,7 +297,7 @@
 		<h2 class="dh-h2" id="h-weiter">Wohin als Nächstes?</h2>
 		<div class="dh-onward">
 			<a href="/humor-in-organisationen/"><span class="dh-kicker">Für Organisationen</span><b>Ein Format für dein Team finden</b><span>Trainings, Workshops, Keynotes und Coaching.</span></a>
-			<a href="/humor-verstehen/"><span class="dh-kicker">Wissen</span><b>Tiefer in die Forschung</b><span>Blog, Themen-Dossiers und Quellen.</span></a>
+			<a href="/blog/"><span class="dh-kicker">Blog</span><b>Tiefer in die Forschung</b><span>Beiträge zu Humor, Denken und Alltag.</span></a>
 			<a href="/kontakt/"><span class="dh-kicker">Kontakt</span><b>Direkt schreiben</b><span>bastian@dehumore.com</span></a>
 		</div>
 	</section>

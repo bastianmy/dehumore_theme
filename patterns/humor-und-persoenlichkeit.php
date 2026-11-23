@@ -185,7 +185,7 @@
 				<li class="wide">Was möchtest du mit deinem Humor in einem konkreten Moment erreichen?</li>
 			</ol>
 			<div class="hp-reflect-foot">
-				<p>Es geht nicht darum, dich in eine Kategorie einzuordnen. Die Fragen sollen dir helfen, Vorlieben, Gewohnheiten und mögliche Wirkungen bewusster wahrzunehmen. Wenn du einen anderen Blickwinkel ausprobieren möchtest: <a class="dh-link" href="/humor-kann-man-trainieren/">Perspektivwechsel im Alltag üben</a></p>
+				<p>Es geht nicht darum, dich in eine Kategorie einzuordnen. Die Fragen sollen dir helfen, Vorlieben, Gewohnheiten und mögliche Wirkungen bewusster wahrzunehmen. Wenn du einen anderen Blickwinkel ausprobieren möchtest:</p>
 				<div class="hp-book"><b>Weiterlesen: eine praxisnahe Perspektive</b>Jennifer Aaker und Naomi Bagdonas beschreiben in <em>Humor, Seriously</em> ein eigenes, alltagsnahes Modell für Humor im Beruf. <a href="https://www.penguinrandomhouse.com/books/611544/humor-seriously-by-jennifer-aaker-and-naomi-bagdonas/">Zum Buch</a></div>
 			</div>
 		</div>
@@ -309,7 +309,6 @@
 				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/">Humor Risk Check starten</a></div>
 			</div>
 			<ul>
-				<li><a class="dh-link" href="/humor-kann-man-trainieren/">Humortraining entdecken</a></li>
 				<li><a class="dh-link" href="/humor-in-organisationen/">Humortraining für Organisationen ansehen</a></li>
 				<li><a class="dh-link" href="<?php echo esc_url( home_url( "/#newsletter" ) ); ?>">Newsletter abonnieren</a></li>
 			</ul>

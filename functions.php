@@ -91,3 +91,33 @@ add_filter( 'render_block_core/html', function ( $content ) {
 	}
 	return $content;
 } );
+
+/**
+ * Meta-Beschreibungen für die gestalteten Seiten.
+ * Greift nur, wenn in Yoast für die Seite keine eigene Beschreibung steht.
+ */
+function dehumore_meta_beschreibung() {
+	$texte = array(
+		'startseite'                => 'De:Humore macht Humorforschung verständlich: warum wir lachen, wann Humor verletzt und wie du ihn im Alltag und im Team bewusst einsetzt.',
+		'humor-risk-check'          => 'Wann verbindet ein Witz, wann verletzt er? Der Humor Risk Check hilft dir, einen konkreten Scherz anhand von fünf Dimensionen einzuschätzen.',
+		'humor-und-persoenlichkeit' => 'Was sagt unser Humor über uns aus? Erfahre, wie Humorstile, Humorpräferenzen und Persönlichkeit zusammenhängen – und warum Humor keine festen Persönlichkeitstypen verrät.',
+		'humor-in-organisationen'   => 'Trainings, Workshops und Keynotes zu Humor in Führung, Kommunikation und Teams: forschungsbasiert, praxisnah, mit Dr. Bastian Mayerhofer.',
+		'ueber'                     => 'De:Humore ist die Plattform von Dr. Bastian Mayerhofer für Humorforschung und ihre Anwendung: verständlich, differenziert und zum Ausprobieren.',
+		'blog'                      => 'Der Blog von De:Humore: Beiträge aus Humorforschung und Kognitionswissenschaft, verständlich erklärt und mit Impulsen für Kommunikation und Alltag.',
+	);
+	$seite = dehumore_seite();
+	if ( ! $seite || ! isset( $texte[ $seite[0] ] ) ) {
+		return '';
+	}
+	return $texte[ $seite[0] ];
+}
+add_filter( 'wpseo_metadesc', function ( $desc ) {
+	$leer = ! is_string( $desc ) || '' === trim( $desc ) || trim( $desc ) === trim( get_bloginfo( 'description' ) );
+	return $leer ? ( dehumore_meta_beschreibung() ?: $desc ) : $desc;
+} );
+foreach ( array( 'wpseo_opengraph_desc', 'wpseo_twitter_description' ) as $dehumore_filter ) {
+	add_filter( $dehumore_filter, function ( $desc ) {
+		$leer = ! is_string( $desc ) || '' === trim( $desc ) || trim( $desc ) === trim( get_bloginfo( 'description' ) );
+		return $leer ? ( dehumore_meta_beschreibung() ?: $desc ) : $desc;
+	} );
+}

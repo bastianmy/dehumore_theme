@@ -14,7 +14,7 @@
 				<p class="dh-kicker">Über De:Humore</p>
 				<h1 id="h-ub">Humor als Fenster auf den menschlichen <span class="hl">Geist</span>.</h1>
 				<p class="dh-lead">De:Humore ist die Plattform von Dr. Bastian Mayerhofer für Humorforschung und ihre Anwendung. Hier erfährst du, was Humor über unser Denken verrät, wann er verbindet und wann er verletzt, und wie du ihn im Alltag und im Beruf bewusster einsetzt.</p>
-				<div class="dh-actions"><a class="dh-btn" href="<?php echo esc_url( home_url( "/#weiter" ) ); ?>">Wo du anfangen kannst</a><a class="dh-link" href="<?php echo esc_url( home_url( "/#kopf" ) ); ?>">Der Kopf dahinter</a></div>
+				<div class="dh-actions"><a class="dh-btn" href="#weiter">Wo du anfangen kannst</a><a class="dh-link" href="#kopf">Der Kopf dahinter</a></div>
 			</div>
 			<div class="ub-logo" aria-hidden="true"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/dehumore-logo.png" ) ); ?>" alt=""></div>
 		</div>

@@ -15,8 +15,8 @@
 				<h1 id="h-rc">Wann kann Humor <span class="hl">verletzen</span>?</h1>
 				<p class="dh-lead">Der Humor Risk Check hilft dir einzuschätzen, wie groß das Potenzial eines Witzes ist, andere zu verletzen. Statt eines pauschalen Urteils zeigt er, welche Faktoren dabei eine Rolle spielen – vom Thema über die Absicht bis zur konkreten Situation.</p>
 				<div class="dh-actions">
-					<a class="dh-btn" href="<?php echo esc_url( home_url( "/#check" ) ); ?>">Humor Risk Check starten</a>
-					<a class="dh-link" href="<?php echo esc_url( home_url( "/#so-gehts" ) ); ?>">So funktioniert’s</a>
+					<a class="dh-btn" href="#check">Humor Risk Check starten</a>
+					<a class="dh-link" href="#so-gehts">So funktioniert’s</a>
 				</div>
 				<span class="dh-status" style="background: var(--lime)"><i></i>Wissenschaftlich fundierter Prototyp</span>
 			</div>

@@ -15,8 +15,8 @@
 				<h1 id="h-org">Humor im Unternehmen <span class="hl">bewusst</span> einsetzen.</h1>
 				<p class="dh-lead">Wissenschaftlich fundierte Trainings, Workshops und Keynotes für Führungskräfte und Teams – zu Humor, Kommunikation und Zusammenarbeit.</p>
 				<div class="dh-actions">
-					<a class="dh-btn" href="<?php echo esc_url( home_url( "/#anfrage" ) ); ?>">Vorgespräch anfragen</a>
-					<a class="dh-link" href="<?php echo esc_url( home_url( "/#themen" ) ); ?>">Themen und Formate ansehen</a>
+					<a class="dh-btn" href="#anfrage">Vorgespräch anfragen</a>
+					<a class="dh-link" href="#themen">Themen und Formate ansehen</a>
 				</div>
 				<p class="og-sender"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/portraet.jpg" ) ); ?>" alt="" width="1400" height="934">De:Humore ist die Plattform von Dr. Bastian Mayerhofer für Humorforschung und praktische Anwendung.</p>
 			</div>
@@ -48,7 +48,7 @@
 				<span class="n">01</span>
 				<h3>Humor in der Führung</h3>
 				<p>Humor ist Teil von Kommunikation und Beziehung. Wie beeinflussen Hierarchie, Vertrauen, Zeitpunkt und Situation, wie eine Äußerung ankommt? Und was ändert sich, wenn die Person mit dem meisten Einfluss den Scherz macht?</p>
-				<a class="dh-link" href="<?php echo esc_url( home_url( "/#anfrage" ) ); ?>">Thema für Ihre Führungskräfte anfragen</a>
+				<a class="dh-link" href="#anfrage">Thema für Ihre Führungskräfte anfragen</a>
 			</article>
 			<article class="og-field dh-rise">
 				<span class="n">02</span>
@@ -62,7 +62,7 @@
 				<p>Wie können Teams Fehler und Missgeschicke aus einer neuen Perspektive betrachten? Eine mögliche Übung ist eine Reflexionsfrage wie diese:</p>
 				<p class="og-q dh-voice" data-voice>„<span class="mk">Was war unser größter Fehler in den letzten zwei Wochen –</span> <span class="mk pt">und wie hätten wir ihn noch schlimmer machen können?</span>“</p>
 				<p class="og-q-note dh-small">Eine Übung, die Abstand schaffen und ins Gespräch führen kann. Ob sie passt, hängt vom Team und von der Situation ab.</p>
-				<a class="dh-link" href="<?php echo esc_url( home_url( "/#formate" ) ); ?>">Passendes Format finden</a>
+				<a class="dh-link" href="#formate">Passendes Format finden</a>
 			</article>
 			<article class="og-field dh-rise">
 				<span class="n">04</span>
@@ -168,7 +168,7 @@
 			<div class="og-format dh-rise"><span class="ic" style="--c: var(--lime)"><svg viewBox="0 0 24 24" fill="none" stroke="#0b303b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><h3>Coaching</h3><p>Einzelbegleitung, die an Ihrem eigenen Umgang mit Humor ansetzt.</p><p class="meta">Für Führungskräfte und Einzelpersonen, auch über Ihre Organisation buchbar.</p></div>
 		</div>
 		<p class="og-tailor dh-rise">Online oder in Präsenz, bevorzugt in Präsenz. Dauer, Gruppengröße und Ablauf stimmen wir passend zu Ihrem Anliegen und Format ab.</p>
-		<div class="dh-actions dh-rise" style="margin-top:24px"><a class="dh-btn" href="<?php echo esc_url( home_url( "/#anfrage" ) ); ?>">Format für Ihre Organisation besprechen</a></div>
+		<div class="dh-actions dh-rise" style="margin-top:24px"><a class="dh-btn" href="#anfrage">Format für Ihre Organisation besprechen</a></div>
 	</section>
 
 	<section class="dh-wrap" aria-labelledby="h-about">

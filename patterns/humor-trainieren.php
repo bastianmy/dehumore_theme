@@ -16,8 +16,8 @@
 				<p class="dh-lead">Wer übt, Situationen aus einer anderen Perspektive zu betrachten, entdeckt eher überraschende, leichte oder humorvolle Seiten des Alltags. So wächst ein Repertoire, auf das du in Gesprächen und im Beruf zurückgreifen kannst.</p>
 				<p class="tr-lead2">Nicht, um ständig witzig sein zu müssen. Sondern um mehr Möglichkeiten zu sehen.</p>
 				<div class="dh-actions">
-					<a class="dh-btn" href="<?php echo esc_url( home_url( "/#miniuebung" ) ); ?>">Miniübung ausprobieren</a>
-					<a class="dh-link" href="<?php echo esc_url( home_url( "/#angebote" ) ); ?>">Humortraining für Alltag und Beruf</a>
+					<a class="dh-btn" href="#miniuebung">Miniübung ausprobieren</a>
+					<a class="dh-link" href="#angebote">Humortraining für Alltag und Beruf</a>
 				</div>
 			</div>
 			<div class="tr-illu" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
@@ -146,14 +146,14 @@
 					<small>Der Ärger darf bleiben. Der zweite Blick schafft etwas Abstand zur Situation.</small>
 				</div>
 				<div class="tr-prose dh-rise">
-					<p>Die Forschung untersucht dazu sehr unterschiedliche Methoden. Was mit einer Methode gefunden wurde, lässt sich nicht einfach auf eine andere übertragen. De:Humore versteht Humor als eine mögliche Ressource, die ergänzt, was Menschen bereits an Bewältigungsstrategien nutzen. Er ersetzt keine notwendige Unterstützung, Problemlösung oder Behandlung. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q4" ) ); ?>">Martin &amp; Ford, 2018</a>)</span></p>
+					<p>Die Forschung untersucht dazu sehr unterschiedliche Methoden. Was mit einer Methode gefunden wurde, lässt sich nicht einfach auf eine andere übertragen. De:Humore versteht Humor als eine mögliche Ressource, die ergänzt, was Menschen bereits an Bewältigungsstrategien nutzen. Er ersetzt keine notwendige Unterstützung, Problemlösung oder Behandlung. <span class="ref">(<a href="#q4">Martin &amp; Ford, 2018</a>)</span></p>
 				</div>
 			</div>
 			<div class="tr-diff">
 				<p class="dh-kicker dh-rise">Welche Methode was zeigt</p>
-				<div class="dh-rise"><b>Humorvolle Neubewertung im Labor</b><p><span class="tr-tag bef">Befund</span>Teilnehmende sollten belastende Bilder humorvoll umdeuten. Danach berichteten sie kurzfristig weniger negative Gefühle als ohne diese Umdeutung, vor allem bei wohlwollendem statt spöttischem Humor. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q6" ) ); ?>">Samson &amp; Gross, 2012</a>; <a href="<?php echo esc_url( home_url( "/#q7" ) ); ?>">Kugler &amp; Kuhbandner, 2015</a>)</span> Untersucht wurden kurze Laborsituationen, nicht Stress im Alltag.</p></div>
-				<div class="dh-rise"><b>Interventionen, die Lachen auslösen</b><p><span class="tr-tag bef">Befund</span>Etwa Lachyoga, Lachübungen oder Comedy-Filme. Eine Meta-Analyse findet Hinweise auf positive Effekte auf das psychische Befinden. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">van der Wal &amp; Kok, 2019</a>)</span> Eine weitere fand nach Interventionen mit spontanem Lachen eine stärkere Abnahme des Stresshormons Cortisol als in Kontrollgruppen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q2" ) ); ?>">Kramer &amp; Leitão, 2023</a>)</span> Die Studien unterscheiden sich stark in Methode und Qualität.</p></div>
-				<div class="dh-rise"><b>Humor als tägliche Praxis</b><p><span class="tr-tag off">Offen</span>Humorvolle Seiten wahrnehmen und Situationen neu rahmen, wie in den Übungen oben. Programme, die solche Gewohnheiten üben, werden untersucht. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q3" ) ); ?>">Ruch et al., 2018</a>)</span> Ihre Wirkung auf Stress und Resilienz ist noch wenig erforscht.</p></div>
+				<div class="dh-rise"><b>Humorvolle Neubewertung im Labor</b><p><span class="tr-tag bef">Befund</span>Teilnehmende sollten belastende Bilder humorvoll umdeuten. Danach berichteten sie kurzfristig weniger negative Gefühle als ohne diese Umdeutung, vor allem bei wohlwollendem statt spöttischem Humor. <span class="ref">(<a href="#q6">Samson &amp; Gross, 2012</a>; <a href="#q7">Kugler &amp; Kuhbandner, 2015</a>)</span> Untersucht wurden kurze Laborsituationen, nicht Stress im Alltag.</p></div>
+				<div class="dh-rise"><b>Interventionen, die Lachen auslösen</b><p><span class="tr-tag bef">Befund</span>Etwa Lachyoga, Lachübungen oder Comedy-Filme. Eine Meta-Analyse findet Hinweise auf positive Effekte auf das psychische Befinden. <span class="ref">(<a href="#q1">van der Wal &amp; Kok, 2019</a>)</span> Eine weitere fand nach Interventionen mit spontanem Lachen eine stärkere Abnahme des Stresshormons Cortisol als in Kontrollgruppen. <span class="ref">(<a href="#q2">Kramer &amp; Leitão, 2023</a>)</span> Die Studien unterscheiden sich stark in Methode und Qualität.</p></div>
+				<div class="dh-rise"><b>Humor als tägliche Praxis</b><p><span class="tr-tag off">Offen</span>Humorvolle Seiten wahrnehmen und Situationen neu rahmen, wie in den Übungen oben. Programme, die solche Gewohnheiten üben, werden untersucht. <span class="ref">(<a href="#q3">Ruch et al., 2018</a>)</span> Ihre Wirkung auf Stress und Resilienz ist noch wenig erforscht.</p></div>
 				<div class="no-card dh-rise"><b>Konkrete Wirkversprechen</b><p><span class="tr-tag no">Nicht belegt</span>Dass ein bestimmtes Humortraining Stress reduziert, Resilienz erhöht oder vor Burnout schützt, versprechen wir nicht.</p></div>
 			</div>
 		</div>
@@ -165,7 +165,7 @@
 				<p class="dh-kicker">Humor, Persönlichkeit und eigener Stil</p>
 				<h2 id="h-stil">Du musst nicht wie jemand anderes witzig sein.</h2>
 				<p>Menschen unterscheiden sich darin, welche Art von Humor sie mögen, wie sie Humor einsetzen und in welchen Situationen sie sich damit wohlfühlen. Ein Training soll deshalb nicht alle auf denselben Stil festlegen.</p>
-				<p>Humor-Stile und Persönlichkeitsmodelle können als Reflexions- und Gesprächswerkzeuge dienen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q5" ) ); ?>">Martin et al., 2003</a>)</span> Sie helfen, Vorlieben und Unterschiede zu besprechen. Sie sind keine Diagnose und sagen nicht zuverlässig voraus, wie eine bestimmte Person in jeder Situation reagieren wird.</p>
+				<p>Humor-Stile und Persönlichkeitsmodelle können als Reflexions- und Gesprächswerkzeuge dienen. <span class="ref">(<a href="#q5">Martin et al., 2003</a>)</span> Sie helfen, Vorlieben und Unterschiede zu besprechen. Sie sind keine Diagnose und sagen nicht zuverlässig voraus, wie eine bestimmte Person in jeder Situation reagieren wird.</p>
 				<a class="dh-link" href="/humor-und-persoenlichkeit/">Die vier Humorstile im Alltag</a>
 			</div>
 			<div class="tr-card peach dh-rise">
@@ -177,7 +177,7 @@
 					<li>Was möchte ich mit diesem Humor erreichen?</li>
 					<li>Ist jetzt der passende Moment dafür?</li>
 				</ul>
-				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/">Humor Risk Check starten</a><a class="dh-link" href="https://bastianmayerhofer.com/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/">Wann Humor verletzend wirken kann</a></div>
+				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/#check">Humor Risk Check starten</a><a class="dh-link" href="https://bastianmayerhofer.com/2025/07/24/warum-mehr-humor-nicht-automatisch-besser-ist/">Wann Humor verletzend wirken kann</a></div>
 			</div>
 		</div>
 	</section>
@@ -188,7 +188,7 @@
 			<h2 class="dh-h2 dh-rise" id="h-offers">Humor praktisch erkunden</h2>
 		</div>
 		<div class="tr-offers">
-			<article class="tr-offer dh-rise"><h3>Übungen für den Alltag</h3><p>Kleine Impulse, um humorvolle Möglichkeiten bewusster wahrzunehmen und Perspektiven zu wechseln.</p><a class="dh-link" href="<?php echo esc_url( home_url( "/#miniuebung" ) ); ?>">Miniübung ausprobieren</a></article>
+			<article class="tr-offer dh-rise"><h3>Übungen für den Alltag</h3><p>Kleine Impulse, um humorvolle Möglichkeiten bewusster wahrzunehmen und Perspektiven zu wechseln.</p><a class="dh-link" href="#miniuebung">Miniübung ausprobieren</a></article>
 			<article class="tr-offer dh-rise"><h3>Coaching</h3><p>Individuelle Begleitung für Menschen, die ihren eigenen Umgang mit Humor erkunden und an konkreten Situationen arbeiten möchten.</p><a class="dh-link" href="https://calendar.app.google/uagqHNJ56Vd2u1ma7" target="_blank" rel="noopener">Coaching anfragen</a></article>
 			<article class="tr-offer dark dh-rise"><h3>Trainings und Workshops</h3><p>Formate für Teams und Organisationen, die Humor in Führung, Kommunikation, Zusammenarbeit oder Präsentationen reflektieren und praktisch erproben möchten.</p><a class="dh-link" href="/humor-in-organisationen/">Humortraining für Organisationen ansehen</a></article>
 		</div>
@@ -216,7 +216,7 @@
 			<details><summary>Muss ich schon witzig sein, um Humor zu trainieren?</summary><div>Nein. Du musst nicht spontan Pointen erzählen können. Ein Einstieg kann sein, alltägliche Situationen genauer wahrzunehmen, andere Perspektiven zu entwickeln und deinen eigenen Humor besser kennenzulernen.</div></details>
 			<details><summary>Bedeutet Humortraining, immer einen passenden Witz parat zu haben?</summary><div>Nein. Es geht nicht darum, in jeder Situation lustig zu sein. Regelmäßiges Üben kann dein Repertoire an Beobachtungen und Perspektiven erweitern. Ob und wann du etwas davon teilst, entscheidest du im jeweiligen Kontext.</div></details>
 			<details><summary>Kann man Humor wirklich trainieren?</summary><div>Trainieren lassen sich unter anderem Wahrnehmung, Perspektivwechsel, das Entwickeln alternativer Lesarten und die Reflexion der eigenen Wirkung. Das bedeutet nicht, dass sich Humor jederzeit planen oder garantieren lässt.</div></details>
-			<details><summary>Hilft Humor gegen Stress?</summary><div>Humor kann für manche Menschen eine Möglichkeit sein, Abstand zu gewinnen oder eine Situation anders zu betrachten. Studien zu Interventionen, die Lachen auslösen, und Laborstudien zur humorvollen Neubewertung liefern Hinweise auf kurzfristige Entlastung. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">van der Wal &amp; Kok, 2019</a>; <a href="<?php echo esc_url( home_url( "/#q2" ) ); ?>">Kramer &amp; Leitão, 2023</a>; <a href="<?php echo esc_url( home_url( "/#q6" ) ); ?>">Samson &amp; Gross, 2012</a>)</span> Daraus folgt aber nicht, dass jedes Humortraining Stress reduziert oder Humor eine notwendige Unterstützung ersetzt.</div></details>
+			<details><summary>Hilft Humor gegen Stress?</summary><div>Humor kann für manche Menschen eine Möglichkeit sein, Abstand zu gewinnen oder eine Situation anders zu betrachten. Studien zu Interventionen, die Lachen auslösen, und Laborstudien zur humorvollen Neubewertung liefern Hinweise auf kurzfristige Entlastung. <span class="ref">(<a href="#q1">van der Wal &amp; Kok, 2019</a>; <a href="#q2">Kramer &amp; Leitão, 2023</a>; <a href="#q6">Samson &amp; Gross, 2012</a>)</span> Daraus folgt aber nicht, dass jedes Humortraining Stress reduziert oder Humor eine notwendige Unterstützung ersetzt.</div></details>
 			<details><summary>Macht Humor resilient?</summary><div>Humor wird als eine mögliche Ressource im Umgang mit Belastungen untersucht. Resilienz ist jedoch komplex und hängt von vielen Faktoren ab. Die Seite verspricht deshalb nicht, dass Humortraining Resilienz automatisch steigert.</div></details>
 			<details><summary>Geht es darum, Probleme positiv zu sehen?</summary><div>Nein. Perspektivwechsel bedeutet nicht, Probleme kleinzureden oder schwierige Gefühle zu übergehen. Er kann eine zusätzliche Sichtweise eröffnen, wenn sie zur Situation passt.</div></details>
 			<details><summary>Ist Humortraining auch für Teams geeignet?</summary><div>Ja. Teams können gemeinsam reflektieren, welche Rolle Humor in ihrer Kommunikation spielt, wie unterschiedliche Reaktionen entstehen und welche Möglichkeiten im jeweiligen Arbeitskontext passen.</div></details>
@@ -294,7 +294,7 @@
 			<div class="dh-stack" style="gap:16px">
 				<h2 id="h-close">Mehr Möglichkeiten im Alltag entdecken.</h2>
 				<p class="dh-lead">Humor bewusst zu entwickeln beginnt mit Aufmerksamkeit: für Situationen, Perspektiven und den eigenen Stil. Finde heraus, welcher nächste Schritt zu dir passt.</p>
-				<div class="dh-actions"><a class="dh-btn" href="<?php echo esc_url( home_url( "/#miniuebung" ) ); ?>">Miniübung ausprobieren</a></div>
+				<div class="dh-actions"><a class="dh-btn" href="#miniuebung">Miniübung ausprobieren</a></div>
 			</div>
 			<ul>
 				<li><a class="dh-link" href="https://calendar.app.google/uagqHNJ56Vd2u1ma7" target="_blank" rel="noopener">Coaching anfragen</a></li>

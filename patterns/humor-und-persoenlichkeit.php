@@ -15,8 +15,8 @@
 				<h1 id="h-hp">Was wir lustig finden – und wie wir Humor <span class="hl">verwenden</span></h1>
 				<p class="dh-lead">Manche lieben Wortspiele, andere trockenen Sarkasmus oder absurden Humor. Auch darin, wie wir selbst Humor einsetzen, unterscheiden wir uns. Die Humorforschung untersucht, wie Humorpräferenzen und Humorstile mit Persönlichkeit zusammenhängen – und warum daraus trotzdem kein einfacher Humortyp-Test wird.</p>
 				<div class="dh-actions">
-					<a class="dh-btn" href="<?php echo esc_url( home_url( "/#reflexion" ) ); ?>">Meinen Humor reflektieren</a>
-					<a class="dh-link" href="<?php echo esc_url( home_url( "/#organisationen" ) ); ?>">Humor im Arbeitskontext</a>
+					<a class="dh-btn" href="#reflexion">Meinen Humor reflektieren</a>
+					<a class="dh-link" href="#organisationen">Humor im Arbeitskontext</a>
 				</div>
 			</div>
 			<div class="hp-illu" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
@@ -77,8 +77,8 @@
 			<div class="dh-stack" style="gap:20px">
 				<p class="dh-kicker dh-rise">Vier Humorstile: Wie Humor im Alltag eingesetzt wird</p>
 				<h2 class="dh-h2 dh-rise" id="h-stile">Martins Humorstile beschreiben Funktionen von Humor</h2>
-				<p class="dh-rise">Das Humor Styles Questionnaire von Rod Martin und Kolleg:innen unterscheidet vier Dimensionen, die beschreiben, wie Menschen Humor im Alltag verwenden. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">Martin et al., 2003</a>)</span> Es geht dabei nicht um eine Einteilung in vier unveränderliche Persönlichkeitstypen.</p>
-				<p class="dh-rise dh-small dh-muted">Das Modell ordnet die Stile entlang zweier Fragen: Bezieht sich der Humor eher auf andere oder auf einen selbst? Und wirkt er eher wohlwollend oder eher auf Kosten von jemandem? <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">Martin et al., 2003</a>)</span></p>
+				<p class="dh-rise">Das Humor Styles Questionnaire von Rod Martin und Kolleg:innen unterscheidet vier Dimensionen, die beschreiben, wie Menschen Humor im Alltag verwenden. <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span> Es geht dabei nicht um eine Einteilung in vier unveränderliche Persönlichkeitstypen.</p>
+				<p class="dh-rise dh-small dh-muted">Das Modell ordnet die Stile entlang zweier Fragen: Bezieht sich der Humor eher auf andere oder auf einen selbst? Und wirkt er eher wohlwollend oder eher auf Kosten von jemandem? <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span></p>
 			</div>
 			<div class="hp-grid dh-rise">
 				<span></span><span class="hp-axis">Bezug: andere</span><span class="hp-axis">Bezug: man selbst</span>
@@ -90,7 +90,7 @@
 				<article class="hp-style cost"><span class="en">Self-defeating</span><h3>Selbstabwertender Humor</h3><p>Sich selbst zum Gegenstand des Humors zu machen, um andere zu unterhalten oder soziale Zugehörigkeit zu sichern. Je nach Häufigkeit und Kontext kann das unterschiedlich erlebt werden.</p></article>
 			</div>
 		</div>
-		<p class="hp-note2 dh-rise"><b>Selbstironie ist nicht automatisch selbstabwertend.</b> Über den eigenen vergessenen Tee zu scherzen, kann spielerische Selbstironie sein. Beim selbstabwertenden Humorstil geht es um eine wiederkehrende Art, sich auf eigene Kosten zum Ziel zu machen, etwa um Anerkennung oder Zugehörigkeit zu gewinnen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">Martin et al., 2003</a>)</span></p>
+		<p class="hp-note2 dh-rise"><b>Selbstironie ist nicht automatisch selbstabwertend.</b> Über den eigenen vergessenen Tee zu scherzen, kann spielerische Selbstironie sein. Beim selbstabwertenden Humorstil geht es um eine wiederkehrende Art, sich auf eigene Kosten zum Ziel zu machen, etwa um Anerkennung oder Zugehörigkeit zu gewinnen. <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span></p>
 		<p class="hp-note dh-rise">Menschen nutzen nicht nur einen Stil. Die Dimensionen dienen dazu, typische Muster zu reflektieren – nicht dazu, Personen abschließend zu etikettieren.</p>
 	</section>
 
@@ -100,14 +100,14 @@
 				<p class="dh-kicker">Humorpräferenzen: Was finden Menschen lustig?</p>
 				<h2 class="dh-h2" id="h-comic">Von Wortspiel bis Nonsense: Humor hat viele Formen</h2>
 				<h3 class="hp-sub">Was wir lustig finden</h3>
-				<p>Willibald Ruch hat untersucht, wie Menschen unterschiedliche Witzstrukturen bewerten. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q3" ) ); ?>">Ruch, 1992</a>)</span> Manche mögen Pointen, bei denen am Ende alles zusammenpasst. Andere mögen Nonsense, bei dem ein Rest Absurdität stehen bleibt.</p>
+				<p>Willibald Ruch hat untersucht, wie Menschen unterschiedliche Witzstrukturen bewerten. <span class="ref">(<a href="#q3">Ruch, 1992</a>)</span> Manche mögen Pointen, bei denen am Ende alles zusammenpasst. Andere mögen Nonsense, bei dem ein Rest Absurdität stehen bleibt.</p>
 				<h3 class="hp-sub">Wie wir Humor ausdrücken</h3>
-				<p>Ruch und Kolleg:innen beschreiben außerdem acht Comic Styles, darunter Wortwitz, Ironie, Satire und Sarkasmus. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q2" ) ); ?>">Ruch et al., 2018</a>)</span> Die Comic Styles beschreiben unterschiedliche Ausdrucksweisen. Martins vier Humorstile richten den Blick darauf, wie Menschen Humor im Alltag verwenden – etwa für soziale Verbindung oder beim Umgang mit Schwierigkeiten. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">Martin et al., 2003</a>)</span></p>
+				<p>Ruch und Kolleg:innen beschreiben außerdem acht Comic Styles, darunter Wortwitz, Ironie, Satire und Sarkasmus. <span class="ref">(<a href="#q2">Ruch et al., 2018</a>)</span> Die Comic Styles beschreiben unterschiedliche Ausdrucksweisen. Martins vier Humorstile richten den Blick darauf, wie Menschen Humor im Alltag verwenden – etwa für soziale Verbindung oder beim Umgang mit Schwierigkeiten. <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span></p>
 				<p class="hp-warn"><b>Vorsicht vor Kurzschlüssen</b>Wer absurden Humor mag, ist nicht automatisch „kreativ“. Wer gern Ironie verwendet, ist nicht automatisch zynisch. Solche Kurzschlüsse gehen über die Forschung hinaus.</p>
 			</div>
 			<div class="hp-chips" aria-label="Acht Comic Styles nach Ruch und Kolleg:innen">
 				<span style="--c: var(--lime)">Spaß</span><span style="--c: var(--lime)">wohlwollender Humor</span><span style="--c: var(--paper)">Nonsense</span><span style="--c: var(--paper)">Wortwitz</span><span style="--c: #c9c9f5">Ironie</span><span style="--c: #c9c9f5">Satire</span><span style="--c: var(--peach)">Sarkasmus</span><span style="--c: var(--peach)">Zynismus</span>
-				<small>Die acht Comic Styles aus der Forschung von Ruch und Kolleg:innen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q2" ) ); ?>">Ruch et al., 2018</a>)</span> Die Farben gruppieren nur zur Orientierung und sind keine Bewertung.</small>
+				<small>Die acht Comic Styles aus der Forschung von Ruch und Kolleg:innen. <span class="ref">(<a href="#q2">Ruch et al., 2018</a>)</span> Die Farben gruppieren nur zur Orientierung und sind keine Bewertung.</small>
 			</div>
 		</div>
 	</section>
@@ -118,8 +118,8 @@
 				<p class="dh-kicker dh-rise">Was hat Persönlichkeit damit zu tun?</p>
 				<h2 class="dh-h2 dh-rise" id="h-pers">Zusammenhänge sind interessant – aber keine Persönlichkeitsformel</h2>
 				<div class="hp-prose dh-rise">
-					<p>Studien untersuchen, wie Humorpräferenzen und Humorstile mit Persönlichkeitsmerkmalen wie den Big Five zusammenhängen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q2" ) ); ?>">Ruch et al., 2018</a>; <a href="<?php echo esc_url( home_url( "/#q4" ) ); ?>">Plessen et al., 2020</a>)</span> Dabei finden sich statistische Beziehungen, aber kein einfacher Schlüssel, der aus einem Persönlichkeitsmerkmal zuverlässig auf den Humor einer einzelnen Person schließen lässt.</p>
-					<p>Ein Beispiel: In einer tschechischen Studie mit 509 Teilnehmenden hing größere Aufgeschlossenheit mit einer relativen Vorliebe für Nonsense gegenüber Humor mit auflösbarer Inkongruenz zusammen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q6" ) ); ?>">Current Psychology, 2023</a>)</span> Das beschreibt eine Tendenz in dieser Stichprobe.</p>
+					<p>Studien untersuchen, wie Humorpräferenzen und Humorstile mit Persönlichkeitsmerkmalen wie den Big Five zusammenhängen. <span class="ref">(<a href="#q2">Ruch et al., 2018</a>; <a href="#q4">Plessen et al., 2020</a>)</span> Dabei finden sich statistische Beziehungen, aber kein einfacher Schlüssel, der aus einem Persönlichkeitsmerkmal zuverlässig auf den Humor einer einzelnen Person schließen lässt.</p>
+					<p>Ein Beispiel: In einer tschechischen Studie mit 509 Teilnehmenden hing größere Aufgeschlossenheit mit einer relativen Vorliebe für Nonsense gegenüber Humor mit auflösbarer Inkongruenz zusammen. <span class="ref">(<a href="#q6">Current Psychology, 2023</a>)</span> Das beschreibt eine Tendenz in dieser Stichprobe.</p>
 					<p>Die Befunde hängen unter anderem davon ab, welche Art von Humor gemessen wird, welche Skala verwendet wird und welche Personen untersucht werden. Deshalb ist eine vorsichtige Aussage sinnvoller als ein starres Schema: Persönlichkeit kann mit Humorpräferenzen und Humorverwendung zusammenhängen, bestimmt sie aber nicht vollständig.</p>
 				</div>
 			</div>
@@ -218,7 +218,7 @@
 			<h2 class="dh-h2 dh-rise" id="h-stand">Was die Forschung sagen kann – und was nicht</h2>
 		</div>
 		<div class="hp-can">
-			<div class="yes dh-rise"><b>Das kann sie</b><p>Forschung zu Humorstilen, Humorpräferenzen und Persönlichkeit kann Muster auf Gruppenebene sichtbar machen. <span class="ref">(<a href="<?php echo esc_url( home_url( "/#q1" ) ); ?>">Martin et al., 2003</a>; <a href="<?php echo esc_url( home_url( "/#q2" ) ); ?>">Ruch et al., 2018</a>; <a href="<?php echo esc_url( home_url( "/#q4" ) ); ?>">Plessen et al., 2020</a>)</span> Sie kann helfen, Fragen zu entwickeln und individuelle Unterschiede besser zu besprechen.</p></div>
+			<div class="yes dh-rise"><b>Das kann sie</b><p>Forschung zu Humorstilen, Humorpräferenzen und Persönlichkeit kann Muster auf Gruppenebene sichtbar machen. <span class="ref">(<a href="#q1">Martin et al., 2003</a>; <a href="#q2">Ruch et al., 2018</a>; <a href="#q4">Plessen et al., 2020</a>)</span> Sie kann helfen, Fragen zu entwickeln und individuelle Unterschiede besser zu besprechen.</p></div>
 			<div class="no dh-rise"><b>Das kann sie nicht</b><p>Sie kann nicht zuverlässig vorhersagen, welchen Witz eine einzelne Person in einer konkreten Situation lustig findet. Auch ein Fragebogen erfasst nur die Merkmale und Verhaltensweisen, für die er entwickelt und geprüft wurde.</p></div>
 		</div>
 	</section>
@@ -306,7 +306,7 @@
 			<div class="dh-stack" style="gap:16px">
 				<h2 id="h-close">Humor besser verstehen</h2>
 				<p class="dh-lead">Entdecke, welche Rolle Humor für dich spielt – und wie sich Unterschiede in Teams oder Organisationen besprechbar machen lassen.</p>
-				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/">Humor Risk Check starten</a></div>
+				<div class="dh-actions"><a class="dh-btn" href="/humor-risk-check/#check">Humor Risk Check starten</a></div>
 			</div>
 			<ul>
 				<li><a class="dh-link" href="/humor-in-organisationen/">Humortraining für Organisationen ansehen</a></li>

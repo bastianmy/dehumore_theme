@@ -158,3 +158,17 @@ add_action( 'template_redirect', function () {
 	}
 	ob_start( 'dehumore_marke_fett' );
 }, 1 );
+
+/**
+ * Beitragsbild für die kuratierten Beiträge auf der Startseite.
+ * Holt das echte Beitragsbild über die URL; ohne Bild bleibt die Farbfläche.
+ */
+function dehumore_beitragsbild( $pfad, $farbe, $schatten ) {
+	$id  = url_to_postid( home_url( $pfad ) );
+	$img = $id ? get_the_post_thumbnail( $id, 'medium_large', array( 'loading' => 'lazy', 'alt' => '' ) ) : '';
+	$stil = '--c: ' . $farbe . '; --dh-schatten: ' . $schatten;
+	if ( $img ) {
+		return '<span class="img dh-rahmen" style="' . esc_attr( $stil ) . '" aria-hidden="true">' . $img . '</span>';
+	}
+	return '<span class="img dh-rahmen" style="' . esc_attr( $stil ) . '" aria-hidden="true"><em>Beitragsbild</em></span>';
+}

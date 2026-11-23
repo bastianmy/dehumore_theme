@@ -3,7 +3,7 @@ Theme Name: De:Humore
 Theme URI: https://dehumore.com
 Author: Dr. Bastian Mayerhofer
 Description: Block-Theme für De:Humore. Dark Teal, Soft White, Lime, Peach und Indigo, Montserrat und Nunito (lokal eingebunden). Aus dem freigegebenen Prototyp (Übergabe 22.11.2026) erzeugt.
-Version: 0.3.5
+Version: 0.3.6
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -366,3 +366,11 @@ html:not(.js) .dh-frog { --a: 1; --b: 1; --c: 1; --d: 1; }
 
 /* Markenschreibweise De:Humore (fettes „Humore“) */
 .dh-marke { font-weight: 800; font-style: inherit; color: inherit; }
+
+/* Beitragsbilder Startseite: CI-Rahmen Variante B */
+:root body .dh-post .img.dh-rahmen { border: 2px solid var(--ink); border-radius: 14px; box-shadow: 8px 8px 0 var(--dh-schatten, var(--lime)); transition: transform .25s ease, box-shadow .25s ease; }
+:root body .dh-post:hover .img.dh-rahmen, :root body .dh-post:focus-visible .img.dh-rahmen { transform: translate(-3px, -3px); box-shadow: 13px 13px 0 var(--dh-schatten, var(--lime)); }
+:root body .dh-post .img.dh-rahmen:has(img)::after { display: none; }
+:root body .dh-post:hover .img img { transform: scale(1.04); }
+:root body .dh-track { padding: 6px 16px 18px 3px; }
+@media (prefers-reduced-motion: reduce) { :root body .dh-post .img.dh-rahmen { transition: none; } :root body .dh-post:hover .img.dh-rahmen { transform: none; } }

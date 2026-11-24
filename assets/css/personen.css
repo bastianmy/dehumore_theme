@@ -26,3 +26,7 @@
 :root body .dh-person [class*="mailpoet_form_below"],
 :root body .dh-person .sharedaddy,
 :root body .dh-person .jp-relatedposts { display: none !important; }
+
+/* Foto mit CI-Rahmen (Variante B) */
+:root body .dh-person-foto { margin: 8px 0 36px; }
+:root body .dh-person-foto img { display: block; width: 100%; height: auto; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 8px 8px 0 var(--lime); }

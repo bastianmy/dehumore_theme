@@ -207,3 +207,20 @@ add_action( 'template_redirect', function () {
 add_filter( 'sharing_show', '__return_false', 99 );
 add_filter( 'wpl_is_likes_visible', '__return_false', 99 );
 add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+
+/**
+ * Danke-Seiten nicht in Google und nicht in der Sitemap.
+ */
+function dehumore_noindex_seite() {
+	return is_page( 'newsletter-bestaetigt' );
+}
+add_filter( 'wpseo_robots', function ( $robots ) {
+	return dehumore_noindex_seite() ? 'noindex, follow' : $robots;
+} );
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function ( $ids ) {
+	$seite = get_page_by_path( 'newsletter-bestaetigt' );
+	if ( $seite ) {
+		$ids[] = $seite->ID;
+	}
+	return $ids;
+} );

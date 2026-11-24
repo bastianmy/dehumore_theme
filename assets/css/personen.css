@@ -30,3 +30,18 @@
 /* Foto mit CI-Rahmen (Variante B) */
 :root body .dh-person-foto { margin: 8px 0 36px; }
 :root body .dh-person-foto img { display: block; width: 100%; height: auto; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 8px 8px 0 var(--lime); }
+
+/* Newsletter bestätigt */
+:root body .dh-nl-gift { box-shadow: 8px 8px 0 var(--lime); }
+:root body .dh-nl-gift .dh-kicker { margin: 0 0 8px; }
+:root body .dh-nl-wege { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 8px 0 36px; }
+@media (max-width: 700px) { :root body .dh-nl-wege { grid-template-columns: 1fr; } }
+:root body .dh-person a.dh-nl-weg { display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 2px solid var(--ink); border-radius: 14px; background: #fff; text-decoration: none; color: var(--ink); transition: transform .15s; }
+:root body .dh-nl-weg:nth-child(1) { box-shadow: 6px 6px 0 var(--peach); }
+:root body .dh-nl-weg:nth-child(2) { box-shadow: 6px 6px 0 #c9c9f4; }
+:root body .dh-nl-weg:nth-child(3) { box-shadow: 6px 6px 0 var(--lime); }
+:root body .dh-person a.dh-nl-weg:hover { transform: translate(-3px, -3px); }
+:root body .dh-nl-weg b { font-family: var(--display); font-size: 19px; }
+:root body .dh-nl-weg span:last-child { font-size: 16px; line-height: 1.5; }
+:root body .dh-person .dh-nl-weg .dh-kicker { margin: 0; }
+:root body .dh-person p.dh-nl-tipp { font-size: 16px; background: #fff; border-left: 4px solid var(--peach); padding: 12px 16px; border-radius: 0 8px 8px 0; }

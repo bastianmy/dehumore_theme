@@ -47,24 +47,6 @@
 :root body .tr-badge { display: inline-flex; gap: 8px; align-items: center; font-family: var(--display); font-weight: 700; font-size: 14px; background: var(--lime); border-radius: 999px; padding: 8px 14px; }
 
 /* 5: Übung */
-:root body .tr-ex { background: var(--ink); color: var(--paper); border-radius: 16px; padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 64px); }
-:root body .tr-ex h2, :root body .tr-ex h3 { color: var(--paper); }
-:root body .tr-ex .dh-kicker { color: #c4d7db; }
-:root body .tr-ex p, :root body .tr-ex li { color: #e2edef; }
-:root body .tr-sentence { margin: 8px 0 0; font-family: var(--display); font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.15; color: var(--paper); }
-:root body .tr-sentence mark { background: none; color: inherit; position: relative; white-space: nowrap; }
-:root body .tr-sentence mark::after { content: ""; position: absolute; left: -4px; right: -4px; top: -6px; bottom: -8px; border: 3px solid var(--lime); border-radius: 50%; transform: rotate(-3deg); opacity: var(--m, 1); }
-:root body .tr-qlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
-:root body .tr-qlist li { border-top: 1px solid rgba(254, 244, 238, .22); padding: 12px 0; font-size: 17px; line-height: 1.5; }
-:root body .tr-howto { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.55; }
-:root body .tr-howto li::marker { font-family: var(--display); font-weight: 800; color: var(--lime); }
-:root body .tr-pad { background: rgba(254, 244, 238, .06); border: 1px solid rgba(254, 244, 238, .22); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
-:root body .tr-pad label { display: flex; flex-direction: column; gap: 6px; font-family: var(--display); font-weight: 700; font-size: 14px; color: var(--paper); }
-:root body .tr-pad input { font: inherit; font-family: var(--text); font-weight: 400; font-size: 17px; color: var(--ink); background: var(--paper); border: 2px solid transparent; border-radius: 8px; padding: 10px 12px; }
-:root body .tr-pad input:focus { outline: none; border-color: var(--lime); }
-:root body .tr-pad .fine { font-size: 13px; line-height: 1.5; color: #c4d7db; }
-:root body .tr-ex .dh-voice { color: var(--lime); font-size: clamp(19px, 1.8vw, 22px); }
-:root body .tr-ex .dh-voice .mk { background-image: linear-gradient(transparent 58%, rgba(226, 253, 199, .2) 58%, rgba(226, 253, 199, .2) 92%, transparent 92%); }
 
 /* 6: Stress und Resilienz */
 :root body .tr-stress { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
@@ -150,7 +132,7 @@
 	:root body .tr-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 900px) {
-	:root body .tr-hero-grid, :root body .tr-what, :root body .tr-daily, :root body .tr-ex, :root body .tr-stress, :root body .tr-pair, :root body .tr-close { grid-template-columns: minmax(0, 1fr); }
+	:root body .tr-hero-grid, :root body .tr-what, :root body .tr-daily, :root body .tr-stress, :root body .tr-pair, :root body .tr-close { grid-template-columns: minmax(0, 1fr); }
 	:root body .tr-illu { aspect-ratio: 4 / 5; max-width: 340px; }
 	:root body .tr-use, :root body .tr-offers { grid-template-columns: minmax(0, 1fr); }
 	:root body .tr-path { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -161,25 +143,44 @@
 	:root body .tr-author { grid-template-columns: minmax(0, 1fr); }
 	:root body .tr-author img { width: 120px; height: 120px; }
 	:root body .tr-hero .dh-actions .dh-btn { width: 100%; }
-	:root body .tr-sentence mark { white-space: normal; }
 }
 
-:root body .tr-mini { background: var(--white); border: 2px solid var(--ink); border-radius: 16px; padding: clamp(24px, 4.5vw, 56px); display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(24px, 4.5vw, 64px); box-shadow: 8px 8px 0 var(--lime); }
-:root body .tr-mini p { font-size: 17px; line-height: 1.6; }
-:root body .tr-mini .tr-mini-quote { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; }
-:root body .tr-mini-q { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 18px; }
-:root body .tr-mini-pad { display: flex; flex-direction: column; gap: 8px; }
-:root body .tr-mini-pad label { font-family: var(--display); font-weight: 700; font-size: 15px; }
-:root body .tr-mini-pad textarea { font: inherit; font-size: 17px; color: var(--ink); background: var(--paper); border: 2px solid var(--line); border-radius: 8px; padding: 10px 12px; resize: vertical; }
-:root body .tr-mini-pad textarea:focus { outline: none; border-color: var(--ink); }
-:root body .tr-mini-pad .fine { font-size: 13px; line-height: 1.5; color: var(--muted, #4a5a5e); }
 :root body .tr-shift { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 :root body .tr-shift > div { border-radius: 12px; padding: 16px 18px; background: var(--white); border: 1px solid var(--line); }
 :root body .tr-shift > div.to { background: var(--lime); border-color: var(--lime); }
 :root body .tr-shift span { display: block; font-family: var(--display); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
 :root body .tr-shift p { font-style: italic; font-size: 17px; line-height: 1.45; margin: 0; }
 :root body .tr-shift small { grid-column: 1 / -1; font-size: 15px; line-height: 1.5; }
-@media (max-width: 900px) { :root body .tr-mini { grid-template-columns: minmax(0, 1fr); box-shadow: 5px 5px 0 var(--lime); } }
 @media (max-width: 560px) { :root body .tr-shift { grid-template-columns: minmax(0, 1fr); } }
 
 html:not(.js) .dh-voice .mk { --s1: 1; --s2: 1; }
+
+/* Reflexionsimpulse */
+:root body .tr-imp { background: var(--white); border: 2px solid var(--ink); border-radius: 16px; padding: clamp(24px, 4.5vw, 56px); box-shadow: 8px 8px 0 var(--lime); display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px); }
+:root body .tr-imp-head { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(20px, 4.5vw, 64px); align-items: end; }
+:root body .tr-imp-head > p { font-size: 17px; line-height: 1.6; margin: 0; }
+:root body .tr-imp-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+:root body .tr-imp-card { background: var(--paper); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+:root body .tr-imp-card h3 { font-size: 21px; line-height: 1.25; margin: 0; }
+:root body .tr-imp-card p { margin: 0; font-size: 16px; line-height: 1.6; }
+:root body .tr-imp-nr { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--ink); border: 2px solid var(--ink); }
+:root body .tr-imp-nr.n1 { background: var(--lime); } :root body .tr-imp-nr.n2 { background: var(--white); } :root body .tr-imp-nr.n3 { background: var(--peach); }
+:root body .tr-imp-card .tr-imp-tag { font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+:root body .tr-imp-note { position: relative; background: var(--lime); border: 2px solid var(--ink); border-radius: 4px 4px 14px 4px; box-shadow: 4px 4px 0 var(--ink); padding: 16px 18px 14px; font-size: 16px; line-height: 1.55; display: flex; flex-direction: column; gap: 6px; transform: rotate(-1deg); margin: 6px 4px 8px 0; font-weight: 600; }
+:root body .tr-imp-card:nth-child(2) .tr-imp-note { transform: rotate(.8deg); }
+:root body .tr-imp-note::before { content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 16px; margin-left: -32px; background: rgba(255, 156, 97, .75); transform: rotate(-3deg); }
+:root body .tr-pen { width: 18px; height: 18px; flex: none; }
+:root body .tr-lines { display: block; height: 52px; margin-top: 4px; background: repeating-linear-gradient(transparent 0 25px, rgba(11, 48, 59, .45) 25px 26px); }
+:root body .tr-imp-note > b { display: flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+:root body .tr-imp-bonus { order: 3; margin-top: 6px; padding: 8px 10px; background: rgba(255, 255, 255, .6); border-radius: 8px; font-size: 15px; font-weight: 400; }
+:root body .tr-imp-note .tr-lines { order: 2; }
+@media (prefers-reduced-motion: reduce) { :root body .tr-imp-note { transform: none !important; } }
+:root body .tr-imp-card .tr-imp-bsp { font-size: 18px; line-height: 1.45; margin-top: auto; }
+:root body .tr-imp-bsp .mk:first-child { background: none; }
+:root body .tr-imp-card .tr-imp-fine { font-size: 13px; color: var(--muted); }
+:root body .tr-imp-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; border-top: 1px solid var(--line); padding-top: 24px; }
+:root body .tr-imp-foot .dh-voice { font-size: clamp(19px, 1.8vw, 22px); margin: 0; max-width: 640px; }
+@media (max-width: 900px) {
+	:root body .tr-imp { box-shadow: 5px 5px 0 var(--lime); }
+	:root body .tr-imp-head, :root body .tr-imp-list { grid-template-columns: minmax(0, 1fr); }
+}

@@ -16,7 +16,7 @@
 				<p class="dh-lead">Wer übt, Situationen aus einer anderen Perspektive zu betrachten, entdeckt eher überraschende, leichte oder humorvolle Seiten des Alltags. So wächst ein Repertoire, auf das du in Gesprächen und im Beruf zurückgreifen kannst.</p>
 				<p class="tr-lead2">Nicht, um ständig witzig sein zu müssen. Sondern um mehr Möglichkeiten zu sehen.</p>
 				<div class="dh-actions">
-					<a class="dh-btn" href="#miniuebung">Miniübung ausprobieren</a>
+					<a class="dh-btn" href="#impulse">Impulse für heute</a>
 					<a class="dh-link" href="#angebote">Humortraining für Alltag und Beruf</a>
 				</div>
 			</div>
@@ -25,40 +25,57 @@
 <g fill="rgba(253,245,240,.10)"><circle cx="20" cy="20" r="1.6"/><circle cx="20" cy="48" r="1.6"/><circle cx="20" cy="76" r="1.6"/><circle cx="20" cy="104" r="1.6"/><circle cx="20" cy="132" r="1.6"/><circle cx="20" cy="160" r="1.6"/><circle cx="20" cy="188" r="1.6"/><circle cx="20" cy="216" r="1.6"/><circle cx="20" cy="244" r="1.6"/><circle cx="20" cy="272" r="1.6"/><circle cx="20" cy="300" r="1.6"/><circle cx="20" cy="328" r="1.6"/><circle cx="20" cy="356" r="1.6"/><circle cx="20" cy="384" r="1.6"/><circle cx="20" cy="412" r="1.6"/><circle cx="20" cy="440" r="1.6"/><circle cx="20" cy="468" r="1.6"/><circle cx="20" cy="496" r="1.6"/><circle cx="48" cy="20" r="1.6"/><circle cx="48" cy="48" r="1.6"/><circle cx="48" cy="76" r="1.6"/><circle cx="48" cy="104" r="1.6"/><circle cx="48" cy="132" r="1.6"/><circle cx="48" cy="160" r="1.6"/><circle cx="48" cy="188" r="1.6"/><circle cx="48" cy="216" r="1.6"/><circle cx="48" cy="244" r="1.6"/><circle cx="48" cy="272" r="1.6"/><circle cx="48" cy="300" r="1.6"/><circle cx="48" cy="328" r="1.6"/><circle cx="48" cy="356" r="1.6"/><circle cx="48" cy="384" r="1.6"/><circle cx="48" cy="412" r="1.6"/><circle cx="48" cy="440" r="1.6"/><circle cx="48" cy="468" r="1.6"/><circle cx="48" cy="496" r="1.6"/><circle cx="76" cy="20" r="1.6"/><circle cx="76" cy="48" r="1.6"/><circle cx="76" cy="76" r="1.6"/><circle cx="76" cy="104" r="1.6"/><circle cx="76" cy="132" r="1.6"/><circle cx="76" cy="160" r="1.6"/><circle cx="76" cy="188" r="1.6"/><circle cx="76" cy="216" r="1.6"/><circle cx="76" cy="244" r="1.6"/><circle cx="76" cy="272" r="1.6"/><circle cx="76" cy="300" r="1.6"/><circle cx="76" cy="328" r="1.6"/><circle cx="76" cy="356" r="1.6"/><circle cx="76" cy="384" r="1.6"/><circle cx="76" cy="412" r="1.6"/><circle cx="76" cy="440" r="1.6"/><circle cx="76" cy="468" r="1.6"/><circle cx="76" cy="496" r="1.6"/><circle cx="104" cy="20" r="1.6"/><circle cx="104" cy="48" r="1.6"/><circle cx="104" cy="76" r="1.6"/><circle cx="104" cy="104" r="1.6"/><circle cx="104" cy="132" r="1.6"/><circle cx="104" cy="160" r="1.6"/><circle cx="104" cy="188" r="1.6"/><circle cx="104" cy="216" r="1.6"/><circle cx="104" cy="244" r="1.6"/><circle cx="104" cy="272" r="1.6"/><circle cx="104" cy="300" r="1.6"/><circle cx="104" cy="328" r="1.6"/><circle cx="104" cy="356" r="1.6"/><circle cx="104" cy="384" r="1.6"/><circle cx="104" cy="412" r="1.6"/><circle cx="104" cy="440" r="1.6"/><circle cx="104" cy="468" r="1.6"/><circle cx="104" cy="496" r="1.6"/><circle cx="132" cy="20" r="1.6"/><circle cx="132" cy="48" r="1.6"/><circle cx="132" cy="76" r="1.6"/><circle cx="132" cy="104" r="1.6"/><circle cx="132" cy="132" r="1.6"/><circle cx="132" cy="160" r="1.6"/><circle cx="132" cy="188" r="1.6"/><circle cx="132" cy="216" r="1.6"/><circle cx="132" cy="244" r="1.6"/><circle cx="132" cy="272" r="1.6"/><circle cx="132" cy="300" r="1.6"/><circle cx="132" cy="328" r="1.6"/><circle cx="132" cy="356" r="1.6"/><circle cx="132" cy="384" r="1.6"/><circle cx="132" cy="412" r="1.6"/><circle cx="132" cy="440" r="1.6"/><circle cx="132" cy="468" r="1.6"/><circle cx="132" cy="496" r="1.6"/><circle cx="160" cy="20" r="1.6"/><circle cx="160" cy="48" r="1.6"/><circle cx="160" cy="76" r="1.6"/><circle cx="160" cy="104" r="1.6"/><circle cx="160" cy="132" r="1.6"/><circle cx="160" cy="160" r="1.6"/><circle cx="160" cy="188" r="1.6"/><circle cx="160" cy="216" r="1.6"/><circle cx="160" cy="244" r="1.6"/><circle cx="160" cy="272" r="1.6"/><circle cx="160" cy="300" r="1.6"/><circle cx="160" cy="328" r="1.6"/><circle cx="160" cy="356" r="1.6"/><circle cx="160" cy="384" r="1.6"/><circle cx="160" cy="412" r="1.6"/><circle cx="160" cy="440" r="1.6"/><circle cx="160" cy="468" r="1.6"/><circle cx="160" cy="496" r="1.6"/><circle cx="188" cy="20" r="1.6"/><circle cx="188" cy="48" r="1.6"/><circle cx="188" cy="76" r="1.6"/><circle cx="188" cy="104" r="1.6"/><circle cx="188" cy="132" r="1.6"/><circle cx="188" cy="160" r="1.6"/><circle cx="188" cy="188" r="1.6"/><circle cx="188" cy="216" r="1.6"/><circle cx="188" cy="244" r="1.6"/><circle cx="188" cy="272" r="1.6"/><circle cx="188" cy="300" r="1.6"/><circle cx="188" cy="328" r="1.6"/><circle cx="188" cy="356" r="1.6"/><circle cx="188" cy="384" r="1.6"/><circle cx="188" cy="412" r="1.6"/><circle cx="188" cy="440" r="1.6"/><circle cx="188" cy="468" r="1.6"/><circle cx="188" cy="496" r="1.6"/><circle cx="216" cy="20" r="1.6"/><circle cx="216" cy="48" r="1.6"/><circle cx="216" cy="76" r="1.6"/><circle cx="216" cy="104" r="1.6"/><circle cx="216" cy="132" r="1.6"/><circle cx="216" cy="160" r="1.6"/><circle cx="216" cy="188" r="1.6"/><circle cx="216" cy="216" r="1.6"/><circle cx="216" cy="244" r="1.6"/><circle cx="216" cy="272" r="1.6"/><circle cx="216" cy="300" r="1.6"/><circle cx="216" cy="328" r="1.6"/><circle cx="216" cy="356" r="1.6"/><circle cx="216" cy="384" r="1.6"/><circle cx="216" cy="412" r="1.6"/><circle cx="216" cy="440" r="1.6"/><circle cx="216" cy="468" r="1.6"/><circle cx="216" cy="496" r="1.6"/><circle cx="244" cy="20" r="1.6"/><circle cx="244" cy="48" r="1.6"/><circle cx="244" cy="76" r="1.6"/><circle cx="244" cy="104" r="1.6"/><circle cx="244" cy="132" r="1.6"/><circle cx="244" cy="160" r="1.6"/><circle cx="244" cy="188" r="1.6"/><circle cx="244" cy="216" r="1.6"/><circle cx="244" cy="244" r="1.6"/><circle cx="244" cy="272" r="1.6"/><circle cx="244" cy="300" r="1.6"/><circle cx="244" cy="328" r="1.6"/><circle cx="244" cy="356" r="1.6"/><circle cx="244" cy="384" r="1.6"/><circle cx="244" cy="412" r="1.6"/><circle cx="244" cy="440" r="1.6"/><circle cx="244" cy="468" r="1.6"/><circle cx="244" cy="496" r="1.6"/><circle cx="272" cy="20" r="1.6"/><circle cx="272" cy="48" r="1.6"/><circle cx="272" cy="76" r="1.6"/><circle cx="272" cy="104" r="1.6"/><circle cx="272" cy="132" r="1.6"/><circle cx="272" cy="160" r="1.6"/><circle cx="272" cy="188" r="1.6"/><circle cx="272" cy="216" r="1.6"/><circle cx="272" cy="244" r="1.6"/><circle cx="272" cy="272" r="1.6"/><circle cx="272" cy="300" r="1.6"/><circle cx="272" cy="328" r="1.6"/><circle cx="272" cy="356" r="1.6"/><circle cx="272" cy="384" r="1.6"/><circle cx="272" cy="412" r="1.6"/><circle cx="272" cy="440" r="1.6"/><circle cx="272" cy="468" r="1.6"/><circle cx="272" cy="496" r="1.6"/><circle cx="300" cy="20" r="1.6"/><circle cx="300" cy="48" r="1.6"/><circle cx="300" cy="76" r="1.6"/><circle cx="300" cy="104" r="1.6"/><circle cx="300" cy="132" r="1.6"/><circle cx="300" cy="160" r="1.6"/><circle cx="300" cy="188" r="1.6"/><circle cx="300" cy="216" r="1.6"/><circle cx="300" cy="244" r="1.6"/><circle cx="300" cy="272" r="1.6"/><circle cx="300" cy="300" r="1.6"/><circle cx="300" cy="328" r="1.6"/><circle cx="300" cy="356" r="1.6"/><circle cx="300" cy="384" r="1.6"/><circle cx="300" cy="412" r="1.6"/><circle cx="300" cy="440" r="1.6"/><circle cx="300" cy="468" r="1.6"/><circle cx="300" cy="496" r="1.6"/><circle cx="328" cy="20" r="1.6"/><circle cx="328" cy="48" r="1.6"/><circle cx="328" cy="76" r="1.6"/><circle cx="328" cy="104" r="1.6"/><circle cx="328" cy="132" r="1.6"/><circle cx="328" cy="160" r="1.6"/><circle cx="328" cy="188" r="1.6"/><circle cx="328" cy="216" r="1.6"/><circle cx="328" cy="244" r="1.6"/><circle cx="328" cy="272" r="1.6"/><circle cx="328" cy="300" r="1.6"/><circle cx="328" cy="328" r="1.6"/><circle cx="328" cy="356" r="1.6"/><circle cx="328" cy="384" r="1.6"/><circle cx="328" cy="412" r="1.6"/><circle cx="328" cy="440" r="1.6"/><circle cx="328" cy="468" r="1.6"/><circle cx="328" cy="496" r="1.6"/><circle cx="356" cy="20" r="1.6"/><circle cx="356" cy="48" r="1.6"/><circle cx="356" cy="76" r="1.6"/><circle cx="356" cy="104" r="1.6"/><circle cx="356" cy="132" r="1.6"/><circle cx="356" cy="160" r="1.6"/><circle cx="356" cy="188" r="1.6"/><circle cx="356" cy="216" r="1.6"/><circle cx="356" cy="244" r="1.6"/><circle cx="356" cy="272" r="1.6"/><circle cx="356" cy="300" r="1.6"/><circle cx="356" cy="328" r="1.6"/><circle cx="356" cy="356" r="1.6"/><circle cx="356" cy="384" r="1.6"/><circle cx="356" cy="412" r="1.6"/><circle cx="356" cy="440" r="1.6"/><circle cx="356" cy="468" r="1.6"/><circle cx="356" cy="496" r="1.6"/><circle cx="384" cy="20" r="1.6"/><circle cx="384" cy="48" r="1.6"/><circle cx="384" cy="76" r="1.6"/><circle cx="384" cy="104" r="1.6"/><circle cx="384" cy="132" r="1.6"/><circle cx="384" cy="160" r="1.6"/><circle cx="384" cy="188" r="1.6"/><circle cx="384" cy="216" r="1.6"/><circle cx="384" cy="244" r="1.6"/><circle cx="384" cy="272" r="1.6"/><circle cx="384" cy="300" r="1.6"/><circle cx="384" cy="328" r="1.6"/><circle cx="384" cy="356" r="1.6"/><circle cx="384" cy="384" r="1.6"/><circle cx="384" cy="412" r="1.6"/><circle cx="384" cy="440" r="1.6"/><circle cx="384" cy="468" r="1.6"/><circle cx="384" cy="496" r="1.6"/></g>
 <rect x="44" y="96" width="312" height="92" rx="14" fill="var(--paper)"/>
 <path d="M92 188 l-10 26 l34-26z" fill="var(--paper)"/>
-<text x="200" y="134" text-anchor="middle" font-size="22" fill="var(--ink)">Ich brauche dringend</text>
-<text x="200" y="168" text-anchor="middle" font-size="22" fill="var(--ink)">mehr Abstand.</text>
-<ellipse cx="240" cy="162" rx="62" ry="18" fill="none" stroke="var(--peach)" stroke-width="4" transform="rotate(-4 238 161)"/>
+<text x="200" y="134" text-anchor="middle" font-size="22" fill="var(--ink)">Ich hab den</text>
+<text x="200" y="168" text-anchor="middle" font-size="22" fill="var(--ink)">Faden verloren.</text>
+<ellipse cx="140" cy="162" rx="46" ry="18" fill="none" stroke="var(--peach)" stroke-width="4" transform="rotate(-4 140 161)"/>
 <g stroke="var(--paper)" stroke-width="2.5" stroke-dasharray="5 7" fill="none">
-<path d="M238 186 C 200 250, 120 270, 104 318"/><path d="M240 186 C 240 250, 210 300, 210 336"/><path d="M244 186 C 290 240, 320 280, 318 318"/></g>
-<g class="r r1"><circle cx="104" cy="360" r="42" fill="var(--lime)"/><text x="104" y="372" text-anchor="middle" font-size="34" fill="var(--ink)">1</text></g>
-<g class="r r2"><circle cx="210" cy="378" r="42" fill="var(--paper)"/><text x="210" y="390" text-anchor="middle" font-size="34" fill="var(--ink)">2</text></g>
-<g class="r r3"><circle cx="318" cy="360" r="42" fill="var(--peach)"/><text x="318" y="372" text-anchor="middle" font-size="34" fill="var(--ink)">3</text></g>
-<text x="210" y="462" text-anchor="middle" font-size="17" fill="#c4d7db" font-weight="700">ein Satz · mehrere Lesarten</text>
+<path d="M134 186 C 126 240, 124 280, 124 318"/><path d="M146 186 C 210 230, 280 270, 284 318"/></g>
+<g class="r r1"><circle cx="124" cy="360" r="42" fill="var(--paper)"/><text x="124" y="372" text-anchor="middle" font-size="34" fill="var(--ink)">1</text><text x="124" y="428" text-anchor="middle" font-size="15" fill="var(--paper)" font-weight="700">naheliegend</text></g>
+<g class="r r2"><circle cx="284" cy="360" r="42" fill="var(--lime)"/><text x="284" y="372" text-anchor="middle" font-size="34" fill="var(--ink)">2</text><text x="284" y="428" text-anchor="middle" font-size="15" fill="var(--lime)" font-weight="700">versteckt</text></g>
+<text x="204" y="474" text-anchor="middle" font-size="17" fill="#c4d7db" font-weight="700">ein Satz · zwei Lesarten</text>
 </svg></div>
 		</div>
 	</section>
 
-	<section class="dh-wrap" id="miniuebung" aria-labelledby="h-mini">
-		<div class="tr-mini">
-			<div class="dh-stack" style="gap:18px">
-				<p class="dh-kicker">Miniübung · etwa fünf Minuten</p>
-				<h2 class="dh-h2" id="h-mini">Was war heute ein bisschen absurd?</h2>
-				<p>Du machst dir morgens einen Tee. Zwei Stunden später merkst du, dass er noch immer neben dir steht. Wie würdest du jemandem davon erzählen? Vielleicht so:</p>
-				<p class="dh-voice tr-mini-quote" data-voice><span class="mk">„Mein Tee ist jetzt endlich auf Betriebstemperatur.</span> <span class="mk pt">Raumtemperatur.“</span></p>
+	<section class="dh-wrap" id="impulse" aria-labelledby="h-imp">
+		<div class="tr-imp">
+			<div class="tr-imp-head">
+				<div class="dh-stack" style="gap:18px">
+					<p class="dh-kicker">Reflexionsimpulse · ein paar Minuten am Tag</p>
+					<h2 class="dh-h2" id="h-imp">Drei Impulse für dein Notizbuch.</h2>
+				</div>
+				<p>Du brauchst kein Programm, nur ein Notizbuch oder deine Notiz-App. Nimm dir am Abend ein paar Minuten und schreib zu einem der Impulse eine Zeile auf. Es geht nicht darum, Pointen zu produzieren, sondern darum, genauer hinzuschauen.</p>
 			</div>
-			<div class="dh-stack" style="gap:18px">
-				<p>Denk an einen kleinen Moment aus deinem Tag.</p>
-				<ol class="tr-mini-q">
-					<li>Was hattest du erwartet?</li>
-					<li>Was ist tatsächlich passiert?</li>
-					<li>Wie könntest du es aus einem anderen Blickwinkel beschreiben?</li>
-				</ol>
-				<form class="tr-mini-pad" onsubmit="return false" aria-label="Notizfeld für deine Version">
-					<label for="mini-note">Schreib eine Version auf</label>
-					<textarea id="mini-note" rows="3" autocomplete="off" placeholder="Heute habe ich …"></textarea>
-					<p class="fine">Nur für dich: Deine Notiz bleibt in diesem Browserfenster und wird weder gespeichert noch übertragen.</p>
-				</form>
-				<p>Wenn sich die Gelegenheit ergibt, kannst du die Beobachtung als Gesprächseinstieg ausprobieren.</p>
+			<ol class="tr-imp-list">
+				<li class="tr-imp-card">
+					<span class="tr-imp-nr n1" aria-hidden="true">1</span>
+					<p class="tr-imp-tag">Beobachten</p>
+					<h3>Den inneren Seinfeld trainieren</h3>
+					<p>Beobachtungshumor beginnt oft mit „Kennst du das, wenn …?“. Gemeint sind Dinge, die eigentlich absurd sind, uns aus Gewohnheit aber ganz normal vorkommen, oder Momente, die viele andere auch kennen. Wer dafür ein Gespür entwickelt, findet leichter etwas, worüber man gemeinsam lachen kann.</p>
+					<div class="tr-imp-note"><b><svg class="tr-pen" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 7l3 3" stroke="currentColor" stroke-width="2"/></svg>Notier dir</b>Einen Moment von heute, der mit „Kennst du das, wenn …?“ beginnen könnte.<i class="tr-lines" aria-hidden="true"></i></div>
+					<p class="tr-imp-bsp dh-voice" data-voice><span class="mk">„Kennst du das, wenn du dir morgens einen Tee machst und er zwei Stunden später noch genau da steht, wo du ihn hingestellt hast?</span> <span class="mk pt">Inzwischen auf Raumtemperatur.“</span></p>
+					<p class="tr-imp-fine">Ein ausführlicher Beitrag dazu ist in Planung.</p>
+				</li>
+				<li class="tr-imp-card">
+					<span class="tr-imp-nr n2" aria-hidden="true">2</span>
+					<p class="tr-imp-tag">Mehrdeutigkeit</p>
+					<h3>Was könnte noch gemeint sein?</h3>
+					<p>Viele Wörter und Sätze haben neben ihrer naheliegenden Lesart noch eine zweite, versteckte. Im Alltag fällt das kaum auf, weil wir automatisch die naheliegende Bedeutung wählen. Wer Mehrdeutigkeiten bewusst bemerkt, sammelt Material für überraschende Verbindungen, das gleiche Prinzip, mit dem viele Wortspiele und Witze arbeiten.</p>
+					<div class="tr-imp-note"><b><svg class="tr-pen" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 7l3 3" stroke="currentColor" stroke-width="2"/></svg>Notier dir</b>Einen Satz, den du heute gehört oder gesagt hast, dazu die naheliegende und eine versteckte Lesart.<i class="tr-lines" aria-hidden="true"></i></div>
+					<p class="tr-imp-bsp dh-voice" data-voice><span class="mk">„Ich hab den Faden verloren.“ Naheliegend: im Gespräch.</span> <span class="mk pt">Versteckt: beim Teebeutel, der jetzt in der Tasse schwimmt.</span></p>
+				</li>
+				<li class="tr-imp-card">
+					<span class="tr-imp-nr n3" aria-hidden="true">3</span>
+					<p class="tr-imp-tag">Umdeuten</p>
+					<h3>Umdeuten und neu rahmen</h3>
+					<p>Eine Situation bleibt, wie sie ist. Du kannst aber ausprobieren, sie anders zu erzählen: Was ist daran auch komisch, nützlich oder überraschend? Das heißt nicht, Ärger wegzulächeln, sondern einen zweiten Blick daneben zu stellen.</p>
+					<div class="tr-imp-note"><b><svg class="tr-pen" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 7l3 3" stroke="currentColor" stroke-width="2"/></svg>Notier dir</b>Etwas, das heute schiefging, und eine zweite Version davon.<span class="tr-imp-bonus"><b>Bonuspunkt:</b> Verknüpf die Umdeutung mit etwas, wofür du dankbar sein kannst.</span><i class="tr-lines" aria-hidden="true"></i></div>
+					<p class="tr-imp-bsp dh-voice" data-voice><span class="mk">„Heute bin ich in Hundekacke gestiegen.</span> <span class="mk pt">Mega, ich wollte sowieso längst mal wieder meine Sneaker putzen.“</span></p>
+				</li>
+			</ol>
+			<div class="tr-imp-foot">
+				<p class="dh-voice" data-voice><span class="mk">Eine Notiz ist noch keine Pointe.</span> <span class="mk pt">Sie ist Material für später und vor allem Training für deine mentale Flexibilität.</span></p>
+				<a class="dh-link" href="/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">Mehr zum Training lesen</a>
 			</div>
 		</div>
 	</section>
@@ -89,46 +106,9 @@
 			</div>
 			<ol class="tr-steps">
 				<li class="dh-rise"><div><b>Im Alltag beobachten</b><span>Was war heute unerwartet, widersprüchlich oder ein bisschen absurd?</span></div></li>
-				<li class="dh-rise"><div><b>Möglichkeiten sammeln</b><span>Welche anderen Lesarten oder Blickwinkel gibt es? Sammle mehrere, bevor du eine auswählst.</span></div></li>
+				<li class="dh-rise"><div><b>Möglichkeiten sammeln</b><span>Welche zweite, versteckte Lesart steckt neben der naheliegenden? Halte sie fest, auch wenn sie noch keine Pointe ist.</span></div></li>
 				<li class="dh-rise"><div><b>Bei passender Gelegenheit darauf zurückgreifen</b><span>Ob du eine Idee teilst, entscheidest du im Moment: für wen, wann und wozu sie passt.</span></div></li>
 			</ol>
-		</div>
-	</section>
-
-	<section class="dh-wrap" id="uebung" aria-labelledby="h-ex">
-		<div class="tr-ex">
-			<div class="dh-stack" style="gap:20px">
-				<p class="dh-kicker">Zweite Übung: Möglichkeiten sammeln</p>
-				<h2 class="dh-h2" id="h-ex">Übung: Was könnte noch gemeint sein?</h2>
-				<p>Wähle einen alltäglichen Satz oder eine kleine Situation. Suche nach einem Wort, Detail oder Zusammenhang, der mehrere Lesarten zulässt. Sammle erst Möglichkeiten, bevor du versuchst, eine Pointe daraus zu machen.</p>
-				<p class="tr-sentence">„Ich brauche dringend mehr <mark>Abstand</mark>.“</p>
-				<h3 style="font-size:20px">Fragen zum Weiterdenken</h3>
-				<ul class="tr-qlist">
-					<li>In welchem Zusammenhang könnte „Abstand“ noch eine andere Bedeutung haben?</li>
-					<li>Welche unerwartete Situation könnte mit dem Satz gemeint sein?</li>
-					<li>Welche zweite Lesart wäre verständlich, aber überraschend?</li>
-					<li>Lässt sich eine humorvolle Version daraus entwickeln?</li>
-				</ul>
-			</div>
-			<div class="dh-stack" style="gap:22px">
-				<h3 style="font-size:20px">So gehst du vor</h3>
-				<ol class="tr-howto">
-					<li>Notiere einen Satz oder eine Beobachtung aus deinem Alltag.</li>
-					<li>Markiere ein Wort oder Detail, das mehrere Bedeutungen haben könnte.</li>
-					<li>Sammle mindestens drei alternative Lesarten.</li>
-					<li>Wähle die überraschendste verständliche Variante.</li>
-					<li>Formuliere sie möglichst knapp.</li>
-					<li>Prüfe, für wen und in welcher Situation sie passen könnte.</li>
-				</ol>
-				<form class="tr-pad" onsubmit="return false" aria-label="Notizfeld für deine Lesarten">
-					<label>Lesart 1<input type="text" autocomplete="off"></label>
-					<label>Lesart 2<input type="text" autocomplete="off"></label>
-					<label>Lesart 3<input type="text" autocomplete="off"></label>
-					<p class="fine">Nur für dich: Deine Notizen bleiben in diesem Browserfenster und werden weder gespeichert noch übertragen.</p>
-				</form>
-				<p class="dh-voice" data-voice><span class="mk">Eine alternative Lesart ist noch keine Pointe.</span> <span class="mk pt">Sie ist Material, mit dem du weiterarbeiten kannst.</span></p>
-				<a class="dh-link" style="color:var(--lime)" href="/2026/05/21/humor-trainieren-warum-dein-gehirn-dabei-mehr-lernt-als-beim-naechsten-mindset-seminar/">Mehr zum Training im Blog</a>
-			</div>
 		</div>
 	</section>
 
@@ -153,7 +133,7 @@
 				<p class="dh-kicker dh-rise">Welche Methode was zeigt</p>
 				<div class="dh-rise"><b>Humorvolle Neubewertung im Labor</b><p><span class="tr-tag bef">Befund</span>Teilnehmende sollten belastende Bilder humorvoll umdeuten. Danach berichteten sie kurzfristig weniger negative Gefühle als ohne diese Umdeutung, vor allem bei wohlwollendem statt spöttischem Humor. <span class="ref">(<a href="#q6">Samson &amp; Gross, 2012</a>; <a href="#q7">Kugler &amp; Kuhbandner, 2015</a>)</span> Untersucht wurden kurze Laborsituationen, nicht Stress im Alltag.</p></div>
 				<div class="dh-rise"><b>Interventionen, die Lachen auslösen</b><p><span class="tr-tag bef">Befund</span>Etwa Lachyoga, Lachübungen oder Comedy-Filme. Eine Meta-Analyse findet Hinweise auf positive Effekte auf das psychische Befinden. <span class="ref">(<a href="#q1">van der Wal &amp; Kok, 2019</a>)</span> Eine weitere fand nach Interventionen mit spontanem Lachen eine stärkere Abnahme des Stresshormons Cortisol als in Kontrollgruppen. <span class="ref">(<a href="#q2">Kramer &amp; Leitão, 2023</a>)</span> Die Studien unterscheiden sich stark in Methode und Qualität.</p></div>
-				<div class="dh-rise"><b>Humor als tägliche Praxis</b><p><span class="tr-tag off">Offen</span>Humorvolle Seiten wahrnehmen und Situationen neu rahmen, wie in den Übungen oben. Programme, die solche Gewohnheiten üben, werden untersucht. <span class="ref">(<a href="#q3">Ruch et al., 2018</a>)</span> Ihre Wirkung auf Stress und Resilienz ist noch wenig erforscht.</p></div>
+				<div class="dh-rise"><b>Humor als tägliche Praxis</b><p><span class="tr-tag off">Offen</span>Humorvolle Seiten wahrnehmen und Situationen neu rahmen, wie mit den Impulsen oben. Programme, die solche Gewohnheiten üben, werden untersucht. <span class="ref">(<a href="#q3">Ruch et al., 2018</a>)</span> Ihre Wirkung auf Stress und Resilienz ist noch wenig erforscht.</p></div>
 				<div class="no-card dh-rise"><b>Konkrete Wirkversprechen</b><p><span class="tr-tag no">Nicht belegt</span>Dass ein bestimmtes Humortraining Stress reduziert, Resilienz erhöht oder vor Burnout schützt, versprechen wir nicht.</p></div>
 			</div>
 		</div>
@@ -188,7 +168,7 @@
 			<h2 class="dh-h2 dh-rise" id="h-offers">Humor praktisch erkunden</h2>
 		</div>
 		<div class="tr-offers">
-			<article class="tr-offer dh-rise"><h3>Übungen für den Alltag</h3><p>Kleine Impulse, um humorvolle Möglichkeiten bewusster wahrzunehmen und Perspektiven zu wechseln.</p><a class="dh-link" href="#miniuebung">Miniübung ausprobieren</a></article>
+			<article class="tr-offer dh-rise"><h3>Übungen für den Alltag</h3><p>Drei kurze Reflexionsimpulse, um humorvolle Möglichkeiten bewusster wahrzunehmen und Perspektiven zu wechseln.</p><a class="dh-link" href="#impulse">Zu den Impulsen</a></article>
 			<article class="tr-offer dh-rise"><h3>Coaching</h3><p>Individuelle Begleitung für Menschen, die ihren eigenen Umgang mit Humor erkunden und an konkreten Situationen arbeiten möchten.</p><a class="dh-link" href="https://calendar.app.google/uagqHNJ56Vd2u1ma7" target="_blank" rel="noopener">Coaching anfragen</a></article>
 			<article class="tr-offer dark dh-rise"><h3>Trainings und Workshops</h3><p>Formate für Teams und Organisationen, die Humor in Führung, Kommunikation, Zusammenarbeit oder Präsentationen reflektieren und praktisch erproben möchten.</p><a class="dh-link" href="/humor-in-organisationen/">Humortraining für Organisationen ansehen</a></article>
 		</div>
@@ -229,7 +209,7 @@
 				<p class="dh-kicker dh-rise">Weiterlesen</p>
 				<h2 class="dh-h2 dh-rise" id="h-posts">Training, Motivation und Alltag.</h2>
 			</div>
-			<div class="dh-slider-nav"><a class="dh-link" href="/blog/" style="margin-right:16px">Alle Beiträge im Blog</a><button type="button" data-prev aria-label="Vorherige Beiträge">←</button><button type="button" data-next aria-label="Nächste Beiträge">→</button></div>
+			<div class="dh-slider-nav"><a class="dh-link" href="/blog/" style="margin-right:16px">Alle Beiträge in Humor-Wissen</a><button type="button" data-prev aria-label="Vorherige Beiträge">←</button><button type="button" data-next aria-label="Nächste Beiträge">→</button></div>
 		</div>
 		<div class="dh-slider" data-slider>
 			<div class="dh-track" tabindex="0" aria-label="Beitragsempfehlungen, seitlich wischen oder Pfeile nutzen">
@@ -294,7 +274,7 @@
 			<div class="dh-stack" style="gap:16px">
 				<h2 id="h-close">Mehr Möglichkeiten im Alltag entdecken.</h2>
 				<p class="dh-lead">Humor bewusst zu entwickeln beginnt mit Aufmerksamkeit: für Situationen, Perspektiven und den eigenen Stil. Finde heraus, welcher nächste Schritt zu dir passt.</p>
-				<div class="dh-actions"><a class="dh-btn" href="#miniuebung">Miniübung ausprobieren</a></div>
+				<div class="dh-actions"><a class="dh-btn" href="#impulse">Impulse für heute</a></div>
 			</div>
 			<ul>
 				<li><a class="dh-link" href="https://calendar.app.google/uagqHNJ56Vd2u1ma7" target="_blank" rel="noopener">Coaching anfragen</a></li>

@@ -13,6 +13,7 @@
 		<nav class="dh-nav" id="menue" aria-label="Hauptmenü">
 			<a href="/blog/">Humor-Wissen</a>
 			<a href="/humor-risk-check/">Humor Risk Check</a>
+			<a href="/humor-kann-man-trainieren/">Humor trainieren</a>
 			<a href="/humor-und-persoenlichkeit/">Humor und Persönlichkeit</a>
 			<a href="/humor-in-organisationen/">Für Organisationen</a>
 			<a href="/ueber/">Über De:Humore</a>

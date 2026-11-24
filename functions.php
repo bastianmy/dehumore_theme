@@ -20,6 +20,7 @@ function dehumore_seite() {
 		array( 'startseite', false, is_front_page() ),
 		array( 'humor-verstehen', true, is_page( 'humor-verstehen' ) ),
 		array( 'humor-risk-check', true, is_page_template( 'page-humor-risk-check' ) || is_page( 'humor-risk-check' ) ),
+		array( 'humor-trainieren', true, is_page( 'humor-kann-man-trainieren' ) ),
 		array( 'humor-und-persoenlichkeit', true, is_page( 'humor-und-persoenlichkeit' ) ),
 		array( 'humor-in-organisationen', true, is_page( 'humor-in-organisationen' ) ),
 		array( 'ueber', true, is_page( 'ueber' ) ),
@@ -107,6 +108,7 @@ function dehumore_meta_beschreibung() {
 	$texte = array(
 		'startseite'                => 'De:Humore macht Humorforschung verständlich: warum wir lachen, wann Humor verletzt und wie du ihn im Alltag und im Team bewusst einsetzt.',
 		'humor-risk-check'          => 'Wann verbindet ein Witz, wann verletzt er? Der Humor Risk Check hilft dir, einen konkreten Scherz anhand von fünf Dimensionen einzuschätzen.',
+		'humor-trainieren'          => 'Humor lässt sich trainieren: mit drei kurzen Reflexionsimpulsen für jeden Tag. Perspektivwechsel üben, Mehrdeutigkeiten entdecken, Situationen umdeuten.',
 		'humor-und-persoenlichkeit' => 'Was sagt unser Humor über uns aus? Erfahre, wie Humorstile, Humorpräferenzen und Persönlichkeit zusammenhängen – und warum Humor keine festen Persönlichkeitstypen verrät.',
 		'humor-in-organisationen'   => 'Trainings, Workshops und Keynotes zu Humor in Führung, Kommunikation und Teams: forschungsbasiert, praxisnah, mit Dr. Bastian Mayerhofer.',
 		'ueber'                     => 'De:Humore ist die Plattform von Dr. Bastian Mayerhofer für Humorforschung und ihre Anwendung: verständlich, differenziert und zum Ausprobieren.',

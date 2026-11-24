@@ -1,6 +1,7 @@
 /* ================= Einzelbeitrag ================= */
 :root body .dh-progress { position: fixed; left: 0; top: 0; height: 4px; width: 100%; background: var(--peach); transform-origin: left; transform: scaleX(var(--p, 0)); z-index: 70; }
 :root body .dh-crumbs { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-family: var(--display); font-weight: 600; font-size: 14px; line-height: 1.4; color: var(--muted); }
+:root body .dh-crumbs > * { margin: 0 !important; } /* WordPress-Flow-Abstand verschob „/ Blog“ nach unten */
 :root body .dh-crumbs a { text-decoration: none; }
 :root body .dh-crumbs a:hover { text-decoration: underline; text-decoration-color: var(--peach); text-underline-offset: 4px; }
 :root body .dh-rubrik { display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 6px; background: var(--peach); color: var(--ink); font-family: var(--display); font-weight: 800; font-size: 13px; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; }

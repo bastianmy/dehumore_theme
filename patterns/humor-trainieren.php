@@ -50,7 +50,7 @@
 				<li class="tr-imp-card">
 					<span class="tr-imp-nr n1" aria-hidden="true">1</span>
 					<p class="tr-imp-tag">Beobachten</p>
-					<h3>Den inneren Seinfeld trainieren</h3>
+					<h3>Den inneren <span class="tr-tip"><button type="button" class="tr-tip-btn" aria-expanded="false" aria-controls="tip-seinfeld">Seinfeld</button><span class="tr-tip-box" id="tip-seinfeld" role="note"><b>Seinfeld</b> Populäre US-Sitcom der 1990er-Jahre, die aus kleinen Alltagsbeobachtungen große Komik gemacht hat. Ein Klassiker des Observational Humor.</span></span> trainieren</h3>
 					<p>Beobachtungshumor beginnt oft mit „Kennst du das, wenn …?“. Gemeint sind Dinge, die eigentlich absurd sind, uns aus Gewohnheit aber ganz normal vorkommen, oder Momente, die viele andere auch kennen. Wer dafür ein Gespür entwickelt, findet leichter etwas, worüber man gemeinsam lachen kann.</p>
 					<div class="tr-imp-note"><b><svg class="tr-pen" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 7l3 3" stroke="currentColor" stroke-width="2"/></svg>Notier dir</b>Einen Moment von heute, der mit „Kennst du das, wenn …?“ beginnen könnte.<i class="tr-lines" aria-hidden="true"></i></div>
 					<p class="tr-imp-bsp dh-voice" data-voice><span class="mk">„Kennst du das, wenn du dir morgens einen Tee machst und er zwei Stunden später noch genau da steht, wo du ihn hingestellt hast?</span> <span class="mk pt">Inzwischen auf Raumtemperatur.“</span></p>

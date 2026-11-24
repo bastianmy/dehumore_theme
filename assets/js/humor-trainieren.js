@@ -40,6 +40,12 @@
 		if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' }); });
 		track.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd();
 	});
+	document.querySelectorAll('.tr-tip').forEach(function (tip) {
+		var btn = tip.querySelector('.tr-tip-btn');
+		btn.addEventListener('click', function (e) { e.stopPropagation(); var o = tip.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); });
+		document.addEventListener('click', function () { tip.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); });
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { tip.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.blur(); } });
+	});
 	var io = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { threshold: 0.15 });
 	document.querySelectorAll('.dh-rise').forEach(function (el) { if (reduce) el.classList.add('is-in'); else io.observe(el); });
 })();

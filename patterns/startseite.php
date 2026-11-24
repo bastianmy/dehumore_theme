@@ -297,7 +297,7 @@
 		<h2 class="dh-h2" id="h-weiter">Wohin als Nächstes?</h2>
 		<div class="dh-onward">
 			<a href="/humor-in-organisationen/"><span class="dh-kicker">Für Organisationen</span><b>Ein Format für dein Team finden</b><span>Trainings, Workshops, Keynotes und Coaching.</span></a>
-			<a href="/blog/"><span class="dh-kicker">Blog</span><b>Tiefer in die Forschung</b><span>Beiträge zu Humor, Denken und Alltag.</span></a>
+			<a href="/blog/"><span class="dh-kicker">Humor-Wissen</span><b>Tiefer in die Forschung</b><span>Beiträge zu Humor, Denken und Alltag.</span></a>
 			<a href="/kontakt/"><span class="dh-kicker">Kontakt</span><b>Direkt schreiben</b><span>bastian@dehumore.com</span></a>
 		</div>
 	</section>

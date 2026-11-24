@@ -61,7 +61,7 @@
 			<a class="ub-way dh-rise" href="/humor-und-persoenlichkeit/"><b>Humor und Persönlichkeit</b><span>Was wir lustig finden und wie wir Humor verwenden.</span></a>
 			<a class="ub-way peach dh-rise" href="/humor-risk-check/"><b>Humor Risk Check</b><span>Wann ein Witz verbindet und wann er verletzen kann.</span></a>
 			<a class="ub-way dark dh-rise" href="/humor-in-organisationen/"><b>Für Organisationen</b><span>Trainings, Workshops und Keynotes für Teams und Führung.</span></a>
-			<a class="ub-way dh-rise" href="/blog/"><b>Blog</b><span>Beiträge zu Humor, Denken und Alltag.</span></a>
+			<a class="ub-way dh-rise" href="/blog/"><b>Humor-Wissen</b><span>Beiträge zu Humor, Denken und Alltag.</span></a>
 		</div>
 	</section>
 

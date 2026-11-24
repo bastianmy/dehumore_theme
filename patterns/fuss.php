@@ -15,7 +15,7 @@
 			</div>
 			<div>
 				<h3>Entdecken</h3>
-				<ul><li><a href="/blog/">Blog</a></li><li><a href="/humor-risk-check/">Humor Risk Check</a></li><li><a href="/humor-und-persoenlichkeit/">Humor und Persönlichkeit</a></li></ul>
+				<ul><li><a href="/blog/">Humor-Wissen</a></li><li><a href="/humor-risk-check/">Humor Risk Check</a></li><li><a href="/humor-und-persoenlichkeit/">Humor und Persönlichkeit</a></li></ul>
 			</div>
 			<div>
 				<h3>De:Humore</h3>

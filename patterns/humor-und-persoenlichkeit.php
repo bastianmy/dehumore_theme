@@ -82,6 +82,7 @@
 			</div>
 			<div class="hp-grid dh-rise">
 				<span></span><span class="hp-axis">Bezug: andere</span><span class="hp-axis">Bezug: man selbst</span>
+				<i class="hp-achsen" aria-hidden="true"><b class="x"></b><b class="y"></b></i>
 				<span class="hp-axis v">eher wohlwollend</span>
 				<article class="hp-style warm"><span class="en">Affiliative</span><h3>Affiliativer Humor</h3><p>Humor, der Beziehungen und gemeinsame Leichtigkeit unterstützen kann – etwa scherzhaft erzählen, gemeinsam lachen oder eine angespannte Situation auflockern.</p></article>
 				<article class="hp-style warm"><span class="en">Self-enhancing</span><h3>Selbstaufwertender Humor</h3><p>Eine humorvolle Haltung gegenüber dem eigenen Leben und schwierigen Situationen. Er kann helfen, Abstand zu gewinnen oder die eigene Perspektive zu verändern.</p></article>

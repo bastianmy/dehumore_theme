@@ -59,6 +59,24 @@
 :root body .hp-style p { font-size: 16px; line-height: 1.6; }
 :root body .hp-style .en { font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 
+/* Achsenkreuz zwischen den vier Feldern (Desktop) */
+:root body .hp-grid { position: relative; }
+:root body .hp-achsen { display: none; }
+@media (min-width: 601px) {
+	:root body .hp-grid { grid-template-rows: auto 1fr 1fr; column-gap: 32px; row-gap: 32px; }
+	:root body .hp-grid > .hp-axis:not(.v) { margin-bottom: -16px; }
+	:root body .hp-achsen { display: block; position: absolute; grid-column: 2 / 4; grid-row: 2 / 4; inset: -14px; pointer-events: none; }
+	:root body .hp-achsen b { position: absolute; background: var(--ink); }
+	:root body .hp-achsen .x { left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; }
+	:root body .hp-achsen .y { top: 0; bottom: 0; left: 50%; width: 2px; margin-left: -1px; }
+	:root body .hp-achsen b::before, :root body .hp-achsen b::after { content: ""; position: absolute; width: 0; height: 0; border: 6px solid transparent; }
+	:root body .hp-achsen .x::before { left: -2px; top: -5px; border-right: 9px solid var(--ink); border-left: 0; }
+	:root body .hp-achsen .x::after { right: -2px; top: -5px; border-left: 9px solid var(--ink); border-right: 0; }
+	:root body .hp-achsen .y::before { top: -2px; left: -5px; border-bottom: 9px solid var(--ink); border-top: 0; }
+	:root body .hp-achsen .y::after { bottom: -2px; left: -5px; border-top: 9px solid var(--ink); border-bottom: 0; }
+	:root body .hp-grid .hp-style { position: relative; z-index: 1; }
+}
+
 /* 5: Comic Styles */
 :root body .hp-comic { background: var(--ink); color: var(--paper); border-radius: 16px; padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 64px); }
 :root body .hp-comic h2 { color: var(--paper); }

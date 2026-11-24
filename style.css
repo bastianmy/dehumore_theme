@@ -3,7 +3,7 @@ Theme Name: De:Humore
 Theme URI: https://dehumore.com
 Author: Dr. Bastian Mayerhofer
 Description: Block-Theme für De:Humore. Dark Teal, Soft White, Lime, Peach und Indigo, Montserrat und Nunito (lokal eingebunden). Aus dem freigegebenen Prototyp (Übergabe 22.11.2026) erzeugt.
-Version: 0.3.19
+Version: 0.3.20
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -244,8 +244,8 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 
 /* ---------- 7 Über ---------- */
 :root body .dh-about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
-:root body .dh-about-photo { aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; background: var(--line); }
-:root body .dh-about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 52% 30%; }
+:root body .dh-about-photo { aspect-ratio: 3 / 2; align-self: center; border-radius: 14px; overflow: hidden; background: var(--line); border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--lime); }
+:root body .dh-about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 :root body .dh-about .dh-voice { font-size: clamp(22px, 2.3vw, 28px); }
 /* Frosch-Zitat: der zweite Satz wird beim Scrollen durchgestrichen, Bastians Antwort schiebt sich darunter */
 :root body .dh-frog { margin: 0; --a: 0; --b: 0; --c: 0; --d: 0; }
@@ -350,7 +350,7 @@ html:not(.js) .dh-frog { --a: 1; --b: 1; --c: 1; --d: 1; }
 	:root.js body .dh-demo-run { height: 200vh; }
 	:root.js body .dh-demo-run .dh-demo { top: calc(var(--head-h) + 12px); }
 	:root body .dh-hero-photo { aspect-ratio: 4 / 3; order: -1; }
-	:root body .dh-about-photo { max-width: 420px; }
+	:root body .dh-about-photo { max-width: 560px; }
 }
 @media (max-width: 600px) {
 	:root body .dh-posts, :root body .dh-effects { grid-template-columns: minmax(0, 1fr); }

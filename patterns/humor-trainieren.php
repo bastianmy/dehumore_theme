@@ -196,7 +196,7 @@
 
 	<section class="dh-wrap" aria-labelledby="h-autor">
 		<div class="tr-author">
-			<img class="dh-rise" src="<?php echo esc_url( get_theme_file_uri( "assets/img/portraet.jpg" ) ); ?>" alt="Porträt von Dr. Bastian Mayerhofer" width="1400" height="934">
+			<img class="dh-rise" src="<?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-900.jpg" ) ); ?>" alt="Dr. Bastian Mayerhofer lächelt und zeigt mit beiden Zeigefingern nach oben" width="900" height="601" loading="lazy">
 			<div class="dh-stack" style="gap:14px">
 				<p class="dh-kicker dh-rise">Über Dr. Bastian Mayerhofer</p>
 				<h2 class="dh-h2 dh-rise" id="h-autor" style="font-size:clamp(28px,3vw,38px)">Humorforschung verstehen und in die Praxis bringen</h2>

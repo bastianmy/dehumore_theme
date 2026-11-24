@@ -173,7 +173,7 @@
 
 	<section class="dh-wrap" aria-labelledby="h-about">
 		<div class="og-about">
-			<div class="og-photo dh-rise"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/portraet.jpg" ) ); ?>" alt="Porträt von Dr. Bastian Mayerhofer" width="1400" height="934"></div>
+			<div class="og-photo dh-rise"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-1600.jpg" ) ); ?>" srcset="<?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-900.jpg" ) ); ?> 900w, <?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-1600.jpg" ) ); ?> 1600w" sizes="(max-width: 900px) 100vw, 600px" alt="Dr. Bastian Mayerhofer lächelt und zeigt mit beiden Zeigefingern nach oben" width="1600" height="1068" loading="lazy"></div>
 			<div class="dh-stack" style="gap:22px">
 				<p class="dh-kicker dh-rise">Über Dr. Bastian Mayerhofer</p>
 				<h2 class="dh-h2 dh-rise" id="h-about">Humor erforschen – und in die Praxis bringen.</h2>

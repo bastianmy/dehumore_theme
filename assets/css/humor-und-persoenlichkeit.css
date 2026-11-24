@@ -136,7 +136,7 @@
 
 /* Autor, Quellen, Abschluss */
 :root body .hp-author { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; max-width: 960px; }
-:root body .hp-author img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: 50% 25%; }
+:root body .hp-author img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; }
 :root body .hp-planned { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 :root body .hp-planned span { font-family: var(--display); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px dashed var(--ink); }
 :root body .hp-src { max-width: 860px; margin-top: 24px; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; }

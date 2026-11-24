@@ -74,9 +74,9 @@ html:not(.js) .dh-voice .mk { --s1: 1; --s2: 1; }
 :root body .og-format .meta { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.5; }
 
 /* Über */
-:root body .og-about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
-:root body .og-about .og-photo { aspect-ratio: 1 / 1; }
-:root body .og-about .og-photo img { object-position: 50% 30%; }
+:root body .og-about { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+:root body .og-about .og-photo { aspect-ratio: 3 / 2; border-radius: 14px; border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--lime); }
+:root body .og-about .og-photo img { object-position: 50% 40%; }
 
 /* FAQ */
 :root body .og-faq { max-width: 860px; margin-top: 32px; border-top: 2px solid var(--ink); }
@@ -111,7 +111,7 @@ html:not(.js) .dh-voice .mk { --s1: 1; --s2: 1; }
 @media (max-width: 900px) {
 	:root body .og-hero-grid, :root body .og-research, :root body .og-learn, :root body .og-about, :root body .og-ask { grid-template-columns: minmax(0, 1fr); }
 	:root body .og-hero .og-photo { aspect-ratio: 4 / 3; max-width: 560px; }
-	:root body .og-about .og-photo { max-width: 420px; }
+	:root body .og-about .og-photo { max-width: 560px; }
 }
 @media (max-width: 600px) {
 	:root body .og-situ, :root body .og-formats, :root body .og-fields, :root body .og-steps, :root body .og-form { grid-template-columns: minmax(0, 1fr); }

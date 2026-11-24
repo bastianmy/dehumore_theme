@@ -118,6 +118,12 @@ function dehumore_meta_beschreibung() {
 		'presse'                    => 'Dr. Bastian Mayerhofer in Presse und Podcasts: Interviews über Humorforschung, Humortraining und warum wir worüber lachen.',
 		'blog'                      => 'Der Blog von De:Humore: Beiträge aus Humorforschung und Kognitionswissenschaft, verständlich erklärt und mit Impulsen für Kommunikation und Alltag.',
 	);
+	if ( is_category() ) {
+		$text = wp_strip_all_tags( (string) term_description() );
+		if ( '' !== trim( $text ) ) {
+			return trim( $text );
+		}
+	}
 	$seite = dehumore_seite();
 	if ( ! $seite || ! isset( $texte[ $seite[0] ] ) ) {
 		return '';
@@ -244,3 +250,38 @@ add_action( 'wpseo_add_opengraph_additional_images', function ( $bilder ) {
 		);
 	}
 } );
+
+/**
+ * Themen-Kategorien von Humor-Wissen, in fester Reihenfolge, mit ihrer Pillar-Seite.
+ */
+function dehumore_kategorien() {
+	return array(
+		'kognition'           => array( '/humor-verstehen/', 'Humor verstehen' ),
+		'evolution-und-spiel' => array( '/humor-verstehen/', 'Humor verstehen' ),
+		'kontext-und-grenzen' => array( '/humor-risk-check/', 'Humor Risk Check' ),
+		'forschung-kritisch'  => array( '/humor-verstehen/', 'Humor verstehen' ),
+		'humor-trainieren'    => array( '/humor-kann-man-trainieren/', 'Humor trainieren' ),
+		'persoenlichkeit'     => array( '/humor-und-persoenlichkeit/', 'Humor und Persönlichkeit' ),
+		'organisationen'      => array( '/humor-in-organisationen/', 'Humor in Organisationen' ),
+	);
+}
+
+/**
+ * Kategorie-Filter für die Übersicht und die Kategorieseiten.
+ * Leere Kategorien werden ausgeblendet, die aktuelle ist markiert.
+ */
+function dehumore_kategorien_filter() {
+	$blog  = get_permalink( get_page_by_path( 'blog' ) ) ?: home_url( '/blog/' );
+	$alle  = ! is_category();
+	$html  = '<nav class="bl-filter" aria-label="Beiträge nach Thema filtern"><span class="bl-filter-label">Themen</span><ul>';
+	$html .= '<li><a href="' . esc_url( $blog ) . '#h-alle"' . ( $alle ? ' aria-current="page"' : '' ) . '>Alle</a></li>';
+	foreach ( array_keys( dehumore_kategorien() ) as $slug ) {
+		$term = get_term_by( 'slug', $slug, 'category' );
+		if ( ! $term || ( 0 === (int) $term->count && ! is_category( $slug ) ) ) {
+			continue;
+		}
+		$aktiv = is_category( $slug ) ? ' aria-current="page"' : '';
+		$html .= '<li><a href="' . esc_url( get_category_link( $term ) ) . '#h-alle"' . $aktiv . '>' . esc_html( $term->name ) . ' <span class="bl-filter-n">' . (int) $term->count . '</span></a></li>';
+	}
+	return $html . '</ul></nav>';
+}

@@ -107,8 +107,8 @@
 					</div>
 				</div>
 				<div class="dh-twoways">
-					<a class="dh-way" href="/blog/"><span class="dh-kicker">Verstehen</span><b>Tiefer ins Wissen</b><span class="d">Humortheorien, Forschung und Beiträge, die erklären, warum wir lachen.</span><span class="dh-link">Zum Blog</span></a>
-					<div class="dh-way dh-way--try"><span class="dh-kicker">Selbst ausprobieren <em class="soon">geplant</em></span><b>Garden-Path-Trainer</b><span class="d">Versteckte Doppeldeutungen entdecken und eigene Pointen bauen, allein oder mit KI-Unterstützung.</span></div>
+					<a class="dh-way" href="/blog/"><span class="dh-kicker">Verstehen</span><b>Tiefer ins Wissen</b><span class="d">Humortheorien, Forschung und Beiträge, die erklären, warum wir lachen.</span><span class="dh-link">Zu Humor-Wissen</span></a>
+					<a class="dh-way dh-way--try" href="/humor-kann-man-trainieren/"><span class="dh-kicker">Selbst ausprobieren</span><b>Humor trainieren</b><span class="d">Drei kurze Reflexionsimpulse für jeden Tag: beobachten, Mehrdeutigkeiten entdecken, Situationen umdeuten.</span><span class="dh-link">Zu den Impulsen</span></a>
 				</div>
 			</div>
 		</div>
@@ -293,7 +293,7 @@
 	</section>
 
 	<!-- 9 Abschluss -->
-	<section class="dh-section dh-wrap" style="padding-bottom: 0" aria-labelledby="h-weiter">
+	<section class="dh-section dh-wrap" aria-labelledby="h-weiter">
 		<h2 class="dh-h2" id="h-weiter">Wohin als Nächstes?</h2>
 		<div class="dh-onward">
 			<a href="/humor-in-organisationen/"><span class="dh-kicker">Für Organisationen</span><b>Ein Format für dein Team finden</b><span>Trainings, Workshops, Keynotes und Coaching.</span></a>

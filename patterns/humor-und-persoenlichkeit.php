@@ -78,7 +78,7 @@
 				<p class="dh-kicker dh-rise">Vier Humorstile: Wie Humor im Alltag eingesetzt wird</p>
 				<h2 class="dh-h2 dh-rise" id="h-stile">Martins Humorstile beschreiben Funktionen von Humor</h2>
 				<p class="dh-rise">Das Humor Styles Questionnaire von Rod Martin und Kolleg:innen unterscheidet vier Dimensionen, die beschreiben, wie Menschen Humor im Alltag verwenden. <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span> Es geht dabei nicht um eine Einteilung in vier unveränderliche Persönlichkeitstypen.</p>
-				<p class="dh-rise dh-small dh-muted">Das Modell ordnet die Stile entlang zweier Fragen: Bezieht sich der Humor eher auf andere oder auf einen selbst? Und wirkt er eher wohlwollend oder eher auf Kosten von jemandem? <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span></p>
+				<p class="dh-rise dh-small dh-muted">Das Modell ordnet die Stile entlang zweier Fragen: Bezieht sich der Humor eher auf andere oder auf einen selbst? Und wirkt er eher wohlwollend oder eher verletzend? <span class="ref">(<a href="#q1">Martin et al., 2003</a>)</span></p>
 			</div>
 			<div class="hp-grid dh-rise">
 				<span></span><span class="hp-axis">Bezug: andere</span><span class="hp-axis">Bezug: man selbst</span>
@@ -86,7 +86,7 @@
 				<span class="hp-axis v">eher wohlwollend</span>
 				<article class="hp-style warm"><span class="en">Affiliative</span><h3>Affiliativer Humor</h3><p>Humor, der Beziehungen und gemeinsame Leichtigkeit unterstützen kann – etwa scherzhaft erzählen, gemeinsam lachen oder eine angespannte Situation auflockern.</p></article>
 				<article class="hp-style warm"><span class="en">Self-enhancing</span><h3>Selbstaufwertender Humor</h3><p>Eine humorvolle Haltung gegenüber dem eigenen Leben und schwierigen Situationen. Er kann helfen, Abstand zu gewinnen oder die eigene Perspektive zu verändern.</p></article>
-				<span class="hp-axis v">eher auf Kosten</span>
+				<span class="hp-axis v">eher verletzend</span>
 				<article class="hp-style cost"><span class="en">Aggressive</span><h3>Aggressiver Humor</h3><p>Humor, der andere zum Ziel macht, etwa durch Spott, Sarkasmus oder herabsetzendes Necken. Wie er wirkt, hängt auch von Beziehung, Macht und Situation ab.</p></article>
 				<article class="hp-style cost"><span class="en">Self-defeating</span><h3>Selbstabwertender Humor</h3><p>Sich selbst zum Gegenstand des Humors zu machen, um andere zu unterhalten oder soziale Zugehörigkeit zu sichern. Je nach Häufigkeit und Kontext kann das unterschiedlich erlebt werden.</p></article>
 			</div>

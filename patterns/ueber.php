@@ -34,7 +34,7 @@
 
 	<section class="dh-wrap" id="kopf" aria-labelledby="h-kopf">
 		<div class="ub-kopf">
-			<div class="photo dh-rise"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/portraet.jpg" ) ); ?>" alt="Porträt von Dr. Bastian Mayerhofer" width="1400" height="934"></div>
+			<div class="photo dh-rise"><img src="<?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-1600.jpg" ) ); ?>" srcset="<?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-900.jpg" ) ); ?> 900w, <?php echo esc_url( get_theme_file_uri( "assets/img/dr-bastian-mayerhofer-zwei-finger-1600.jpg" ) ); ?> 1600w" sizes="(max-width: 900px) 100vw, 600px" alt="Dr. Bastian Mayerhofer lächelt und zeigt mit beiden Zeigefingern nach oben" width="1600" height="1068" loading="lazy"></div>
 			<div class="dh-stack" style="gap:22px">
 				<p class="dh-kicker dh-rise">Der Kopf hinter De:Humore</p>
 				<h2 class="dh-h2 dh-rise" id="h-kopf">Dr. Bastian Mayerhofer</h2>

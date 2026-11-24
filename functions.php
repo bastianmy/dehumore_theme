@@ -225,3 +225,20 @@ add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function ( $ids ) {
 	}
 	return $ids;
 } );
+
+/**
+ * Standard-Teilen-Bild (1200 × 630) für Seiten ohne eigenes Beitragsbild.
+ */
+add_action( 'wpseo_add_opengraph_additional_images', function ( $bilder ) {
+	if ( is_object( $bilder ) && method_exists( $bilder, 'add_image' ) ) {
+		$bilder->add_image(
+			array(
+				'url'    => get_theme_file_uri( 'assets/img/dehumore-teilen.jpg' ),
+				'width'  => 1200,
+				'height' => 630,
+				'type'   => 'image/jpeg',
+				'alt'    => 'De:Humore – Humor als Fenster auf den menschlichen Geist. Dr. Bastian Mayerhofer',
+			)
+		);
+	}
+} );

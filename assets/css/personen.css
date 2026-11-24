@@ -20,3 +20,9 @@
 	:root body .dh-person-cta { padding: 26px 20px; }
 	:root body .dh-person-cta .dh-btn { flex: 1 1 100%; }
 }
+
+/* MailPoet hängt sein Formular doppelt unter Seiteninhalte; auf Personen-Seiten ausblenden. */
+:root body .dh-person .mailpoet_form,
+:root body .dh-person [class*="mailpoet_form_below"],
+:root body .dh-person .sharedaddy,
+:root body .dh-person .jp-relatedposts { display: none !important; }

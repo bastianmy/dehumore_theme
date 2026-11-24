@@ -129,6 +129,9 @@ add_filter( 'wpseo_metadesc', function ( $desc ) {
 foreach ( array( 'wpseo_opengraph_desc', 'wpseo_twitter_description' ) as $dehumore_filter ) {
 	add_filter( $dehumore_filter, function ( $desc ) {
 		$leer = ! is_string( $desc ) || '' === trim( $desc ) || trim( $desc ) === trim( get_bloginfo( 'description' ) );
+		if ( ! $leer && is_singular() && '' === trim( (string) get_post_meta( get_queried_object_id(), '_yoast_wpseo_metadesc', true ) ) ) {
+			$leer = true; // Yoast hat nur einen Auszug aus dem Inhalt erzeugt.
+		}
 		return $leer ? ( dehumore_meta_beschreibung() ?: $desc ) : $desc;
 	} );
 }

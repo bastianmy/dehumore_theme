@@ -3,7 +3,7 @@ Theme Name: De:Humore
 Theme URI: https://dehumore.com
 Author: Dr. Bastian Mayerhofer
 Description: Block-Theme für De:Humore. Dark Teal, Soft White, Lime, Peach und Indigo, Montserrat und Nunito (lokal eingebunden). Aus dem freigegebenen Prototyp (Übergabe 22.11.2026) erzeugt.
-Version: 0.3.25
+Version: 0.3.26
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -45,7 +45,7 @@ html { scroll-padding-top: 96px; }
 	--display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 	--text: "Nunito", "Segoe UI", Arial, sans-serif;
 	--wide: 1240px;
-	--gutter: max(16px, min(4vw, 48px));
+	--gutter: max(24px, min(4vw, 48px));
 	--section: clamp(80px, 10vw, 136px);
 	--head-h: 76px;
 	color-scheme: light;
@@ -382,3 +382,20 @@ html:not(.js) .dh-frog { --a: 1; --b: 1; --c: 1; --d: 1; }
 
 /* Jetpack-Teilen/Likes nirgends anzeigen (Sicherheitsnetz zum Filter in functions.php) */
 :root body .sharedaddy, :root body .sd-sharing-enabled, :root body .jetpack-likes-widget-wrapper, :root body #jp-post-flair { display: none !important; }
+
+/* ---------- Mobil: Innenabstände (0.3.26, Bastian 24.11.2026 „Hier überall noch padding“) ---------- */
+/* Versatzschatten (8px) bleibt innerhalb des Seitenrands, Bilder stehen mittig im Satzspiegel. */
+@media (max-width: 600px) {
+	html:root body .bl-img, html:root body .dh-about-photo, html:root body .og-about .og-photo,
+	html:root body .ub-kopf .photo, html:root body .tr-imp, html:root body .dh-person-cta,
+	html:root body .dh-nl-gift { margin-right: 8px; }
+	html:root body .dh-person-foto img { width: calc(100% - 8px); }
+}
+/* Touch-Geräte: kein „klebender“ Hover-Versatz nach dem Antippen (Schatten würde auf 13px wachsen). */
+@media (hover: none) {
+	html:root body .bl-card:hover .bl-img, html:root body .bl-feat-card:hover .bl-img,
+	html:root body .dh-post:hover .img.dh-rahmen { transform: none; box-shadow: 8px 8px 0 var(--dh-schatten, var(--lime)); }
+	html:root body .bl-card:hover .bl-img img, html:root body .bl-feat-card:hover .bl-img img, html:root body .dh-post:hover .img img { transform: none; }
+}
+/* Seiten ohne eigenen Abschluss-Abstand: Luft vor der Fußzeile. */
+html:root body main > .dh-wrap:last-child:not(.dh-section):not([style*="margin-bottom"]) { padding-bottom: var(--section); }

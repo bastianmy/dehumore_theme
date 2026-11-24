@@ -248,7 +248,7 @@
    "defaultPresets": false
   },
   "custom": {
-   "gutter": "clamp(20px, 3vw, 32px)"
+   "gutter": "max(24px, min(4vw, 48px))"
   }
  },
  "styles": {

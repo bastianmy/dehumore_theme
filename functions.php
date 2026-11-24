@@ -153,7 +153,7 @@ function dehumore_marke_fett( $html ) {
 			continue;
 		}
 		if ( '<' === $teil[0] ) {
-			if ( '' === $skip && preg_match( '/^<(script|style|textarea|title|svg|noscript)\b/i', $teil, $m ) ) {
+			if ( '' === $skip && preg_match( '/^<(script|style|textarea|title|svg|noscript|option)\b/i', $teil, $m ) ) {
 				$skip = strtolower( $m[1] );
 			} elseif ( '' !== $skip && preg_match( '/^<\/' . $skip . '\b/i', $teil ) ) {
 				$skip = '';
@@ -161,7 +161,8 @@ function dehumore_marke_fett( $html ) {
 			continue;
 		}
 		if ( '' === $skip && false !== strpos( $teil, 'De:Humore' ) ) {
-			$teile[ $i ] = str_replace( 'De:Humore', 'De:<b class="dh-marke">Humore</b>', $teil );
+			// In einer Span bündeln, damit Flex-/Grid-Container den Text nicht in Einzelteile zerlegen.
+			$teile[ $i ] = '<span class="dh-marke-txt">' . str_replace( 'De:Humore', 'De:<b class="dh-marke">Humore</b>', $teil ) . '</span>';
 		}
 	}
 	return $kopf . implode( '', $teile );

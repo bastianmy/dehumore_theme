@@ -3,7 +3,7 @@ Theme Name: De:Humore
 Theme URI: https://dehumore.com
 Author: Dr. Bastian Mayerhofer
 Description: Block-Theme für De:Humore. Dark Teal, Soft White, Lime, Peach und Indigo, Montserrat und Nunito (lokal eingebunden). Aus dem freigegebenen Prototyp (Übergabe 22.11.2026) erzeugt.
-Version: 0.3.15
+Version: 0.3.16
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -354,8 +354,10 @@ html:not(.js) .dh-frog { --a: 1; --b: 1; --c: 1; --d: 1; }
 }
 @media (max-width: 600px) {
 	:root body .dh-posts, :root body .dh-effects { grid-template-columns: minmax(0, 1fr); }
-	:root body .dh-steps { gap: 8px; margin-top: 20px; }
-	:root body .dh-steps b { font-size: 14px; }
+	:root body .dh-steps { grid-template-columns: minmax(0, 1fr); gap: 6px; margin-top: 18px; }
+	:root body .dh-steps li { border-top: 0; border-left: 3px solid rgba(254, 244, 238, .2); padding: 2px 0 2px 12px; }
+	:root body .dh-steps li.on { border-left-color: var(--peach); }
+	:root body .dh-steps b { font-size: 15px; }
 	:root body .dh-steps span { display: none; }
 	:root body .dh-joke { font-size: 22px; }
 	:root body .dh-actions .dh-btn { width: 100%; }

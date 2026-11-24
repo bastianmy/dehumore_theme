@@ -25,6 +25,10 @@ function dehumore_seite() {
 		array( 'ueber', true, is_page( 'ueber' ) ),
 		array( 'beitrag', true, is_singular( 'post' ) ),
 		array( 'blog', true, is_page( 'blog' ) || is_home() || is_archive() || is_search() ),
+		array( 'ueber-mich', false, is_page( 'ueber-mich' ) ),
+		array( 'kontakt', false, is_page( 'kontakt' ) ),
+		array( 'wissenschaftliche-publikationen', false, is_page( 'wissenschaftliche-publikationen' ) ),
+		array( 'presse', false, is_page( 'presse-podcasts-mit-dr-bastian-mayerhofer' ) ),
 	);
 	foreach ( $seiten as $s ) {
 		if ( $s[2] ) {
@@ -37,10 +41,13 @@ function dehumore_seite() {
 add_action( 'wp_enqueue_scripts', function () {
 	$v = wp_get_theme()->get( 'Version' );
 	wp_enqueue_style( 'dehumore', get_stylesheet_uri(), array(), $v );
+	if ( is_page_template( 'page-person' ) ) {
+		wp_enqueue_style( 'dehumore-personen', get_theme_file_uri( 'assets/css/personen.css' ), array( 'dehumore' ), $v );
+	}
 	$seite  = dehumore_seite();
 	$script = 'site';
 	if ( $seite ) {
-		$script = in_array( $seite[0], array( 'blog' ), true ) ? 'site' : $seite[0];
+		$script = ( 'blog' !== $seite[0] && file_exists( get_theme_file_path( 'assets/js/' . $seite[0] . '.js' ) ) ) ? $seite[0] : 'site';
 		if ( $seite[1] ) {
 			wp_enqueue_style( 'dehumore-' . $seite[0], get_theme_file_uri( 'assets/css/' . $seite[0] . '.css' ), array( 'dehumore' ), $v );
 		}
@@ -103,6 +110,10 @@ function dehumore_meta_beschreibung() {
 		'humor-und-persoenlichkeit' => 'Was sagt unser Humor über uns aus? Erfahre, wie Humorstile, Humorpräferenzen und Persönlichkeit zusammenhängen – und warum Humor keine festen Persönlichkeitstypen verrät.',
 		'humor-in-organisationen'   => 'Trainings, Workshops und Keynotes zu Humor in Führung, Kommunikation und Teams: forschungsbasiert, praxisnah, mit Dr. Bastian Mayerhofer.',
 		'ueber'                     => 'De:Humore ist die Plattform von Dr. Bastian Mayerhofer für Humorforschung und ihre Anwendung: verständlich, differenziert und zum Ausprobieren.',
+		'ueber-mich'                => 'Dr. Bastian Mayerhofer ist promovierter Kognitionspsychologe, Humorforscher und Trainer. Wie er Humorforschung, Bühne und Markenkommunikation verbindet.',
+		'kontakt'                   => 'Kontakt zu Dr. Bastian Mayerhofer und De:Humore: Anfragen zu Workshops, Keynotes und Humortraining per E-Mail oder im kostenlosen 15-Minuten-Gespräch.',
+		'wissenschaftliche-publikationen' => 'Wissenschaftliche Publikationen von Dr. Bastian Mayerhofer zu Humor, Garden-Path-Witzen, Mehrdeutigkeit und probabilistischem Denken.',
+		'presse'                    => 'Dr. Bastian Mayerhofer in Presse und Podcasts: Interviews über Humorforschung, Humortraining und warum wir worüber lachen.',
 		'blog'                      => 'Der Blog von De:Humore: Beiträge aus Humorforschung und Kognitionswissenschaft, verständlich erklärt und mit Impulsen für Kommunikation und Alltag.',
 	);
 	$seite = dehumore_seite();
@@ -186,3 +197,13 @@ add_action( 'template_redirect', function () {
 		exit;
 	}
 }, 0 );
+
+/**
+ * Personen-Seiten (Vorlage page-person): ohne Jetpack-„Teilen“ und „Gefällt mir“.
+ */
+add_filter( 'sharing_show', function ( $show ) {
+	return is_page_template( 'page-person' ) ? false : $show;
+}, 20 );
+add_filter( 'wpl_is_likes_visible', function ( $visible ) {
+	return is_page_template( 'page-person' ) ? false : $visible;
+}, 20 );

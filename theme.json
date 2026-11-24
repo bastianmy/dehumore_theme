@@ -436,6 +436,13 @@
    "postTypes": [
     "page"
    ]
+  },
+  {
+   "name": "page-person",
+   "title": "Person (schmal, ohne Titel)",
+   "postTypes": [
+    "page"
+   ]
   }
  ]
 }

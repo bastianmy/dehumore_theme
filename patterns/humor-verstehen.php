@@ -201,7 +201,7 @@
 				<p class="dh-kicker dh-rise">Über den Autor</p>
 				<h2 class="dh-h2 dh-rise" id="h-autor" style="font-size:clamp(28px,3vw,38px)">Dr. Bastian Mayerhofer</h2>
 				<p class="dh-rise">Promovierter Psychologe und Humorforscher. Er hat zur kognitiven Verarbeitung von Garden-Path-Witzen geforscht und entwickelt mit De:Humore Formate, die Humorforschung verständlich machen und in die Praxis übertragen.</p>
-				<a class="dh-link dh-rise" href="https://bastianmayerhofer.com" data-todo="Ziel-URL der Biografie auf der Personal-Website">Ausführliche Biografie</a>
+				<a class="dh-link dh-rise" href="/ueber-mich/">Ausführliche Biografie</a>
 			</div>
 		</div>
 	</section>

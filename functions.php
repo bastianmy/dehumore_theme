@@ -285,3 +285,13 @@ function dehumore_kategorien_filter() {
 	}
 	return $html . '</ul></nav>';
 }
+
+/* Seitentitel der Kategorieseiten statt „… Archive“. */
+foreach ( array( 'wpseo_title', 'wpseo_opengraph_title' ) as $dehumore_filter ) {
+	add_filter( $dehumore_filter, function ( $title ) {
+		if ( is_category() && ! is_paged() ) {
+			return single_cat_title( '', false ) . ': Beiträge auf Humor-Wissen | De:Humore';
+		}
+		return $title;
+	} );
+}

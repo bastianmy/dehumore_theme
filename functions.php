@@ -202,11 +202,8 @@ add_action( 'template_redirect', function () {
 }, 0 );
 
 /**
- * Personen-Seiten (Vorlage page-person): ohne Jetpack-„Teilen“ und „Gefällt mir“.
+ * Jetpack-„Teilen mit“ und „Gefällt mir“ auf der ganzen Site aus (Bastian, 24.11.2026).
  */
-add_filter( 'sharing_show', function ( $show ) {
-	return is_page_template( 'page-person' ) ? false : $show;
-}, 20 );
-add_filter( 'wpl_is_likes_visible', function ( $visible ) {
-	return is_page_template( 'page-person' ) ? false : $visible;
-}, 20 );
+add_filter( 'sharing_show', '__return_false', 99 );
+add_filter( 'wpl_is_likes_visible', '__return_false', 99 );
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );

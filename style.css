@@ -100,12 +100,22 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 :root body .dh-header .dh-logo { margin-right: auto; }
 /* Sprachregler DE/EN (nur sichtbar, wenn Polylang aktiv ist) */
 :root body .dh-lang { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; flex: none; padding: 3px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--paper); }
-:root body .dh-lang a { position: relative; z-index: 1; min-width: 38px; padding: 5px 9px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: .08em; line-height: 1.2; text-align: center; text-decoration: none; color: var(--ink); border-radius: 999px; transition: color .25s; }
+:root body .dh-lang a { position: relative; z-index: 1; min-width: 34px; padding: 5px 7px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: .08em; line-height: 1.2; text-align: center; text-decoration: none; color: var(--ink); border-radius: 999px; transition: color .25s; }
 :root body .dh-lang a[aria-current] { color: var(--paper); }
 :root body .dh-lang a:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
 :root body .dh-lang-knopf { position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc(50% - 3px); border-radius: 999px; background: var(--ink); transition: transform .25s ease; }
 :root body .dh-lang:has(a[lang="en"][aria-current]) .dh-lang-knopf { transform: translateX(100%); }
 :root body .dh-lang:hover a:not([aria-current]) { color: var(--indigo); }
+/* Mit Regler braucht die Kopfzeile mehr Platz: Burger bis 1260px, engere Navigation darüber. */
+@media (min-width: 1181px) and (max-width: 1260px) {
+	:root body .dh-header:has(.dh-lang) .dh-nav { position: fixed; inset: calc(var(--head-h) + env(safe-area-inset-top, 0px)) 0 auto; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 24px; background: var(--paper); border-bottom: 1px solid var(--line); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .2s, transform .2s, visibility .2s; }
+	:root body .dh-header:has(.dh-lang) .dh-nav a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+	:root body .dh-header.is-open:has(.dh-lang) .dh-nav { opacity: 1; visibility: visible; transform: none; }
+	:root body .dh-header:has(.dh-lang) .dh-burger { display: block; order: 4; }
+	:root body .dh-header:has(.dh-lang) .dh-lang { order: 3; }
+}
+@media (min-width: 1261px) { :root body .dh-header:has(.dh-lang) .dh-nav { gap: 18px; } }
+@media (min-width: 1261px) and (max-width: 1380px) { :root body .dh-header:has(.dh-lang) .dh-nav a { font-size: 14px; } }
 :root body .dh-burger { display: none; width: 44px; height: 44px; border: 0; background: transparent; border-radius: 8px; cursor: pointer; color: var(--ink); }
 :root body .dh-burger span { display: block; width: 22px; height: 2px; margin: 5px auto; background: currentColor; transition: transform .25s, opacity .25s; }
 :root body .dh-header.is-open .dh-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }

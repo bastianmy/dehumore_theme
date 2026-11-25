@@ -288,6 +288,9 @@ foreach ( array( 'wpseo_opengraph_desc', 'wpseo_twitter_description' ) as $dehum
  * (Theme, Seiten, Beiträge). Attribute, Head, Skripte und Styles bleiben unverändert.
  */
 function dehumore_marke_fett( $html ) {
+	if ( function_exists( 'dehumore_en_feinschliff' ) && dehumore_en() ) {
+		$html = dehumore_en_feinschliff( $html );
+	}
 	$body = stripos( $html, '<body' );
 	if ( false === $body || false === strpos( $html, 'De:Humore' ) ) {
 		return $html;
@@ -740,14 +743,66 @@ add_filter( 'render_block', function ( $html, $block ) {
 	}
 	$map  = dehumore_vorlagen_texte_en();
 	$html = str_replace( array_keys( $map ), array_values( $map ), $html );
-	// Interne Links auf die englische Fassung umbiegen, wenn es eine gibt.
-	return preg_replace_callback( '#href="(/[^"\#?]*)(\#[^"]*)?"#', function ( $m ) {
-		if ( 0 === strpos( $m[1], '/en/' ) || 0 === strpos( $m[1], '/wp-' ) ) {
+	return dehumore_links_en( $html );
+}, 20, 2 );
+
+/**
+ * Interne Links (relativ oder https://dehumore.com/…) auf die englische Fassung umbiegen,
+ * wenn es eine veröffentlichte gibt. Sonst bleibt der deutsche Link.
+ */
+function dehumore_links_en( $html ) {
+	if ( ! dehumore_en() || false === strpos( $html, 'href=' ) ) {
+		return $html;
+	}
+	return preg_replace_callback( '#href="(?:https?://(?:www\.)?dehumore\.com)?(/[^"\#?]*)(\#[^"]*)?"#i', function ( $m ) {
+		if ( 0 === strpos( $m[1], '/en/' ) || '/en' === $m[1] || 0 === strpos( $m[1], '/wp-' ) ) {
 			return $m[0];
 		}
-		return 'href="' . esc_url( dehumore_link( $m[1] . ( isset( $m[2] ) ? $m[2] : '' ) ) ) . '"';
+		$ziel = dehumore_link( $m[1] . ( isset( $m[2] ) ? $m[2] : '' ) );
+		return $ziel === $m[1] . ( isset( $m[2] ) ? $m[2] : '' ) ? $m[0] : 'href="' . esc_url( $ziel ) . '"';
 	}, $html );
-}, 20, 2 );
+}
+
+/* Ältere Beiträge (klassisches HTML ohne Blöcke): Links im Inhalt ebenfalls umbiegen. */
+add_filter( 'the_content', function ( $html ) {
+	return dehumore_en() ? dehumore_links_en( $html ) : $html;
+}, 25 );
+
+/* Gibt es die englische Blog-Übersicht schon öffentlich? */
+function dehumore_en_blog_live() {
+	static $live = null;
+	if ( null === $live ) {
+		$live = false;
+		$de   = get_page_by_path( 'blog' );
+		if ( $de && function_exists( 'pll_get_post' ) ) {
+			$en   = pll_get_post( $de->ID, 'en' );
+			$live = $en && 'publish' === get_post_status( $en );
+		}
+	}
+	return $live;
+}
+
+/**
+ * Feinschliff der fertigen englischen Seite: Links, die schon auf eine englische Fassung
+ * zeigen, verlieren hreflang="de" und den Hinweis „(in German)“. Ist die englische
+ * Blog-Übersicht öffentlich, fallen auch die Hinweise an den Leselisten weg.
+ */
+function dehumore_en_feinschliff( $html ) {
+	$html = preg_replace_callback( '#<a\b[^>]*>.*?</a>#is', function ( $m ) {
+		if ( ! preg_match( '#^<a\b[^>]*href="(?:https?://(?:www\.)?dehumore\.com)?/en/#i', $m[0] ) ) {
+			return $m[0];
+		}
+		return str_replace( array( ' hreflang="de"', ' (in German)' ), '', $m[0] );
+	}, $html );
+	if ( dehumore_en_blog_live() ) {
+		$html = str_replace(
+			array( 'Further reading (in German)', 'Selected reading (in German)', 'Articles and exercises (in German)', 'everyday life (in German).' ),
+			array( 'Further reading', 'Selected reading', 'Articles and exercises', 'everyday life.' ),
+			$html
+		);
+	}
+	return $html;
+}
 
 /* Englische Kategorien mit den deutschen verknüpfen (EN-Slug => DE-Slug). */
 function dehumore_en_kategorien() {

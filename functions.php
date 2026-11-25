@@ -245,6 +245,17 @@ function dehumore_meta_beschreibung() {
 		'presse'                    => 'Dr. Bastian Mayerhofer in Presse und Podcasts: Interviews über Humorforschung, Humortraining und warum wir worüber lachen.',
 		'blog'                      => 'Der Blog von De:Humore: Beiträge aus Humorforschung und Kognitionswissenschaft, verständlich erklärt und mit Impulsen für Kommunikation und Alltag.',
 	);
+	if ( dehumore_en() ) {
+		$texte = array(
+			'startseite'                => 'De:Humore makes humour research accessible: why we laugh, when humour hurts and how to use it deliberately in everyday life and at work.',
+			'humor-verstehen'           => 'Understanding humour: what happens when we laugh? Key perspectives from humour research, clearly explained, with findings, theories and open questions kept apart.',
+			'humor-risk-check'          => 'When does a joke connect, and when does it hurt? The Humour Risk Check helps you assess a specific joke across five dimensions.',
+			'humor-trainieren'          => 'Humour can be trained: three short daily prompts for reflection. Practise switching perspectives, spot ambiguity and reframe situations.',
+			'humor-und-persoenlichkeit' => 'What does our humour say about us? How humour styles, humour preferences and personality are related, and why humour does not reveal fixed personality types.',
+			'humor-in-organisationen'   => 'Training, workshops and keynotes on humour in leadership, communication and teams: research-based and practical, with Dr Bastian Mayerhofer.',
+			'ueber'                     => 'De:Humore is Dr Bastian Mayerhofer’s platform for humour research and how to apply it: clear, nuanced and made to try out.',
+		);
+	}
 	if ( is_category() ) {
 		$text = wp_strip_all_tags( (string) term_description() );
 		if ( '' !== trim( $text ) ) {
@@ -372,7 +383,7 @@ add_action( 'wpseo_add_opengraph_additional_images', function ( $bilder ) {
 				'width'  => 1200,
 				'height' => 630,
 				'type'   => 'image/jpeg',
-				'alt'    => 'De:Humore – Humor als Fenster auf den menschlichen Geist. Dr. Bastian Mayerhofer',
+				'alt'    => dehumore_en() ? 'De:Humore – humour as a window into the human mind. Dr Bastian Mayerhofer' : 'De:Humore – Humor als Fenster auf den menschlichen Geist. Dr. Bastian Mayerhofer',
 			)
 		);
 	}

@@ -433,3 +433,151 @@ foreach ( array( 'wpseo_title', 'wpseo_opengraph_title' ) as $dehumore_filter ) 
 		return $title;
 	} );
 }
+
+/*
+ * Einmalige Polylang-Einrichtung (Deutsch + British English).
+ * Läuft nur, wenn Polylang aktiv ist, und hört auf, sobald alles erledigt ist.
+ * Jeder Schritt ist wiederholbar; nichts wird gelöscht.
+ */
+function dehumore_en_seiten() {
+	// EN-Slug => DE-Slug
+	return array(
+		'humour-risk-check'       => 'humor-risk-check',
+		'training-humour'         => 'humor-kann-man-trainieren',
+		'understanding-humour'    => 'humor-verstehen',
+		'humour-and-personality'  => 'humor-und-persoenlichkeit',
+		'humour-in-organisations' => 'humor-in-organisationen',
+		'about'                   => 'ueber',
+	);
+}
+
+function dehumore_seite_nach_slug( $slug ) {
+	$treffer = get_posts( array(
+		'name'             => $slug,
+		'post_type'        => 'page',
+		'post_status'      => array( 'draft', 'publish', 'pending', 'private' ),
+		'numberposts'      => 1,
+		'lang'             => '',
+		'suppress_filters' => false,
+	) );
+	return $treffer ? $treffer[0] : null;
+}
+
+add_action( 'init', function () {
+	if ( 'fertig' === get_option( 'dehumore_en_setup' ) ) {
+		return;
+	}
+	if ( ! function_exists( 'PLL' ) || ! function_exists( 'pll_set_post_language' ) || ! PLL() || empty( PLL()->model ) ) {
+		return;
+	}
+	if ( get_transient( 'dehumore_en_setup_sperre' ) ) {
+		return;
+	}
+	set_transient( 'dehumore_en_setup_sperre', 1, 60 );
+
+	$model = PLL()->model;
+	$log   = array();
+
+	// 1. Sprachen anlegen.
+	$sprachen = array(
+		array( 'name' => 'Deutsch', 'slug' => 'de', 'locale' => 'de_DE', 'rtl' => 0, 'term_group' => 0, 'flag' => 'de' ),
+		array( 'name' => 'English', 'slug' => 'en', 'locale' => 'en_GB', 'rtl' => 0, 'term_group' => 1, 'flag' => 'gb' ),
+	);
+	$vorhanden = function_exists( 'pll_languages_list' ) ? (array) pll_languages_list( array( 'fields' => 'slug' ) ) : array();
+	foreach ( $sprachen as $s ) {
+		if ( in_array( $s['slug'], $vorhanden, true ) ) {
+			continue;
+		}
+		if ( isset( $model->languages ) && is_object( $model->languages ) && method_exists( $model->languages, 'add' ) ) {
+			$r = $model->languages->add( $s );
+		} elseif ( method_exists( $model, 'add_language' ) ) {
+			$r = $model->add_language( $s );
+		} else {
+			$r = new WP_Error( 'dehumore', 'keine Methode zum Anlegen' );
+		}
+		$log[] = $s['slug'] . ': ' . ( is_wp_error( $r ) ? $r->get_error_message() : 'angelegt' );
+	}
+	if ( method_exists( $model, 'clean_languages_cache' ) ) {
+		$model->clean_languages_cache();
+	}
+	$vorhanden = (array) pll_languages_list( array( 'fields' => 'slug' ) );
+	if ( ! in_array( 'de', $vorhanden, true ) || ! in_array( 'en', $vorhanden, true ) ) {
+		update_option( 'dehumore_en_setup', 'fehler: ' . implode( '; ', $log ), false );
+		return;
+	}
+
+	// 2. Einstellungen: Verzeichnis-URLs, deutsche URLs ohne /de/, keine Browser-Weiterleitung.
+	$werte = array( 'force_lang' => 1, 'hide_default' => 1, 'rewrite' => 1, 'browser' => 0, 'redirect_lang' => 0, 'media_support' => 0, 'default_lang' => 'de' );
+	$opt   = isset( PLL()->options ) ? PLL()->options : null;
+	if ( is_object( $opt ) && $opt instanceof ArrayAccess ) {
+		foreach ( $werte as $k => $v ) {
+			$opt[ $k ] = $v;
+		}
+		if ( method_exists( $opt, 'save' ) ) {
+			$opt->save();
+		}
+	} else {
+		$o = (array) get_option( 'polylang', array() );
+		update_option( 'polylang', array_merge( $o, $werte ) );
+	}
+
+	// 3. Englische Seiten verknüpfen.
+	$fehlt = array();
+	foreach ( dehumore_en_seiten() as $en_slug => $de_slug ) {
+		$en = dehumore_seite_nach_slug( $en_slug );
+		$de = dehumore_seite_nach_slug( $de_slug );
+		if ( ! $en || ! $de ) {
+			$fehlt[] = $en_slug;
+			continue;
+		}
+		pll_set_post_language( $en->ID, 'en' );
+		pll_set_post_language( $de->ID, 'de' );
+		pll_save_post_translations( array( 'de' => $de->ID, 'en' => $en->ID ) );
+	}
+
+	// 4. Alles ohne Sprache wird Deutsch.
+	{
+		$typen = array_filter( array_values( get_post_types( array( 'public' => true ) ) ), function ( $t ) {
+			return 'attachment' !== $t && ( ! function_exists( 'pll_is_translated_post_type' ) || pll_is_translated_post_type( $t ) );
+		} );
+		foreach ( get_posts( array( 'post_type' => array_values( $typen ), 'post_status' => 'any', 'numberposts' => -1, 'fields' => 'ids', 'lang' => '', 'suppress_filters' => false ) ) as $id ) {
+			if ( ! pll_get_post_language( $id ) ) {
+				pll_set_post_language( $id, 'de' );
+			}
+		}
+		$begriffe = get_terms( array( 'taxonomy' => array( 'category', 'post_tag' ), 'hide_empty' => false, 'lang' => '' ) );
+		foreach ( is_wp_error( $begriffe ) ? array() : $begriffe as $t ) {
+			if ( function_exists( 'pll_get_term_language' ) && ! pll_get_term_language( $t->term_id ) ) {
+				pll_set_term_language( $t->term_id, 'de' );
+			}
+		}
+	}
+
+	// 5. Englische Seiten veröffentlichen.
+	if ( ! $fehlt ) {
+		foreach ( array_keys( dehumore_en_seiten() ) as $en_slug ) {
+			$en = dehumore_seite_nach_slug( $en_slug );
+			if ( $en && 'publish' !== $en->post_status ) {
+				wp_update_post( array( 'ID' => $en->ID, 'post_status' => 'publish' ) );
+			}
+		}
+	}
+
+	flush_rewrite_rules( false );
+	update_option( 'dehumore_en_flush', 1, false );
+	update_option( 'dehumore_en_setup', $fehlt ? 'wartet auf: ' . implode( ', ', $fehlt ) : 'fertig', false );
+	delete_transient( 'dehumore_en_setup_sperre' );
+}, 99 );
+
+// Permalinks nach der Einrichtung einmal neu schreiben, wenn Polylang die Sprachen kennt.
+add_action( 'init', function () {
+	if ( get_option( 'dehumore_en_flush' ) && function_exists( 'pll_languages_list' ) && pll_languages_list() ) {
+		delete_option( 'dehumore_en_flush' );
+		flush_rewrite_rules( false );
+	}
+}, 100 );
+
+// Englischer Untertitel der Website.
+add_filter( 'option_blogdescription', function ( $text ) {
+	return dehumore_en() ? 'More lightness when things get serious.' : $text;
+}, 20 );

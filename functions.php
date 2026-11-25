@@ -91,7 +91,7 @@ function dehumore_link( $pfad ) {
 			$seite = get_page_by_path( trim( $pfad, '/' ) );
 			$id    = $seite ? $seite->ID : url_to_postid( home_url( $pfad ) );
 			$en    = $id ? pll_get_post( $id, 'en' ) : 0;
-			if ( $en ) {
+			if ( $en && 'publish' === get_post_status( $en ) ) {
 				$ziel = get_permalink( $en );
 			}
 		}
@@ -253,6 +253,7 @@ function dehumore_meta_beschreibung() {
 			'humor-trainieren'          => 'Humour can be trained: three short daily prompts for reflection. Practise switching perspectives, spot ambiguity and reframe situations.',
 			'humor-und-persoenlichkeit' => 'What does our humour say about us? How humour styles, humour preferences and personality are related, and why humour does not reveal fixed personality types.',
 			'humor-in-organisationen'   => 'Training, workshops and keynotes on humour in leadership, communication and teams: research-based and practical, with Dr Bastian Mayerhofer.',
+			'blog'                      => 'Humour Insights from De:Humore: articles on humour research and cognitive science, clearly explained, with ideas for communication and everyday life.',
 			'ueber'                     => 'De:Humore is Dr Bastian Mayerhofer’s platform for humour research and how to apply it: clear, nuanced and made to try out.',
 		);
 	}
@@ -409,16 +410,27 @@ function dehumore_kategorien() {
  * Leere Kategorien werden ausgeblendet, die aktuelle ist markiert.
  */
 function dehumore_kategorien_filter() {
-	$blog  = get_permalink( get_page_by_path( 'blog' ) ) ?: home_url( '/blog/' );
+	$en    = dehumore_en();
+	$blogs = get_page_by_path( 'blog' );
+	if ( $en && $blogs && function_exists( 'pll_get_post' ) ) {
+		$blog_en = pll_get_post( $blogs->ID, 'en' );
+		$blogs   = ( $blog_en && 'publish' === get_post_status( $blog_en ) ) ? get_post( $blog_en ) : $blogs;
+	}
+	$blog  = $blogs ? get_permalink( $blogs ) : home_url( '/blog/' );
 	$alle  = ! is_category();
-	$html  = '<nav class="bl-filter" aria-label="Beiträge nach Thema filtern"><span class="bl-filter-label">Themen</span><ul>';
-	$html .= '<li><a href="' . esc_url( $blog ) . '#h-alle"' . ( $alle ? ' aria-current="page"' : '' ) . '>Alle</a></li>';
+	$html  = '<nav class="bl-filter" aria-label="' . ( $en ? 'Filter articles by topic' : 'Beiträge nach Thema filtern' ) . '"><span class="bl-filter-label">' . ( $en ? 'Topics' : 'Themen' ) . '</span><ul>';
+	$html .= '<li><a href="' . esc_url( $blog ) . '#h-alle"' . ( $alle ? ' aria-current="page"' : '' ) . '>' . ( $en ? 'All' : 'Alle' ) . '</a></li>';
+	$aktuell = is_category() ? get_queried_object_id() : 0;
 	foreach ( array_keys( dehumore_kategorien() ) as $slug ) {
 		$term = get_term_by( 'slug', $slug, 'category' );
-		if ( ! $term || ( 0 === (int) $term->count && ! is_category( $slug ) ) ) {
+		if ( $term && $en ) {
+			$en_id = function_exists( 'pll_get_term' ) ? pll_get_term( $term->term_id, 'en' ) : 0;
+			$term  = $en_id ? get_term( $en_id, 'category' ) : null;
+		}
+		if ( ! $term || is_wp_error( $term ) || ( 0 === (int) $term->count && (int) $term->term_id !== $aktuell ) ) {
 			continue;
 		}
-		$aktiv = is_category( $slug ) ? ' aria-current="page"' : '';
+		$aktiv = ( (int) $term->term_id === $aktuell ) ? ' aria-current="page"' : '';
 		$html .= '<li><a href="' . esc_url( get_category_link( $term ) ) . '#h-alle"' . $aktiv . '>' . esc_html( $term->name ) . ' <span class="bl-filter-n">' . (int) $term->count . '</span></a></li>';
 	}
 	return $html . '</ul></nav>';
@@ -581,3 +593,158 @@ add_action( 'init', function () {
 add_filter( 'option_blogdescription', function ( $text ) {
 	return dehumore_en() ? 'More lightness when things get serious.' : $text;
 }, 20 );
+
+/* ---------- Englische Beiträge (Polylang-Übersetzungen) ---------- */
+
+/*
+ * Verknüpfung per Meta „dh_uebersetzung_von“ = ID des deutschen Originals.
+ * So können Beiträge, Seiten und Kategorien über REST (MCP, Importer) als
+ * englische Übersetzung angelegt werden, ohne Polylang Pro.
+ */
+add_action( 'init', function () {
+	foreach ( array( 'post', 'page' ) as $typ ) {
+		register_post_meta( $typ, 'dh_uebersetzung_von', array(
+			'type'          => 'integer',
+			'single'        => true,
+			'show_in_rest'  => true,
+			'default'       => 0,
+			'auth_callback' => function () {
+				return current_user_can( 'edit_posts' );
+			},
+		) );
+	}
+	register_term_meta( 'category', 'dh_uebersetzung_von', array(
+		'type'          => 'integer',
+		'single'        => true,
+		'show_in_rest'  => true,
+		'default'       => 0,
+		'auth_callback' => function () {
+			return current_user_can( 'manage_categories' );
+		},
+	) );
+} );
+
+function dehumore_verknuepfe_beitrag( $id ) {
+	$de = (int) get_post_meta( $id, 'dh_uebersetzung_von', true );
+	if ( ! $de || $de === (int) $id || ! get_post( $de ) || ! function_exists( 'pll_save_post_translations' ) ) {
+		return;
+	}
+	if ( 'en' !== pll_get_post_language( $id ) ) {
+		pll_set_post_language( $id, 'en' );
+	}
+	if ( ! pll_get_post_language( $de ) ) {
+		pll_set_post_language( $de, 'de' );
+	}
+	$tr       = pll_get_post_translations( $de );
+	$tr['de'] = $de;
+	$tr['en'] = (int) $id;
+	if ( pll_get_post_translations( $id ) !== $tr ) {
+		pll_save_post_translations( $tr );
+	}
+	// Deutsche Kategorien durch ihre englischen Übersetzungen ersetzen.
+	if ( 'post' === get_post_type( $id ) && function_exists( 'pll_get_term' ) ) {
+		$alt = wp_get_post_categories( $id );
+		$neu = array();
+		foreach ( $alt as $k ) {
+			$en    = pll_get_term( $k, 'en' );
+			$neu[] = $en ? (int) $en : (int) $k;
+		}
+		if ( $neu && $neu !== array_map( 'intval', $alt ) ) {
+			wp_set_post_categories( $id, $neu );
+		}
+	}
+}
+add_action( 'wp_after_insert_post', function ( $id ) {
+	dehumore_verknuepfe_beitrag( $id );
+}, 30 );
+foreach ( array( 'post', 'page' ) as $dehumore_typ ) {
+	add_action( 'rest_after_insert_' . $dehumore_typ, function ( $post ) {
+		dehumore_verknuepfe_beitrag( $post->ID );
+	}, 30 );
+}
+
+function dehumore_verknuepfe_kategorie( $id ) {
+	$de = (int) get_term_meta( $id, 'dh_uebersetzung_von', true );
+	if ( ! $de || $de === (int) $id || ! get_term( $de, 'category' ) || ! function_exists( 'pll_save_term_translations' ) ) {
+		return;
+	}
+	pll_set_term_language( $id, 'en' );
+	if ( ! pll_get_term_language( $de ) ) {
+		pll_set_term_language( $de, 'de' );
+	}
+	$tr       = pll_get_term_translations( $de );
+	$tr['de'] = $de;
+	$tr['en'] = (int) $id;
+	pll_save_term_translations( $tr );
+}
+add_action( 'rest_after_insert_category', function ( $term ) {
+	dehumore_verknuepfe_kategorie( $term->term_id );
+}, 30 );
+add_action( 'edited_category', 'dehumore_verknuepfe_kategorie', 30 );
+
+/* Datumsformat und Template-Texte auf Englisch. */
+add_filter( 'option_date_format', function ( $f ) {
+	return dehumore_en() ? 'j F Y' : $f;
+}, 20 );
+
+function dehumore_vorlagen_texte_en() {
+	return array(
+		'Weiterlesen →'                => 'Read more →',
+		'>Start<'                      => '>Home<',
+		'>Humor-Wissen<'               => '>Humour Insights<',
+		'aria-label="Inhalt"'          => 'aria-label="Contents"',
+		'>Inhalt<'                     => '>Contents<',
+		'Newsletter abonnieren'        => 'Subscribe to the newsletter (in German)',
+		'aria-label="Teilen"'          => 'aria-label="Share"',
+		'Auf LinkedIn teilen'          => 'Share on LinkedIn',
+		'Link kopieren'                => 'Copy link',
+		'Geschrieben von'              => 'Written by',
+		'Kognitionspsychologe mit Promotion in Psycholinguistik zur neurokognitiven Verarbeitung von Humor. Der wissenschaftliche Kopf hinter De:Humore.' => 'Cognitive psychologist with a PhD in psycholinguistics on the neurocognitive processing of humour. The scientific mind behind De:Humore.',
+		'Mehr über Bastian'            => 'More about Bastian (in German)',
+		'Dr. Bastian Mayerhofer'       => 'Dr Bastian Mayerhofer',
+		'>Weiterlesen<'                => '>Read on<',
+		'Noch ein Frosch gefällig?'    => 'Fancy another frog?',
+		'Alle Beiträge'                => 'All articles',
+		'Neue Beiträge, ohne Frosch-Spam.' => 'New articles, no frog spam.',
+		'<b>Gratis zur Anmeldung:</b> das E-Paper „10 Humor-Hacks für mehr Leichtigkeit“' => '<b>Free when you sign up:</b> the e-paper “10 Humour Hacks for More Lightness” (in German)',
+		'Abmelden geht jederzeit, Details in der' => 'You can unsubscribe at any time. Details in our',
+		'>Datenschutzerklärung<'       => '>privacy policy (in German)<',
+		'Zack. Und wieder stirbt ein Frosch.' => 'Zap … and another frog bites the dust.',
+		'Beiträge aus Humorforschung, Kognitionswissenschaft und Alltag: verständlich erklärt, mit Quellen und einem Augenzwinkern.' => 'Articles from humour research, cognitive science and everyday life: clearly explained, with sources and a twinkle in the eye.',
+		'„Humor zu analysieren ist wie einen Frosch zu sezieren. Nur wenige interessiert es … und der Frosch stirbt dabei.“<small>Berühmtes Zitat</small>' => '“Humor can be dissected, as a frog can, but the thing dies in the process and the innards are discouraging to any but the pure scientific mind.”<small>E. B. White</small>',
+		'„Mit einer speziellen Veranlagung macht es verdammt viel Spaß.“' => '“With the right disposition, it is a hell of a lot of fun.”',
+		'aria-label="Themen"'          => 'aria-label="Topics"',
+		'>Wann Humor verletzt<'        => '>When humour hurts<',
+		'>Humor und Persönlichkeit<'   => '>Humour and personality<',
+		'>Humor in Organisationen<'    => '>Humour in organisations<',
+		'>Neu<'                        => '>New<',
+		'"Neuere"'                     => '"Newer"',
+		'>Neuere<'                     => '>Newer<',
+		'>Ältere<'                     => '>Older<',
+		'Zu diesem Thema gibt es noch keine Beiträge.' => 'There are no English articles on this topic yet.',
+		'Alle Beiträge ansehen'        => 'See all articles',
+		'Fehler 404'                   => 'Error 404',
+		'Diese Seite gibt es nicht. Noch nicht.' => 'This page does not exist. Not yet.',
+		'Vielleicht hilft der Weg zurück zur' => 'Perhaps the way back to the',
+		'>Startseite<'                 => '>home page<',
+	);
+}
+
+add_filter( 'render_block', function ( $html, $block ) {
+	if ( ! dehumore_en() || empty( $block['blockName'] ) ) {
+		return $html;
+	}
+	$typen = array( 'core/html', 'core/paragraph', 'core/heading', 'core/post-excerpt', 'core/query-pagination-previous', 'core/query-pagination-next', 'core/query-no-results' );
+	if ( ! in_array( $block['blockName'], $typen, true ) ) {
+		return $html;
+	}
+	$map  = dehumore_vorlagen_texte_en();
+	$html = str_replace( array_keys( $map ), array_values( $map ), $html );
+	// Interne Links auf die englische Fassung umbiegen, wenn es eine gibt.
+	return preg_replace_callback( '#href="(/[^"\#?]*)(\#[^"]*)?"#', function ( $m ) {
+		if ( 0 === strpos( $m[1], '/en/' ) || 0 === strpos( $m[1], '/wp-' ) ) {
+			return $m[0];
+		}
+		return 'href="' . esc_url( dehumore_link( $m[1] . ( isset( $m[2] ) ? $m[2] : '' ) ) ) . '"';
+	}, $html );
+}, 20, 2 );

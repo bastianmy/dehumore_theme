@@ -6,7 +6,7 @@
 	burger.addEventListener('click', function () {
 		var open = head.classList.toggle('is-open');
 		burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-		burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+		var en = document.documentElement.lang.indexOf('en') === 0; burger.setAttribute('aria-label', open ? (en ? 'Close menu' : 'Menü schließen') : (en ? 'Open menu' : 'Menü öffnen'));
 	});
 	document.querySelectorAll('#menue a').forEach(function (a) {
 		a.addEventListener('click', function () { head.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); });

@@ -4,6 +4,9 @@
  * Slug: dehumore/fuss
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'fuss' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <footer class="dh-footer">

@@ -190,6 +190,7 @@ html:not(.js) .dh-voice .mk { --s1: 1; --s2: 1; }
 :root body .tr-tip-btn { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: help; text-decoration: underline dotted; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: var(--peach); }
 :root body .tr-tip-btn::after { content: "i"; display: inline-grid; place-items: center; width: 17px; height: 17px; margin-left: 5px; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 11px; font-weight: 800; vertical-align: 3px; text-decoration: none; }
 :root body .tr-tip-box { position: absolute; left: 0; top: calc(100% + 10px); z-index: 20; width: min(280px, 72vw); padding: 14px 16px; background: var(--ink); color: var(--paper); border-radius: 10px; font-family: var(--text); font-size: 15px; font-weight: 400; line-height: 1.5; box-shadow: 4px 4px 0 var(--lime); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .15s, transform .15s, visibility .15s; }
+:root body .tr-tip--ende .tr-tip-box { left: auto; right: 0; }
 :root body .tr-tip-box b { display: block; font-family: var(--display); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--lime); margin-bottom: 4px; }
 :root body .tr-tip:hover .tr-tip-box, :root body .tr-tip:focus-within .tr-tip-box, :root body .tr-tip.is-open .tr-tip-box { opacity: 1; visibility: visible; transform: none; }
 :root body .tr-tip-box::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }

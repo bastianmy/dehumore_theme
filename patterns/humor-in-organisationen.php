@@ -4,6 +4,9 @@
  * Slug: dehumore/humor-in-organisationen
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'humor-in-organisationen' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <main id="start">

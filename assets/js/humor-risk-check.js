@@ -5,7 +5,7 @@
 	burger.addEventListener('click', function () {
 		var open = head.classList.toggle('is-open');
 		burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-		burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+		var en = document.documentElement.lang.indexOf('en') === 0; burger.setAttribute('aria-label', open ? (en ? 'Close menu' : 'Menü schließen') : (en ? 'Open menu' : 'Menü öffnen'));
 	});
 	function seg(p, a, b) { return Math.max(0, Math.min(1, (p - a) / (b - a))); }
 	function viewP(el, start, len) { var vh = window.innerHeight, r = el.getBoundingClientRect(); return reduce ? 1 : Math.max(0, Math.min(1, (vh * start - r.top) / (vh * len))); }

@@ -4,6 +4,9 @@
  * Slug: dehumore/humor-und-persoenlichkeit
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'humor-und-persoenlichkeit' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <main id="start">

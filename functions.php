@@ -748,3 +748,32 @@ add_filter( 'render_block', function ( $html, $block ) {
 		return 'href="' . esc_url( dehumore_link( $m[1] . ( isset( $m[2] ) ? $m[2] : '' ) ) ) . '"';
 	}, $html );
 }, 20, 2 );
+
+/* Englische Kategorien mit den deutschen verknüpfen (EN-Slug => DE-Slug). */
+function dehumore_en_kategorien() {
+	return array(
+		'cognition'               => 'kognition',
+		'evolution-and-play'      => 'evolution-und-spiel',
+		'context-and-limits'      => 'kontext-und-grenzen',
+		'research-under-scrutiny' => 'forschung-kritisch',
+		'humour-training'         => 'humor-trainieren',
+		'personality'             => 'persoenlichkeit',
+		'organisations'           => 'organisationen',
+	);
+}
+add_action( 'init', function () {
+	if ( ! function_exists( 'pll_save_term_translations' ) || get_transient( 'dehumore_en_kat_geprueft' ) ) {
+		return;
+	}
+	set_transient( 'dehumore_en_kat_geprueft', 1, HOUR_IN_SECONDS );
+	foreach ( dehumore_en_kategorien() as $en_slug => $de_slug ) {
+		$en = get_term_by( 'slug', $en_slug, 'category' );
+		$de = get_term_by( 'slug', $de_slug, 'category' );
+		if ( ! $en || ! $de || (int) pll_get_term( $de->term_id, 'en' ) === (int) $en->term_id ) {
+			continue;
+		}
+		pll_set_term_language( $en->term_id, 'en' );
+		pll_set_term_language( $de->term_id, 'de' );
+		pll_save_term_translations( array( 'de' => $de->term_id, 'en' => $en->term_id ) );
+	}
+}, 120 );

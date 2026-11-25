@@ -4,6 +4,9 @@
  * Slug: dehumore/humor-trainieren
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'humor-trainieren' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <main id="start">

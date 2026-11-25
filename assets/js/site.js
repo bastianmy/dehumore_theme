@@ -6,7 +6,7 @@
 	if (burger && head) burger.addEventListener('click', function () {
 		var open = head.classList.toggle('is-open');
 		burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-		burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+		var en = document.documentElement.lang.indexOf('en') === 0; burger.setAttribute('aria-label', open ? (en ? 'Close menu' : 'Menü schließen') : (en ? 'Open menu' : 'Menü öffnen'));
 	});
 	function onScroll() { if (head) head.classList.toggle('is-scrolled', window.scrollY > 8); }
 	window.addEventListener('scroll', onScroll, { passive: true }); onScroll();

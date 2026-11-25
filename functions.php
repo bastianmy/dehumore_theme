@@ -12,24 +12,151 @@ add_action( 'after_setup_theme', function () {
 	add_theme_support( 'responsive-embeds' );
 } );
 
+/* ---------- Zweisprachigkeit (Deutsch / britisches Englisch, über Polylang) ---------- */
+
+/**
+ * Aktuelle Sprache: 'en' auf englischen Seiten (Polylang), sonst 'de'.
+ * Ohne Polylang ist die Site rein deutsch und alles bleibt wie bisher.
+ */
+function dehumore_sprache() {
+	if ( function_exists( 'pll_current_language' ) && 'en' === pll_current_language( 'slug' ) ) {
+		return 'en';
+	}
+	return 'de';
+}
+
+function dehumore_en() {
+	return 'en' === dehumore_sprache();
+}
+
+/**
+ * Englische Fassung eines Musters einbinden (sprachen/en/<name>.php).
+ * Gibt true zurück, wenn die englische Datei ausgegeben wurde.
+ * Muster werden erst beim Rendern geladen, also wenn die Sprache feststeht.
+ */
+function dehumore_muster_en( $name ) {
+	if ( ! dehumore_en() ) {
+		return false;
+	}
+	$datei = get_theme_file_path( 'sprachen/en/' . $name . '.php' );
+	if ( ! file_exists( $datei ) ) {
+		return false;
+	}
+	include $datei;
+	return true;
+}
+
+/**
+ * Slug der deutschen Seite zur aktuellen Seite. Englische Seiten sind
+ * Polylang-Übersetzungen und bekommen dieselbe Vorlage, dasselbe CSS/JS.
+ */
+function dehumore_de_slug() {
+	if ( ! is_page() ) {
+		return '';
+	}
+	$id = get_queried_object_id();
+	if ( function_exists( 'pll_get_post' ) ) {
+		$de = pll_get_post( $id, 'de' );
+		if ( $de ) {
+			$id = $de;
+		}
+	}
+	return (string) get_post_field( 'post_name', $id );
+}
+
+function dehumore_ist_seite( $slug ) {
+	return '' !== $slug && dehumore_de_slug() === $slug;
+}
+
+/**
+ * Link auf eine deutsche Adresse (z. B. '/humor-risk-check/#check') in der aktuellen Sprache.
+ * Auf englischen Seiten wird die englische Übersetzung verlinkt, falls es sie gibt,
+ * sonst bleibt der deutsche Link. So stehen keine englischen Slugs fest im Theme.
+ */
+function dehumore_link( $pfad ) {
+	$anker = '';
+	if ( false !== strpos( $pfad, '#' ) ) {
+		list( $pfad, $anker ) = explode( '#', $pfad, 2 );
+		$anker = '#' . $anker;
+	}
+	if ( ! dehumore_en() || ! function_exists( 'pll_get_post' ) ) {
+		return $pfad . $anker;
+	}
+	static $cache = array();
+	if ( ! isset( $cache[ $pfad ] ) ) {
+		$ziel = $pfad;
+		if ( '/' === $pfad ) {
+			$ziel = function_exists( 'pll_home_url' ) ? pll_home_url( 'en' ) : $pfad;
+		} else {
+			$seite = get_page_by_path( trim( $pfad, '/' ) );
+			$id    = $seite ? $seite->ID : url_to_postid( home_url( $pfad ) );
+			$en    = $id ? pll_get_post( $id, 'en' ) : 0;
+			if ( $en ) {
+				$ziel = get_permalink( $en );
+			}
+		}
+		$cache[ $pfad ] = $ziel;
+	}
+	return $cache[ $pfad ] . $anker;
+}
+
+/* Kurzform für die englischen Muster: Link ausgeben. */
+function dehumore_href( $pfad ) {
+	echo esc_url( dehumore_link( $pfad ) );
+}
+
+/* Englische Seite nutzt die Vorlage ihrer deutschen Seite (page-<de-slug>.html). */
+add_filter( 'page_template_hierarchy', function ( $vorlagen ) {
+	if ( dehumore_en() ) {
+		$slug = dehumore_de_slug();
+		if ( $slug && ! in_array( 'page-' . $slug . '.php', $vorlagen, true ) ) {
+			$pos = array_search( 'page.php', $vorlagen, true );
+			array_splice( $vorlagen, false === $pos ? count( $vorlagen ) : $pos, 0, array( 'page-' . $slug . '.php' ) );
+		}
+	}
+	return $vorlagen;
+} );
+
+/**
+ * Sprachregler DE/EN für die Kopfzeile. Erscheint nur, wenn Polylang aktiv ist
+ * und Englisch angelegt wurde. Ohne Übersetzung führt EN zur englischen Startseite.
+ */
+function dehumore_sprachregler() {
+	if ( ! function_exists( 'pll_the_languages' ) ) {
+		return '';
+	}
+	$sprachen = pll_the_languages( array( 'raw' => 1, 'hide_if_empty' => 0, 'hide_if_no_translation' => 0 ) );
+	if ( ! is_array( $sprachen ) || empty( $sprachen['de'] ) || empty( $sprachen['en'] ) ) {
+		return '';
+	}
+	$en    = dehumore_en();
+	$label = $en ? 'Language' : 'Sprache';
+	$html  = '<div class="dh-lang" role="group" aria-label="' . esc_attr( $label ) . '">';
+	foreach ( array( 'de' => array( 'DE', 'Deutsch' ), 'en' => array( 'EN', 'English' ) ) as $slug => $text ) {
+		$aktiv = ! empty( $sprachen[ $slug ]['current_lang'] );
+		$html .= '<a href="' . esc_url( $sprachen[ $slug ]['url'] ) . '" lang="' . esc_attr( $slug ) . '" hreflang="' . esc_attr( $slug ) . '" title="' . esc_attr( $text[1] ) . '"' . ( $aktiv ? ' aria-current="true"' : '' ) . '>' . esc_html( $text[0] ) . '</a>';
+	}
+	return $html . '<span class="dh-lang-knopf" aria-hidden="true"></span></div>';
+}
+
 /**
  * Welche gestaltete Seite gerade angezeigt wird: array( slug, hat_css ) oder null.
  */
 function dehumore_seite() {
 	$seiten = array(
 		array( 'startseite', false, is_front_page() ),
-		array( 'humor-verstehen', true, is_page( 'humor-verstehen' ) ),
-		array( 'humor-risk-check', true, is_page_template( 'page-humor-risk-check' ) || is_page( 'humor-risk-check' ) ),
-		array( 'humor-trainieren', true, is_page( 'humor-kann-man-trainieren' ) ),
-		array( 'humor-und-persoenlichkeit', true, is_page( 'humor-und-persoenlichkeit' ) ),
-		array( 'humor-in-organisationen', true, is_page( 'humor-in-organisationen' ) ),
-		array( 'ueber', true, is_page( 'ueber' ) ),
+		array( 'humor-verstehen', true, dehumore_ist_seite( 'humor-verstehen' ) ),
+		array( 'humor-risk-check', true, is_page_template( 'page-humor-risk-check' ) || dehumore_ist_seite( 'humor-risk-check' ) ),
+		array( 'humor-trainieren', true, dehumore_ist_seite( 'humor-kann-man-trainieren' ) ),
+		array( 'humor-und-persoenlichkeit', true, dehumore_ist_seite( 'humor-und-persoenlichkeit' ) ),
+		array( 'humor-in-organisationen', true, dehumore_ist_seite( 'humor-in-organisationen' ) ),
+		array( 'ueber', true, dehumore_ist_seite( 'ueber' ) ),
 		array( 'beitrag', true, is_singular( 'post' ) ),
-		array( 'blog', true, is_page( 'blog' ) || is_home() || is_archive() || is_search() ),
-		array( 'ueber-mich', false, is_page( 'ueber-mich' ) ),
-		array( 'kontakt', false, is_page( 'kontakt' ) ),
-		array( 'wissenschaftliche-publikationen', false, is_page( 'wissenschaftliche-publikationen' ) ),
-		array( 'presse', false, is_page( 'presse-podcasts-mit-dr-bastian-mayerhofer' ) ),
+		array( 'blog', true, dehumore_ist_seite( 'blog' ) || is_home() || is_archive() || is_search() ),
+		array( 'ueber-mich', false, dehumore_ist_seite( 'ueber-mich' ) ),
+		array( 'kontakt', false, dehumore_ist_seite( 'kontakt' ) ),
+		array( 'wissenschaftliche-publikationen', false, dehumore_ist_seite( 'wissenschaftliche-publikationen' ) ),
+		array( 'presse', false, dehumore_ist_seite( 'presse-podcasts-mit-dr-bastian-mayerhofer' ) ),
 	);
 	foreach ( $seiten as $s ) {
 		if ( $s[2] ) {

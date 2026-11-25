@@ -4,6 +4,9 @@
  * Slug: dehumore/humor-risk-check-unten
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'humor-risk-check-unten' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 

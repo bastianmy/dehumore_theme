@@ -4,6 +4,9 @@
  * Slug: dehumore/kopf
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'kopf' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <header class="dh-header" id="kopf">
@@ -18,6 +21,7 @@
 			<a href="/humor-in-organisationen/">Für Organisationen</a>
 			<a href="/ueber/">Über De:Humore</a>
 		</nav>
+		<?php echo dehumore_sprachregler(); ?>
 	</div>
 </header>
 

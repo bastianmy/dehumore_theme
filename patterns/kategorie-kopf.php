@@ -9,6 +9,9 @@ $dh_name   = ( $dh_term && isset( $dh_term->name ) ) ? $dh_term->name : 'Humor-W
 $dh_desc   = ( $dh_term && isset( $dh_term->description ) ) ? $dh_term->description : '';
 $dh_map    = dehumore_kategorien();
 $dh_pillar = ( $dh_term && isset( $dh_term->slug, $dh_map[ $dh_term->slug ] ) ) ? $dh_map[ $dh_term->slug ] : null;
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'kategorie-kopf' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <section class="dh-wrap bl-hero bl-hero--kat" aria-labelledby="h-kat">

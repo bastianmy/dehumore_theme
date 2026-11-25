@@ -4,6 +4,9 @@
  * Slug: dehumore/ueber
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'ueber' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <main id="start">

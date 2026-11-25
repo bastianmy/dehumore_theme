@@ -4,6 +4,9 @@
  * Slug: dehumore/startseite
  * Inserter: no
  */
+if ( function_exists( 'dehumore_muster_en' ) && dehumore_muster_en( 'startseite' ) ) {
+	return;
+}
 ?>
 <!-- wp:html -->
 <main id="start">

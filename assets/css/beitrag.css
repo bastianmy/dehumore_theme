@@ -24,10 +24,10 @@
 :root body .dh-toc a.is-active { color: var(--ink); font-weight: 700; border-left-color: var(--peach); }
 :root body .dh-toc .dh-btn { margin-top: 24px; min-height: 44px; font-size: 14px; padding: 0 18px; }
 
-:root body .dh-article { font-size: 19px; line-height: 1.72; min-width: 0; }
+:root body .dh-article { font-size: 19px; line-height: 1.65; min-width: 0; }
 :root body .dh-article > * + * { margin-top: 1.1em; }
 :root body .dh-article h2 { font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15; margin-top: 2.4em; scroll-margin-top: calc(var(--head-h) + 24px); }
-:root body .dh-article h2 + * { margin-top: .8em; }
+:root body .dh-article h2 + * { margin-top: 1em; }
 :root body .dh-article a:not(.dh-next):not(.dh-link) { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--peach); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 :root body .dh-article a:not(.dh-next):not(.dh-link):hover { background: var(--lime); }
 :root body .dh-article em { font-style: italic; }
@@ -102,7 +102,7 @@
 	:root body .dh-toc details summary::after { content: "+"; font-size: 20px; line-height: 1; }
 	:root body .dh-toc details[open] summary::after { content: "–"; }
 	:root body .dh-toc .dh-btn { display: none; }
-	:root body .dh-article { font-size: 18px; }
+	:root body .dh-article { font-size: 18px; line-height: 1.6; }
 	:root body .dh-author { grid-template-columns: 80px minmax(0, 1fr); gap: 18px; }
 	:root body .dh-author img { width: 80px; height: 80px; }
 }
@@ -121,6 +121,11 @@
 :root body .dh-article > * { max-width: 100%; }
 :root body .dh-article > * + * { margin-top: 1.1em; }
 :root body .dh-article h3 { font-size: clamp(21px, 2vw, 25px); line-height: 1.25; margin-top: 1.8em; }
+/* Vertikaler Rhythmus (28.11.2026): Überschriften stehen sichtbar beim folgenden Text.
+   Verschachtelte HTML-Beiträge (section/article/aside/div ohne Theme-Klasse) bekommen denselben Absatzfluss wie Blöcke;
+   :where hält die Spezifität niedrig, damit Theme-Bausteine (.dh-…) ihre eigenen Abstände behalten. */
+:root body .dh-article :where(:is(section, article, aside, div):not([class*="dh-"], [class*="wp-block"], [class*="is-layout"])) > * + * { margin-top: 1.1em; }
+:root body .dh-article :where(h3, h4) + * { margin-top: .7em; }
 :root body .dh-article h2, :root body .dh-article h3 { scroll-margin-top: calc(var(--head-h) + 24px); }
 :root body .dh-article ul, :root body .dh-article ol { padding-left: 1.3em; }
 :root body .dh-article li + li { margin-top: .4em; }
